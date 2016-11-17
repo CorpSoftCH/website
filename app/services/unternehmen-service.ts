@@ -18,12 +18,7 @@ export class UnternehmenProperties {
 }
 
 export class UnternehmenService {
-    unt: Unternehmen;
-
-    consoleLog() {
-        console.log(unternehmen.map(u => new Unternehmen(u.description, u.property.map(p => new UnternehmenProperties(p.title, p.paragraphs, p.list, p.imgPath)))));
-    }
-
+    
     getUnternehmen(): Unternehmen {
         return unternehmen.map(u => new Unternehmen(u.description, u.property.map(p => new UnternehmenProperties(p.title, p.paragraphs, p.list, p.imgPath))));
     }

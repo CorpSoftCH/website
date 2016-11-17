@@ -60,5 +60,10 @@ hr {
 	color: $cosoBlue01;
 }
 
+.row {
+	float: left;
+	width: 50%;
+}
+@import 'carousel';
 @import 'header';
 @import 'containers';

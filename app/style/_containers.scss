@@ -101,17 +101,20 @@
 }
 
 //Kontakt
-#contact h4, #contact p {
+#kontakt p {
+	text-align: justify;
     margin-bottom: 1em;
 }
 
-#contact label {
+#kontakt label {
     padding: 0;
     margin: 0;
     font-size: 1em;
     color: #2B425C;
 }
-
+.kontakt-info {
+	padding: 2em;
+}
 .contact-icon {
     float: left;
     margin-right: 0.5em;
@@ -138,17 +141,22 @@
     width: 4em;
     height: 4em;
 }
-.contact-form-group-1 {
+.form-control {
+	font-size: 1.2em;
+	padding: 1.2em;
+	width: calc(100% - 5em);
     border: 0.3em solid #2B425C;
-    margin: 0.5em;
+    margin: 1em;
 }
 
-.contact-form-group-2 {
+.form-control-2 {
+	border: 0;
     border-left: 0.3em solid #2B425C;
     border-bottom: 0.3em solid #2B425C;
-    margin: 0.5em;
 }
 #contact-form-senden {
+	font-size: 1.2em;
+	padding: 2em;
     border: none;
     background-color: white;
     color: #2B425C;

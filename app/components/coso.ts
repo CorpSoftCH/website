@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {AngebotPartnerService} from 'app/services/angebot-partner-service';
+import {ReferenzenService} from 'app/services/referenzen-service';
 import {TeamService} from 'app/services/team-service';
 import {UnternehmenService} from 'app/services/unternehmen-service';
 
@@ -11,28 +12,32 @@ import HeaderComponent from './header';
 	selector: 'coso',
 	templateUrl: 'app/templates/coso.html',
 	directives: [ ROUTER_DIRECTIVES, HeaderComponent ],
-	providers: [AngebotPartnerService, TeamService, UnternehmenService],
+	providers: [AngebotPartnerService, TeamService, UnternehmenService, ReferenzenService],
 	precompile: []
 	})
 export default class CosoComponent implements OnInit {
 	angebote: Item[] = [];
-	paretner: Item[] = [];
-	team: Mitarbeiter[] = [];
+	referenzen: Referenz[] = [];
 	unternehmen: Unternehmen;
+	team: Mitarbeiter[] = [];
+	partner: Item[] = [];
 
 	constructor(
 		private angPartService: AngebotPartnerService,
+		private refService: ReferenzenService,
 		private teamService: TeamService,
 		private untService: UnternehmenService
 		) {
 		this.angebote = angPartService.getAngebote();
-		this.partner = angPartService.getPartner();
-		this.team = teamService.getTeam();
+		this.referenzen = refService.getReferenzen();
 		this.unternehmen = untService.getUnternehmen();
+		this.team = teamService.getTeam();
+		this.partner = angPartService.getPartner();
     }
 
     ngOnInit() {
     	this.loadMap();
+		this.activateFirst();
     }
 
     changeView(element:any)  {
@@ -41,12 +46,17 @@ export default class CosoComponent implements OnInit {
     	$("#" + element.id ).toggleClass("hide");
     }
 
+	activateFirst() {
+		console.log(referenzen[0]);
+		referenzen[0].state = "active";
+	}
+
     loadMap() {    	
 	    var myLatLng = {lat: 47.1316061, lng: 7.2481453};
 
 	    var mapProp = {
 	        center: new google.maps.LatLng(47.1316061,7.2481453),
-	        zoom: 16,
+	        zoom: 17,
 	        mapTypeId: google.maps.MapTypeId.ROADMAP,
 	        scrollwheel: false,
 	    };
