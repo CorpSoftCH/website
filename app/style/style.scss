@@ -12,16 +12,21 @@ $font: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-family: $font;
 }
 
-
 h1,
 h2 {
 	font-weight: 700;
+}
+
+p {
+	margin: 0.5em;
 }
 
 #content {
 	margin-top: 8.8em;
 }
 .container {
+	width: 100%;
+	float: left;
 	text-align: center;
 	min-height: 40em;
 }
@@ -37,6 +42,7 @@ h2 {
 
 hr {
 	margin-left: calc(100%/2 - 10em);
+	margin-bottom: 2em;
 	border: 0;
 	height: 0.3em;
 	background-color: $cosoBlue01;
@@ -45,6 +51,13 @@ hr {
 
 .hide {
 	display: none;
+}
+
+.ueberschrift {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1em;
+	color: $cosoBlue01;
 }
 
 @import 'header';

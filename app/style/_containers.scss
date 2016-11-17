@@ -21,6 +21,26 @@
 	width: 100%
 }
 
+
+
+.item  {
+	float: left;
+}
+
+.field:hover img {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.field  i {
+	visibility: hidden;
+}
+
+.field:hover  i {
+	opacity: 1;
+	visibility: visible;
+}
+
 //Angebot
 #angebot .angebot-container {
 	margin: 1em;
@@ -28,26 +48,110 @@
 	float: left;
 }
 
-#angebot .item  {
-	width: calc(100% / 3);
-	float: left;
-}
 #angebot .fa {
 	position: absolute;
 	margin: 75px;
 }
 
-.field:hover img {
-	cursor: pointer;
-	opacity: 0.5;
-	//filter: 
+#angebot .item {
+	width: calc(100% / 3);
+}
+//unternehmen
+#unternehmen .item {
+	padding: 1.5em;
+	width: calc(100% / 3 - 3em);
+}
+#unternehmen .item p {
+	text-align: justify;
+}
+#unternehmen .item ul {
+	padding: 1em;
+	list-style: none;
 }
 
-#angebot .field  i {
-	visibility: hidden;
+#unternehmen .item img {
+	width: 50%;
 }
 
-#angebot .field:hover  i {
-	opacity: 1;
-	visibility: visible;
+
+//team
+#team .item {
+	padding: 1.5em;
+	width: calc(100% / 5 - 3em);
+}
+#team .fa {
+	position: absolute;
+	margin: 140px 75px 0 75px;
+}
+
+//partner
+#partner .item {
+	margin: 1em;
+	width: calc(100% / 4 - 3em);
+}
+
+#partner .item img {
+	padding: 0.5em;
+	background-color: white;
+	border-radius: 50%;
+}
+#partner .fa {
+	position: absolute;
+	margin: 110px;
+}
+
+//Kontakt
+#contact h4, #contact p {
+    margin-bottom: 1em;
+}
+
+#contact label {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    color: #2B425C;
+}
+
+.contact-icon {
+    float: left;
+    margin-right: 0.5em;
+    margin-bottom: 2em;
+    width: 1em;
+}
+.contact-us {
+    margin-top: 2em;
+    float: left;
+    width: 50%;
+}
+.contact-us p {
+    text-transform: none;
+    text-decoration: none;
+}
+
+
+.social-media button {
+    float: left;
+    margin: 0.2em;
+    background-color: #2B425C;
+    color: white;
+    border: none;
+    width: 4em;
+    height: 4em;
+}
+.contact-form-group-1 {
+    border: 0.3em solid #2B425C;
+    margin: 0.5em;
+}
+
+.contact-form-group-2 {
+    border-left: 0.3em solid #2B425C;
+    border-bottom: 0.3em solid #2B425C;
+    margin: 0.5em;
+}
+#contact-form-senden {
+    border: none;
+    background-color: white;
+    color: #2B425C;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }

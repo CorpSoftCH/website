@@ -1,7 +1,9 @@
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
-import {AngebotService} from 'app/services/angebot'
+import {AngebotPartnerService} from 'app/services/angebot-partner-service';
+import {TeamService} from 'app/services/team-service';
+import {UnternehmenService} from 'app/services/unternehmen-service';
 
 import HeaderComponent from './header';
 
@@ -9,35 +11,37 @@ import HeaderComponent from './header';
 	selector: 'coso',
 	templateUrl: 'app/templates/coso.html',
 	directives: [ ROUTER_DIRECTIVES, HeaderComponent ],
-	providers: [AngebotService],
+	providers: [AngebotPartnerService, TeamService, UnternehmenService],
 	precompile: []
 	})
 export default class CosoComponent implements OnInit {
-	angebote: Angebot[] = [];
+	angebote: Item[] = [];
+	paretner: Item[] = [];
+	team: Mitarbeiter[] = [];
+	unternehmen: Unternehmen;
 
-	constructor(private angebotService: AngebotService) {
-		this.angebote = this.angebotService.getAngebote();
-        
+	constructor(
+		private angPartService: AngebotPartnerService,
+		private teamService: TeamService,
+		private untService: UnternehmenService
+		) {
+		this.angebote = angPartService.getAngebote();
+		this.partner = angPartService.getPartner();
+		this.team = teamService.getTeam();
+		this.unternehmen = untService.getUnternehmen();
     }
 
     ngOnInit() {
     	this.loadMap();
     }
 
-    changeView(ele: Angebot)  {
-    	ele.active = !ele.active;
-    	ele.changeOperator();
-    	$("#" + ele.id ).toggleClass("hide");
+    changeView(element:any)  {
+    	element.active = !element.active;
+    	element.changeOperator();
+    	$("#" + element.id ).toggleClass("hide");
     }
 
-
-    consoleLog() {
-    	console.log("hallo");
-    }
-
-    loadMap() {
-    	console.log("map");
-    	
+    loadMap() {    	
 	    var myLatLng = {lat: 47.1316061, lng: 7.2481453};
 
 	    var mapProp = {
@@ -47,7 +51,7 @@ export default class CosoComponent implements OnInit {
 	        scrollwheel: false,
 	    };
 	    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-	    var image = 'app/data/images/coso_google_marker_klein.png';
+	    var image = 'app/data/images/logos/coso_google_marker_klein.png';
 	    var marker = new google.maps.Marker({
 	      map: map,
 	      position: myLatLng,
