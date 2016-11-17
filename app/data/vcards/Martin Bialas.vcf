@@ -1,0 +1,15 @@
+begin:vcard
+version:3.0
+prodid:Microsoft-MacOutlook/f.16.0.160506
+UID:FEF0F91D-983A-46C6-800B-C05767D09677
+fn;charset=utf-8:Martin Bialas
+n;charset=utf-8:;Martin Bialas;;;
+org;charset=utf-8:Corporate Software AG;
+url;charset=utf-8;type=home:https://twitter.com/CorpSoftCH/
+url;charset=utf-8;type=work:www.corporatesoftware.ch
+adr;charset=utf-8;type=work;type=pref:;;Schöneggstrasse 5;Biel;;2503;Switzerland
+label;charset=utf-8;type=work;type=pref:Schöneggstrasse 5\n2503 Biel\nSwitzerland
+tel;charset=utf-8;type=work:+41 32 322 67 05
+tel;charset=utf-8;type=cell:+41 79 247 65 84
+email;charset=utf-8;type=internet;type=pref;type=work:martin.bialas@corporatesoftware.ch
+end:vcard

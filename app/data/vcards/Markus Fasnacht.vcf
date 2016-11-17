@@ -1,0 +1,15 @@
+begin:vcard
+version:3.0
+prodid:Microsoft-MacOutlook/f.16.0.160506
+UID:8A75D529-83C6-4ECD-892C-E872193C2E95
+fn;charset=utf-8:Markus Fasnacht
+n;charset=utf-8:Fasnacht;Markus;;;
+org;charset=utf-8:Corporatesoftware.ch;
+url;charset=utf-8;type=home:https://twitter.com/CorpSoftCH/
+url;charset=utf-8;type=work:www.corporatesoftware.ch
+adr;charset=utf-8;type=work;type=pref:;;Schöneggstrasse 5;Biel;;2503;Switzerland
+label;charset=utf-8;type=work;type=pref:Schöneggstrasse 5\n2503 Biel\nSwitzerland
+tel;charset=utf-8;type=work:+41 32 322 67 05
+tel;charset=utf-8;type=cell:+41 78 531 28 08
+email;charset=utf-8;type=internet;type=pref;type=work:markus.fasnacht@corporatesoftware.ch
+end:vcard

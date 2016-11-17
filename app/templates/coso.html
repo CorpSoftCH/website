@@ -1,0 +1,58 @@
+<coso-header></coso-header>
+<section id="content">
+	<section id="hello" class="container">
+		<img id="hello-logo" src="app/data/images/logo_color.png">
+		<p>SharePoint - Project Server - Service Management - Project Management</p>
+		<img id="hello-ms" src="app/data/images/MS-logo_weiss_Feb16_def.png">
+		<img id="hello-profile" src="app/data/images/profile.png">
+	</section>
+
+	<section id="angebot" class="container">
+		<h1>Angebot</h1>
+		<hr />
+		<div class="angebot-container">
+			<div class="item" *ngFor="let a of angebote">
+				<div class="field" (click)="changeView(a)">
+					<i class="fa fa-search-{{a.operator}} fa fa-3x"></i>
+					<img src="{{a.imgPath}}">
+				</div>
+				<h2>{{a.title}}</h2>
+				<p id="{{a.id}}" class="hide" *ngFor="let p of a.description">{{p}}</p>
+			</div>
+		</div>		
+		
+	</section>
+
+	<section id="produkte" class="container">
+		<h1>Produkte</h1>
+	</section>
+	<section id="referenzen" class="container">
+		<h1>Referenzen</h1>
+	</section>
+	<section id="unternehmnung" class="container">
+		<h1>Unternehmung</h1>
+	</section>
+	<section id="team" class="container">
+		<h1>Team</h1>
+	</section>
+	<section id="partner" class="container">
+		<h1>Partner</h1>
+	</section>
+	<section id="kontakt" class="container">
+		<h1>Kontakt</h1>
+	</section>
+
+	<section id="standort" class="container">
+		<h1>Standort</h1>
+		<div style="width: 100%;text-align: center;">
+
+        <div id="googleMap" style="width:calc(100%-40px);height:450px;"></div>
+
+    </div>
+
+	</section>
+</section>
+
+
+
+

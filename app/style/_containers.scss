@@ -1,0 +1,53 @@
+//Hello
+#hello {
+	background-color: $cosoBlue02;
+}
+
+#hello p {
+	margin: 1em;
+	font-size: 2em;
+	color: white;
+}
+
+#hello-logo {
+	margin: 2em;
+}
+
+#hello-ms {
+	width: 30%;
+}
+
+#hello-profile {
+	width: 100%
+}
+
+//Angebot
+#angebot .angebot-container {
+	margin: 1em;
+	width: 100%;
+	float: left;
+}
+
+#angebot .item  {
+	width: calc(100% / 3);
+	float: left;
+}
+#angebot .fa {
+	position: absolute;
+	margin: 75px;
+}
+
+.field:hover img {
+	cursor: pointer;
+	opacity: 0.5;
+	//filter: 
+}
+
+#angebot .field  i {
+	visibility: hidden;
+}
+
+#angebot .field:hover  i {
+	opacity: 1;
+	visibility: visible;
+}
