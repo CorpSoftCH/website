@@ -67,7 +67,7 @@ var team = [
       "Martin Bialas unterstützt uns als Mitarbeiter auf Projektbasis. Er hat über 25 Jahre Praxiserfahrung im Bereich Projektmanagement. Mit Leidenschaft und Herzblut beschäftigt er sich mit der Integration von Projektmanagement-Methodik und Softwareunterstützung in Unternehmen unterschiedlicher Grösse. Er begleitet Projektbeteiligte sowohl auf der strukturellen als auch auf der kulturellen, verhaltensorientierten Ebene. Er ist NLP Master und Mediator. Martin Bialas ist IPMA-zertifizierter «Programme und Portfolio Management Consultant (PPMC)», Fachgruppenleiter der Fachgruppe «Software für PM-Aufgaben» sowie Assessor für den Deutschen Project Excellence Award 2016 der GPM Deutsche Gesellschaft für Projektmanagement e.V. und Assessor für IPMA Delta. "
     ],
     "email" : "martin.bialas@corporatesoftware.ch",
-    "imgPath": "app/data/images/team/martin.png",
+    "imgPath": "app/data/images/team/Martin.png",
     "vCardPath": "app/data/vcards//Martin%20Bialas.vcf"
 },{
     "vorname": "Matthias",

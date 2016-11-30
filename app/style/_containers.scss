@@ -40,10 +40,11 @@
 }
 
 .field  i {
+	z-index: 6;
 	position: absolute;
-	width: 2em;
-	top:30%;
-    left:20%;
+	width: 100%;
+	bottom: 50%;
+    left:0;
 	visibility: hidden;
 }
 
@@ -65,10 +66,11 @@
 	margin: auto;
 }*/
 
-#angebot .text {
+.text {
 	position: absolute;
 	left: 0;
-	//float: left;
+	z-index: 5;
+	background-color: white;
 	width: 100%;
 }
 #angebot .arrow {
@@ -76,7 +78,21 @@
 }
 //produkte
 #produkte .item {
-	width: 33.33%;
+	padding: 1em;
+	border: 0.2em solid black;
+	margin: 1em;
+	//width: 33.33%;
+}
+
+#produkte .item span {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#produkte .item hr {
+	border: 0;
+    height: 0.13em;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 

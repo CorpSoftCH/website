@@ -5,25 +5,22 @@
   z-index: 0; }
 
 html {
-  background-color: white;
   margin: auto;
   max-width: 1500px; }
-
-body {
-  background-color: #2B425C; }
 
 header {
   max-width: 1500px; }
 
 h1,
 h2 {
+  z-index: 2;
   font-weight: 700; }
 
 p {
   margin: 0.5em; }
 
 #content {
-  margin-top: 8.8em; }
+  margin-top: 8.7em; }
 
 .container {
   width: 100%;
@@ -32,6 +29,9 @@ p {
 
 .container:nth-child(2n+1) {
   background-color: rgba(43, 66, 92, 0.4); }
+
+.container:nth-child(2n) {
+  background-color: white; }
 
 .container h1 {
   text-transform: uppercase;
@@ -241,7 +241,7 @@ header {
   background-color: #2B425C;
   position: fixed;
   width: 100%;
-  z-index: 1; }
+  z-index: 10; }
 
 header h1,
 header h2 {
@@ -314,10 +314,11 @@ header button {
   opacity: 0.5; }
 
 .field i {
+  z-index: 6;
   position: absolute;
-  width: 2em;
-  top: 30%;
-  left: 20%;
+  width: 100%;
+  bottom: 50%;
+  left: 0;
   visibility: hidden; }
 
 .field:hover i {
@@ -332,16 +333,29 @@ header button {
 	position: absolute;
 	margin: auto;
 }*/
-#angebot .text {
+.text {
   position: absolute;
   left: 0;
+  z-index: 5;
+  background-color: white;
   width: 100%; }
 
 #angebot .arrow {
   width: 50%; }
 
 #produkte .item {
-  width: 33.33%; }
+  padding: 1em;
+  border: 0.2em solid black;
+  margin: 1em; }
+
+#produkte .item span {
+  font-size: 1.2em;
+  font-weight: bold; }
+
+#produkte .item hr {
+  border: 0;
+  height: 0.13em;
+  background-image: linear-gradient(to right, transparent, black, transparent); }
 
 #unternehmen .item {
   padding: 1.5em; }
@@ -466,7 +480,7 @@ header button {
   padding: 1em;
   padding-left: 1.5em;
   text-align: justify;
-  right: 0;
+  left: 30%;
   position: absolute;
   width: calc(70% - 2em); }
 
@@ -480,7 +494,7 @@ header button {
 .mobile .arrow {
   position: absolute;
   top: 60px;
-  left: -1.5em;
+  left: -3.5em;
   -ms-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   transform: rotate(270deg);

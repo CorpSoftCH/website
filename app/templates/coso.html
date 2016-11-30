@@ -36,7 +36,9 @@
 		</div>
 		<div class="item" *ngFor="let prod of produkte[0].produkte" id="{{prod.id}}">
 			<h2>{{prod.title}}</h2>
+			<hr />
 			<p><span>{{prod.price}}</span> / {{prod.priceFor}}</p>
+			<hr />
 			<p *ngFor="let para of prod.description">{{para}}</p>
 		</div>
 	</section>

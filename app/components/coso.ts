@@ -51,25 +51,38 @@ export default class CosoComponent implements OnInit {
 		this.showpartner = this.toppartner;
 		this.partner = angPartService.getPartner();
 		this.produkte = prodService.getPWI();
-
 		
-
+		//window.dispatchEvent(new Event('resize'));
+		//window.resizeTo(window.innerWidth+1, window.innerHeight+1);
 		window.onresize = () => {
-			console.log("new Size: " , window.innerWidth);
-			this.setHeaderClasses(window.innerWidth);
-		  	this.setSizeSettings(window.innerWidth);
+			this.myResize(); 
     	};
+
+		//window.onresize = this.myResize;
+
+		/*$(document).ready() {
+			console.log("log");
+			$(window).resize();
+		}*/
 		
-    }
+	}
 
 	
 
     ngOnInit(): void {
     	this.loadMap();
 		this.activateFirst();
-		this.setSizeSettings(window.innerWidth);
-		this.setHeaderClasses(window.innerWidth);
+		//$(window).onresize();
+		//window.onresize = this.myResize;
+		this.myResize();
 	}
+
+	myResize() {
+		console.log("my new Size: " , window.innerWidth);
+		this.setHeaderClasses(window.innerWidth);
+		this.setSizeSettings(window.innerWidth);
+	}
+
 
     changeView(element:any): void  {
     	element.active = !element.active;
@@ -106,7 +119,7 @@ export default class CosoComponent implements OnInit {
 		if(this.TABLET < size) {
 			$("#angebot .item").width("33.33%");
 			$("#angebot").removeClass("mobile");
-			$("#produkte .item").width("33.33%");
+			$("#produkte .item").width("calc(33.33% - 4.4em)");
 			$("#unternehmen .item").width("calc(33.33% - 3em)");
 			$("#team .item").width("calc(25% - 3em)");
 			$("#partner .item").width("calc(25% - 3em)");
@@ -114,7 +127,7 @@ export default class CosoComponent implements OnInit {
 		} else if(this.MOBILE < size && size <= this.TABLET) {
 			$("#angebot .item").width("50%");
 			$("#angebot").removeClass("mobile");
-			$("#produkte .item").width("100%");
+			$("#produkte .item").width("calc(100% - 4.4em)");
 			$("#unternehmen .item").width("calc(100% - 3em)");
 			$("#team .item").width("calc(50% - 3em)");
 			$("#partner .item").width("calc(50% - 3em)");
@@ -124,7 +137,7 @@ export default class CosoComponent implements OnInit {
 			$("#angebot .item").width("100%");
 			$("#angebot").addClass("mobile");
 
-			$("#produkte .item").width("100%");
+			$("#produkte .item").width("calc(100% - 4.4em)");
 			$("#unternehmen .item").width("calc(100% - 3em)");
 			$("#team .item").width("calc(100% - 3em)");
 			$("#partner .item").width("calc(100% - 3em)");

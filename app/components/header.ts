@@ -1,15 +1,12 @@
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
-//import {WINDOW, WINDOW_PROVIDERS} from './window.service';
-
 @Component({
   selector: 'coso-header',
   templateUrl: 'app/templates/header.html',
   directives: [ ROUTER_DIRECTIVES],
 })
-export default class HeaderComponent implements OnInit {
-	//private WIDTH_BY_NAVCHANGE: number = 1200;
+export default class HeaderComponent {
 
 	win: Window;
     private offSet: number = 60;
@@ -18,11 +15,6 @@ export default class HeaderComponent implements OnInit {
 		this.startHeaderListener();
 		this.win = window;
 	}
-
-	ngOnInit(): void {
-    	//this.setClasses(window.innerWidth);
-    }
-
 
 	startHeaderListener(): void {
 		window.addEventListener('scroll', function(e){
@@ -42,17 +34,6 @@ export default class HeaderComponent implements OnInit {
 	toggleNav(): void {
 		$("#navigation").toggleClass("hide");
 	}
-
-	/*
-	setClasses(size: number): void {
-		if(size < this.WIDTH_BY_NAVCHANGE) {
-			$("#burger").removeClass("hide");
-			$("#navigation").addClass("small hide");
-		} else {
-			$("#burger").addClass("hide");
-			$("#navigation").removeClass("small hide");
-		}
-	}*/
 
 	scrollTo(yPoint: number, duration: number) {
 		setTimeout(() => {
