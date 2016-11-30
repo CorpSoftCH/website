@@ -14,10 +14,13 @@
 			<div class="item" *ngFor="let a of angebote">
 				<div class="field" (click)="changeView(a)">
 					<i class="fa fa-search-{{a.operator}} fa fa-3x"></i>
-					<img src="{{a.imgPath}}">
+					<img class="img" src="{{a.imgPath}}">
 				</div>
-				<h2>{{a.title}}</h2>
-				<div id="{{a.id}}" class="hide">
+				
+				<h2 class="title">{{a.title}}</h2>
+				<div id="{{a.id}}" class="hide text">
+					<img class="arrow" src="app/data/images/arrowactive.png">
+					<h2 class="">{{a.title}}</h2>
 					<p *ngFor="let p of a.description">{{p}}</p>
 				</div>
 			</div>
@@ -27,6 +30,15 @@
 
 	<section id="produkte" class="container">
 		<h1>Produkte</h1>
+		<hr />
+		<div>
+			<p *ngFor="let text of produkte[0].text">{{text}}</p>
+		</div>
+		<div class="item" *ngFor="let prod of produkte[0].produkte" id="{{prod.id}}">
+			<h2>{{prod.title}}</h2>
+			<p><span>{{prod.price}}</span> / {{prod.priceFor}}</p>
+			<p *ngFor="let para of prod.description">{{para}}</p>
+		</div>
 	</section>
 
 	<section id="referenzen" class="container">
@@ -34,7 +46,6 @@
 		<hr />
 		<div id="div-carousel" class="carousel slide" data-ride="carousel">
 	  <ol class="carousel-indicators">
-		<li></li>
 		<li *ngFor="let i of referenzen"></li>
 	  </ol>
 	  <div class="carousel-inner">
@@ -44,7 +55,7 @@
 			<p>{{r.lecturer}}</p>
 			<p>{{r.position}}</p>
 			<a href="{{r.link}}">
-	      		<img src="{{r.imgPath}}">
+	      		<img class="carousel-img" src="{{r.imgPath}}">
 			</a>
 	    </div>
 	  </div>
@@ -94,7 +105,7 @@
 		<h1>Partner</h1>
 		<hr />
 		<div class="partner-container">
-			<div class="item" *ngFor="let p of partner">
+			<div class="item" *ngFor="let p of showpartner">
 				<div class="field" (click)="changeView(p)">
 					<i class="fa fa-search-{{p.operator}} fa fa-3x"></i>
 					<img src="{{p.imgPath}}">
@@ -104,6 +115,8 @@
 					<p *ngFor="let para of p.description">{{para}}</p>
 				</div>
 			</div>
+			<button id="mPart" class="pBtn" (click)="morePartner()">Mehr Partner</button>
+			<button id="lPart" class="pBtn hide" (click)="lessPartner()">Weniger Partner</button>
 		</div>
 	</section>
 	<section id="kontakt" class="container">

@@ -5,11 +5,25 @@ $background01: rgba(43, 66, 92, 0.4);
 
 $font: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
+$MAX_WIDTH: 1500px;
 
 * {
 	margin: 0;
 	padding: 0;
 	font-family: $font;
+}
+
+html {
+	background-color: white;
+	margin: auto;
+	max-width: $MAX_WIDTH;
+}
+body {
+	background-color: $cosoBlue01;
+}
+
+header {
+	max-width: $MAX_WIDTH;
 }
 
 h1,
@@ -28,7 +42,6 @@ p {
 	width: 100%;
 	float: left;
 	text-align: center;
-	min-height: 40em;
 }
 .container:nth-child(2n+1) {
 	background-color: $background01;
@@ -67,3 +80,5 @@ hr {
 @import 'carousel';
 @import 'header';
 @import 'containers';
+
+@import 'mobile';

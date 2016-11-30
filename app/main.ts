@@ -11,7 +11,7 @@ import CosoComponent from './components/coso';
 
 bootstrap(CosoComponent, [
 	HTTP_PROVIDERS,
-	//Ng2PageScrollModule,
+//	Ng2PageScrollModule,
 	//provideRouter(theRoutes),
 	{provide: LocationStrategy, useClass: HashLocationStrategy}
 ]);

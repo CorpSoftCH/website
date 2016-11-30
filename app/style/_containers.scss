@@ -25,6 +25,13 @@
 
 .item  {
 	float: left;
+	//position: relative;
+}
+
+.field {
+	position: relative;
+	width:100%;
+    height:100%;
 }
 
 .field:hover img {
@@ -33,6 +40,10 @@
 }
 
 .field  i {
+	position: absolute;
+	width: 2em;
+	top:30%;
+    left:20%;
 	visibility: hidden;
 }
 
@@ -41,25 +52,38 @@
 	visibility: visible;
 }
 
-//Angebot
+//Angebot 
 #angebot .angebot-container {
-	margin: 1em;
+	//margin: 1em;
 	width: 100%;
 	float: left;
+	//position: relative;
 }
 
-#angebot .fa {
+/*#angebot .fa {
 	position: absolute;
-	margin: 75px;
+	margin: auto;
+}*/
+
+#angebot .text {
+	position: absolute;
+	left: 0;
+	//float: left;
+	width: 100%;
+}
+#angebot .arrow {
+	width: 50%;
+}
+//produkte
+#produkte .item {
+	width: 33.33%;
 }
 
-#angebot .item {
-	width: calc(100% / 3);
-}
+
 //unternehmen
 #unternehmen .item {
 	padding: 1.5em;
-	width: calc(100% / 3 - 3em);
+	//width: calc(100% / 3 - 3em);
 }
 #unternehmen .item p {
 	text-align: justify;
@@ -77,7 +101,7 @@
 //team
 #team .item {
 	padding: 1.5em;
-	width: calc(100% / 5 - 3em);
+	//width: calc(100% / 5 - 3em);
 }
 #team .fa {
 	position: absolute;
@@ -87,7 +111,7 @@
 //partner
 #partner .item {
 	margin: 1em;
-	width: calc(100% / 4 - 3em);
+	//width: calc(100% / 4 - 3em);
 }
 
 #partner .item img {
@@ -98,6 +122,15 @@
 #partner .fa {
 	position: absolute;
 	margin: 110px;
+}
+#partner .pBtn {
+	font-size: 1.2em;
+	padding: 2em;
+    border: none;
+    background-color: transparent;
+    color: $cosoBlue01;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 //Kontakt

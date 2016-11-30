@@ -35,5 +35,13 @@ export class AngebotPartnerService {
     return partner.map(p => new Item(p.id, p.title, p.description, p.imgPath));
   }
 
+  getTopPartner(): Array<Item> {
+    var p = this.getPartner();
+    var tp: Item[] = [];
+    for (var i:number = 0; i < 4; i++) {
+      tp.push(p[i]);
+    }
+    return tp; 
+  }
 }
 

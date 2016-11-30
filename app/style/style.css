@@ -3,6 +3,17 @@
   padding: 0;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+html {
+  background-color: white;
+  margin: auto;
+  max-width: 1500px; }
+
+body {
+  background-color: #2B425C; }
+
+header {
+  max-width: 1500px; }
+
 h1,
 h2 {
   font-weight: 700; }
@@ -16,8 +27,7 @@ p {
 .container {
   width: 100%;
   float: left;
-  text-align: center;
-  min-height: 40em; }
+  text-align: center; }
 
 .container:nth-child(2n+1) {
   background-color: rgba(43, 66, 92, 0.4); }
@@ -52,7 +62,8 @@ hr {
 /*Bootstrap - Part*/
 .carousel {
   text-align: center;
-  position: relative; }
+  position: relative;
+  margin-bottom: 5em; }
 
 .carousel-inner {
   position: relative;
@@ -74,7 +85,8 @@ hr {
   display: block; }
 
 .carousel-inner > .active {
-  left: calc((100% - 550px)/2); }
+  left: 0;
+  width: 100%; }
 
 .carousel-inner > .next,
 .carousel-inner > .prev {
@@ -90,7 +102,7 @@ hr {
 
 .carousel-inner > .next.left,
 .carousel-inner > .prev.right {
-  left: calc((100% - 550px)/2); }
+  left: 0; }
 
 .carousel-inner > .active.left {
   left: -100%; }
@@ -163,7 +175,7 @@ hr {
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: -3em;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -178,11 +190,10 @@ hr {
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid #fff;
+  border: 1px solid #000;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #fff \9;
-  background-color: rgba(255, 255, 255, 0); }
+  background-color: rgba(0, 131, 195, 0.5); }
 
 .carousel-indicators .active {
   margin: 0;
@@ -219,10 +230,11 @@ hr {
   .carousel-caption {
     left: 20%;
     right: 20%;
-    padding-bottom: 30px; }
+    padding-bottom: 30px; } }
+/*my Part*/
+.carousel-img {
+  width: 25%; }
 
-  .carousel-indicators {
-    bottom: 20px; } }
 header {
   top: 0;
   background-color: #2B425C;
@@ -255,11 +267,20 @@ header.smallerHead h1 {
   display: none; }
 
 #headerLogo {
+  float: left;
   border-radius: 50%;
   background-color: white;
   margin: 0.2em;
   padding: 0.5em;
   font-size: 2em; }
+
+header button {
+  background-color: #2B425C;
+  color: white;
+  float: right;
+  border: none;
+  padding: 1.5em;
+  top: 0; }
 
 #hello {
   background-color: rgba(0, 131, 195, 0.5); }
@@ -281,11 +302,20 @@ header.smallerHead h1 {
 .item {
   float: left; }
 
+.field {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
 .field:hover img {
   cursor: pointer;
   opacity: 0.5; }
 
 .field i {
+  position: absolute;
+  width: 2em;
+  top: 30%;
+  left: 20%;
   visibility: hidden; }
 
 .field:hover i {
@@ -293,20 +323,26 @@ header.smallerHead h1 {
   visibility: visible; }
 
 #angebot .angebot-container {
-  margin: 1em;
   width: 100%;
   float: left; }
 
-#angebot .fa {
+/*#angebot .fa {
+	position: absolute;
+	margin: auto;
+}*/
+#angebot .text {
   position: absolute;
-  margin: 75px; }
+  left: 0;
+  width: 100%; }
 
-#angebot .item {
-  width: calc(100% / 3); }
+#angebot .arrow {
+  width: 50%; }
+
+#produkte .item {
+  width: 33.33%; }
 
 #unternehmen .item {
-  padding: 1.5em;
-  width: calc(100% / 3 - 3em); }
+  padding: 1.5em; }
 
 #unternehmen .item p {
   text-align: justify; }
@@ -319,16 +355,14 @@ header.smallerHead h1 {
   width: 50%; }
 
 #team .item {
-  padding: 1.5em;
-  width: calc(100% / 5 - 3em); }
+  padding: 1.5em; }
 
 #team .fa {
   position: absolute;
   margin: 140px 75px 0 75px; }
 
 #partner .item {
-  margin: 1em;
-  width: calc(100% / 4 - 3em); }
+  margin: 1em; }
 
 #partner .item img {
   padding: 0.5em;
@@ -338,6 +372,15 @@ header.smallerHead h1 {
 #partner .fa {
   position: absolute;
   margin: 110px; }
+
+#partner .pBtn {
+  font-size: 1.2em;
+  padding: 2em;
+  border: none;
+  background-color: transparent;
+  color: #2B425C;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
 
 #kontakt p {
   text-align: justify;
@@ -396,5 +439,49 @@ header.smallerHead h1 {
   color: #2B425C;
   letter-spacing: 3px;
   text-transform: uppercase; }
+
+.small h2 {
+  color: #2B425C; }
+
+.small ul {
+  width: 100%;
+  float: none;
+  text-align: center; }
+
+.small li {
+  background-color: white;
+  float: none;
+  width: 100%; }
+
+.mobile .item {
+  float: left;
+  width: 100%; }
+
+.mobile .item .title {
+  display: none; }
+
+.mobile .item .text {
+  padding: 1em;
+  padding-left: 1.5em;
+  text-align: justify;
+  right: 0;
+  position: absolute;
+  width: calc(70% - 2em); }
+
+.mobile .item .field {
+  float: left;
+  width: 30%; }
+
+.mobile .item .img {
+  width: 100%; }
+
+.mobile .arrow {
+  position: absolute;
+  top: 60px;
+  left: -1.5em;
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 6em; }
 
 /*# sourceMappingURL=style.css.map */

@@ -37,9 +37,19 @@ header.smallerHead h1 {
 }
 
 #headerLogo {
+	float: left;
 	border-radius: 50%;
 	background-color: white;
 	margin: 0.2em;
 	padding: 0.5em;
 	font-size: 2em;
+}
+
+header button {
+	background-color: $cosoBlue01;
+	color: white;
+	float: right;
+	border: none;
+	padding: 1.5em;
+	top: 0;
 }

@@ -1,0 +1,54 @@
+.small h2 {
+    color: $cosoBlue01;
+}
+
+.small ul {
+    width: 100%;
+    float: none;
+    text-align: center;
+   
+}
+
+.small li {
+    background-color: white;
+    float: none;
+    width: 100%;
+}
+
+
+
+.mobile .item {
+    float: left;
+   
+    width: 100%;
+}
+
+.mobile .item .title {
+    display: none;
+}
+.mobile .item .text {
+    padding: 1em;
+    padding-left: 1.5em;
+    text-align: justify;
+    right: 0;
+    position: absolute;
+    width: calc(70% - 2em);
+}
+.mobile .item .field {
+    float: left;
+    width: 30%;
+}
+
+.mobile .item .img {
+    width: 100%;
+}
+
+.mobile .arrow {
+    position: absolute;
+    top: 60px;
+    left: -1.5em;
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    width: 6em;
+}
