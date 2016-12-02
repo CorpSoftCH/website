@@ -11,7 +11,7 @@ var angebot = [
   },
   {
     "id": "angEP",
-    "title": "Enterprise Projektmanagement",
+    "title": "Projektmanagement",
     "description": [
       "Wir besitzen als einziges nationales Unternehmen mit Hauptsitz in der Schweiz die Microsoft® Gold Zertifizierung in Project- und Portfoliomanagement. Dies zeichnet uns als hochqualifiziertes Unternehmen im Bereich Microsoft® Project Server, Project Online und Project Pro aus.",
       "Mittels Microsoft® Project Server und Project Online werden Ihnen alle Daten zu Ihrem Projektportfolio zur Verfügung gestellt. Damit haben Sie jederzeit den Überblick über Ihre laufenden Projekte. Zudem können Sie Ihre Aufgaben mit Hilfe der Terminplanungsfunktion zentral planen und verwalten und die Teammitglieder problemlos koordinieren. Damit ist ein erfolgreiches Projektmanagement und die damit verbundene Organisation, Planung, Steuerung und Überwachung der projektspezifischen Ressourcen garantiert.",
@@ -38,7 +38,7 @@ var angebot = [
   },
   {
     "id": "angSDfSP",
-    "title": "Software Developement for SharePoint",
+    "title": "SharePoint",
     "description": [
     "Wir entwickeln spezifische Lösungen im Bereich SharePoint, Project Server und Office 365 für unsere Kunden. Wir unterstützen Sie dabei, Ihre Bedürfnisse zu analysieren und stellen Ihnen dabei massgeschneiderte Software-Lösungen für jegliche Art von Anforderungen oder Geschäftsszenarien zur Verfügung. Wenn der Standard nicht mehr spezifisch genug ist, springen wir ein und erweitern Ihre Software bis diese exakt auf Ihre Bedürfnisse abgestimmt ist. Mit unseren Know-How decken wir die ganze Bedürfnispalette ab."
     ],

@@ -12,14 +12,16 @@
 		<hr />
 		<div class="angebot-container">
 			<div class="item" *ngFor="let a of angebote">
-				<div class="field" (click)="changeView(a)">
+				<div class="field" (click)="deactivateOthers(a);changeView(a);">
 					<i class="fa fa-search-{{a.operator}} fa fa-3x"></i>
 					<img class="img" src="{{a.imgPath}}">
+					<img id="arrow-{{a.id}}" class="arrow hide" src="app/data/images/arrowactive.png">
 				</div>
 				
+				
 				<h2 class="title">{{a.title}}</h2>
-				<div id="{{a.id}}" class="hide text">
-					<img class="arrow" src="app/data/images/arrowactive.png">
+				<div id="text-{{a.id}}" class="hide text">
+					
 					<h2 class="">{{a.title}}</h2>
 					<p *ngFor="let p of a.description">{{p}}</p>
 				</div>
@@ -90,12 +92,12 @@
 		<hr />
 		<div class="team-container">
 			<div class="item" *ngFor="let m of team">
-				<div class="field" (click)="changeView(m)">
+				<div class="field" (click)="deactivateOthers(m);changeView(m)">
 					<i class="fa fa-search-{{m.operator}} fa fa-4x"></i>
 					<img src="{{m.imgPath}}">
 				</div>
 				<h2>{{m.vorname}}</h2>
-				<div id="{{m.id}}" class="hide">
+				<div id="text-{{m.id}}" class="hide">
 					<p *ngFor="let p of m.description">{{p}}</p>
 					<a href="mailto:{{m.email}}">Email an {{m.vorname}}</a>
 					<a href="{{m.vCardPath}}">vCard</a>
@@ -108,11 +110,11 @@
 		<hr />
 		<div class="partner-container">
 			<div class="item" *ngFor="let p of showpartner">
-				<div class="field" (click)="changeView(p)">
+				<div class="field" (click)="deactivateOthers(p);changeView(p)">
 					<i class="fa fa-search-{{p.operator}} fa fa-3x"></i>
 					<img src="{{p.imgPath}}">
 				</div>
-				<div id="{{p.id}}" class="hide">
+				<div id="text-{{p.id}}" class="hide">
 					<h2>{{p.title}}</h2>
 					<p *ngFor="let para of p.description">{{para}}</p>
 				</div>

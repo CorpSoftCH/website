@@ -17,8 +17,8 @@ import HeaderComponent from './header';
 	precompile: []
 	})
 export default class CosoComponent implements OnInit {
-	WIDTH_BY_NAVCHANGE: number = 1200;
 	MAX_WIDTH: number = 1500;
+	SMALL_DESKTOP: number = 1200;
 	DESKTOP: number = 960;
 	TABLET: number =  768;
 	MOBILE_LARGE: number = 640;
@@ -52,19 +52,9 @@ export default class CosoComponent implements OnInit {
 		this.partner = angPartService.getPartner();
 		this.produkte = prodService.getPWI();
 		
-		//window.dispatchEvent(new Event('resize'));
-		//window.resizeTo(window.innerWidth+1, window.innerHeight+1);
 		window.onresize = () => {
 			this.myResize(); 
-    	};
-
-		//window.onresize = this.myResize;
-
-		/*$(document).ready() {
-			console.log("log");
-			$(window).resize();
-		}*/
-		
+    	};	
 	}
 
 	
@@ -72,23 +62,38 @@ export default class CosoComponent implements OnInit {
     ngOnInit(): void {
     	this.loadMap();
 		this.activateFirst();
-		//$(window).onresize();
-		//window.onresize = this.myResize;
 		this.myResize();
 	}
 
 	myResize() {
-		console.log("my new Size: " , window.innerWidth);
 		this.setHeaderClasses(window.innerWidth);
 		this.setSizeSettings(window.innerWidth);
+	}
+
+	deactivateOthers(ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
+		for(let value of this.angebote) {
+			if(value.active && value != ignoreElement) {
+				this.changeView(value);
+			}
+		}
+		for(let value of this.showpartner) {
+			if(value.active && value != ignoreElement) {
+				this.changeView(value);
+			}
+		}
+		for(let value of this.team) {
+			if(value.active && value != ignoreElement) {
+				this.changeView(value);
+			}
+		}
 	}
 
 
     changeView(element:any): void  {
     	element.active = !element.active;
     	element.changeOperator();
-    	$("#" + element.id ).toggleClass("hide");
-
+    	$("#text-" + element.id ).toggleClass("hide");
+		$("#arrow-" + element.id ).toggleClass("hide");
     }
 
 	activateFirst(): void  {
@@ -115,45 +120,44 @@ export default class CosoComponent implements OnInit {
 	};
 
 	setSizeSettings(size: number): void  {
-		console.log("done");
+		if(this.TABLET <= size && size <= this.SMALL_DESKTOP) {
+			$("body").addClass("smallDesk");
+		} else {
+			$("body").removeClass("smallDesk");
+		}
+		
 		if(this.TABLET < size) {
-			$("#angebot .item").width("33.33%");
-			$("#angebot").removeClass("mobile");
-			$("#produkte .item").width("calc(33.33% - 4.4em)");
-			$("#unternehmen .item").width("calc(33.33% - 3em)");
-			$("#team .item").width("calc(25% - 3em)");
-			$("#partner .item").width("calc(25% - 3em)");
-			$("#kontakt .row").width("50%");
-		} else if(this.MOBILE < size && size <= this.TABLET) {
-			$("#angebot .item").width("50%");
-			$("#angebot").removeClass("mobile");
-			$("#produkte .item").width("calc(100% - 4.4em)");
-			$("#unternehmen .item").width("calc(100% - 3em)");
-			$("#team .item").width("calc(50% - 3em)");
-			$("#partner .item").width("calc(50% - 3em)");
-			$("#kontakt .row").width("100%");
-		} else if (this.MOBILE > size) {
-			$(".title").addClass("hide");
-			$("#angebot .item").width("100%");
-			$("#angebot").addClass("mobile");
-
-			$("#produkte .item").width("calc(100% - 4.4em)");
-			$("#unternehmen .item").width("calc(100% - 3em)");
-			$("#team .item").width("calc(100% - 3em)");
-			$("#partner .item").width("calc(100% - 3em)");
-			$("#kontakt .row").width("100%");
+			$("body").removeClass("tablet");
+			$("body").removeClass("mobile-large");
 			
+			$(".title").removeClass("hide");
+			$("body").addClass("desktop");
+			
+		} else if(this.MOBILE_LARGE < size && size <= this.TABLET) {
+			$("body").removeClass("desktop");
+			$("body").removeClass("mobile-large");
+			
+			$(".title").addClass("hide");
+			$("body").addClass("tablet");
+			
+
+		} else if (size <= this.MOBILE_LARGE) {
+			$("body").removeClass("desktop");
+			$("body").removeClass("tablet");
+			
+			$(".title").addClass("hide");
+			$("body").addClass("mobile-large");
 		}
 	}
 
 
 	setHeaderClasses(size: number): void {
-		if(size < this.WIDTH_BY_NAVCHANGE) {
+		if(size < this.SMALL_DESKTOP) {
 			$("#burger").removeClass("hide");
-			$("#navigation").addClass("small hide");
+			$("#navigation").addClass("smallHead hide");
 		} else {
 			$("#burger").addClass("hide");
-			$("#navigation").removeClass("small hide");
+			$("#navigation").removeClass("smallHead hide");
 		}
 	}
 
