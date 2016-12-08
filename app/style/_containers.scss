@@ -75,6 +75,20 @@
 	background-color: transparent;
 	background-color: white; //notlösung
 }
+
+#produkte .produkt {
+	background-color: $cosoBlue02;
+	padding: 1em;
+	width: calc(100% - 2em);
+	box-shadow: 10px 10px 15px $cosoBlue01;
+	margin: 1em;
+}
+#produkte h2 {
+	text-transform: uppercase;
+}
+
+
+
 #unternehmen img {
 	width: 30%;
 }
@@ -100,6 +114,10 @@
 .special {
 	margin-right: 1px;
 }*/
+//team
+#team .item {
+	text-align: justify;
+}
 
 //partner
 #partner .item {

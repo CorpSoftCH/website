@@ -55,6 +55,10 @@ hr {
   transition: 0.4s;
   transform: translateX(-100%); }
 
+.highlighted {
+  font-weight: bold;
+  font-style: italic; }
+
 .ueberschrift {
   text-transform: uppercase;
   font-weight: 700;
@@ -64,6 +68,9 @@ hr {
 .row {
   float: left;
   width: 50%; }
+
+.btn {
+  background-color: white; }
 
 /*Bootstrap - Part*/
 .carousel {
@@ -367,6 +374,16 @@ header button {
   background-color: transparent;
   background-color: white; }
 
+#produkte .produkt {
+  background-color: rgba(0, 131, 195, 0.5);
+  padding: 1em;
+  width: calc(100% - 2em);
+  box-shadow: 10px 10px 15px #2B425C;
+  margin: 1em; }
+
+#produkte h2 {
+  text-transform: uppercase; }
+
 #unternehmen img {
   width: 30%; }
 
@@ -392,6 +409,9 @@ header button {
 .special {
 	margin-right: 1px;
 }*/
+#team .item {
+  text-align: justify; }
+
 #partner .item {
   min-height: 10em; }
 

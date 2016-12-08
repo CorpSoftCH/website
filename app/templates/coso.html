@@ -21,8 +21,7 @@
 					<i class="fa fa-search-{{a.operator}} fa fa-3x"></i>
 					<img class="img" src="{{a.imgPath}}">
 					<!--<img id="arrow-{{a.id}}" class="arrow hide" src="app/data/images/arrowactive.png">-->
-				
-					
+			
 				</div>
 				
 				
@@ -44,14 +43,19 @@
 		<h1>Produkte</h1>
 		<hr />
 		<div>
-			<p *ngFor="let text of produkte[0].text">{{text}}</p>
+			<p class="ueberschrift" *ngFor="let text of produkte[0].text">{{text}}</p>
 		</div>
 		<div class="col-md-4 item" *ngFor="let prod of produkte[0].produkte" id="{{prod.id}}">
-			<h2>{{prod.title}}</h2>
-			<hr />
-			<p><span>{{prod.price}}</span> / {{prod.priceFor}}</p>
-			<hr />
-			<p *ngFor="let para of prod.description">{{para}}</p>
+			<div class="produkt">
+				<h2>{{prod.title}}</h2>
+				<hr />
+				<p><span class="highlighted">{{prod.price}}</span> / {{prod.priceFor}}</p>
+				<hr />
+				<p *ngFor="let para of prod.description">{{para}}</p>
+				<hr />
+				<button class="btn">zum Produkt</button>
+				<hr />
+			</div>
 		</div>
 	</section>
 
@@ -65,7 +69,7 @@
 		<div class="carousel-inner">
 
 			<div *ngFor="let r of referenzen" class="item {{r.state}}">
-				<p *ngFor="let para of r.zitat">{{para}}</p>
+				<p class="highlighted" *ngFor="let para of r.zitat">{{para}}</p>
 				<p>{{r.lecturer}}</p>
 				<p>{{r.position}}</p>
 				<a href="{{r.link}}">
@@ -112,6 +116,7 @@
 				<div id="text-{{m.id}}" class="hide">
 					<p *ngFor="let p of m.description">{{p}}</p>
 					<a href="mailto:{{m.email}}">Email an {{m.vorname}}</a>
+					<br />
 					<a href="{{m.vCardPath}}">vCard</a>
 				</div>
 			</div>
