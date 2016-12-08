@@ -81,6 +81,13 @@ hr {
 	//display: none;
 }
 
+.toLeft {
+	transition-timing-function: ease-in;
+	transition: 0.4s;
+	transform: translateX(-100%);
+
+}
+
 .ueberschrift {
 	text-transform: uppercase;
 	font-weight: 700;

@@ -50,6 +50,11 @@ hr {
 .hide {
   visibility: hidden; }
 
+.toLeft {
+  transition-timing-function: ease-in;
+  transition: 0.4s;
+  transform: translateX(-100%); }
+
 .ueberschrift {
   text-transform: uppercase;
   font-weight: 700;
@@ -254,35 +259,41 @@ header h1 {
   font-size: 1.4em;
   padding: 1.5em 0 1.5em 4.5em; }
 
-header a {
+header h2 {
+  color: #2B425C; }
+
+header p {
+  color: #2B425C;
   text-transform: uppercase; }
 
 header ul {
-  float: right;
+  position: absolute;
+  width: 20em;
   list-style: none;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-align: right;
+  border-bottom: solid #2B425C 0.1em;
+  transition-timing-function: ease-out;
+  transition: 0.6s;
+  transform: translateX(0); }
 
 header li {
   cursor: pointer;
-  padding: 1.5em 1em 1.5em 1em;
-  float: left; }
+  padding: 0.5em;
+  background-color: white;
+  width: 100%; }
 
-header li:hover h2 {
-  color: rgba(0, 131, 195, 0.5); }
+header li:hover {
+  background-color: #2B425C; }
+
+header li:hover p {
+  color: white; }
 
 /*
 header.smallerHead h1 {
 	display: none;
 }
-
-#headerLogo {
-	float: left;
-	border-radius: 50%;
-	background-color: white;
-	margin: 0.2em;
-	padding: 0.5em;
-	font-size: 2em;
-}*/
+*/
 header button {
   position: fixed;
   left: 0;
@@ -292,20 +303,6 @@ header button {
   padding: 1.8em;
   top: 0;
   z-index: 100; }
-
-.smallHead h2 {
-  color: #2B425C; }
-
-.smallHead ul {
-  width: 100%;
-  float: none;
-  text-align: center; }
-
-.smallHead li {
-  padding: 0.5em;
-  background-color: white;
-  float: none;
-  width: 100%; }
 
 #hello {
   text-align: center;
@@ -335,7 +332,7 @@ header button {
   position: relative; }
 
 .field:hover {
-  box-shadow: 0px 0px 20px #888888; }
+  box-shadow: 0px 0px 15px lightgray; }
 
 .field img {
   width: 70%;

@@ -138,6 +138,7 @@ export default class CosoComponent implements OnInit {
 
 	setSizeSettings(size: number): void  {
 		//Burgernavigation Ja/Nein
+		/*
 		if(size < this.SMALL_DESKTOP) {
 			$("#burger").removeClass("hide");
 			$("#navigation").addClass("smallHead hide");
@@ -145,7 +146,7 @@ export default class CosoComponent implements OnInit {
 			$("#burger").addClass("hide");
 			$("#navigation").removeClass("smallHead hide");
 		}
-
+		*/
 		if (size < this.TABLET) {
 			this.itemRows = 2;
 		}

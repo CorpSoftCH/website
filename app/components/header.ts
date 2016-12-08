@@ -39,7 +39,7 @@ export default class HeaderComponent implements OnInit {
 
 	toggleNav(): void {
 		
-		$("#navigation").toggleClass("hide");
+		$("#navigation ul").toggleClass("toLeft");
 	}
 
 	scrollTo(yPoint: number, duration: number) {
