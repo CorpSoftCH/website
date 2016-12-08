@@ -6,16 +6,22 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
   templateUrl: 'app/templates/header.html',
   directives: [ ROUTER_DIRECTIVES],
 })
-export default class HeaderComponent {
-
+export default class HeaderComponent implements OnInit {
+	sections: any;
 	win: Window;
     private offSet: number = 60;
 
 	constructor() {
-		this.startHeaderListener();
+		//this.startHeaderListener();
 		this.win = window;
+		
 	}
 
+	ngOnInit() {
+		this.sections = $(".container:not(#hello)");
+	}
+
+	/*
 	startHeaderListener(): void {
 		window.addEventListener('scroll', function(e){
 	        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
@@ -29,9 +35,10 @@ export default class HeaderComponent {
 	            }
 	        }
 	    });
-	}
+	}*/
 
 	toggleNav(): void {
+		
 		$("#navigation").toggleClass("hide");
 	}
 

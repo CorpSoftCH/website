@@ -2,6 +2,71 @@ var angebot = [
   {
     "id": "angCo",
     "title": "Collaboration",
+    "description":  [
+      ""
+    ],
+    "list" : [
+      "Design und Aufbau von Kollaboration Plattformen",
+      "Business Process Management mit Formularen und Workflows",
+      "Branding für CI/CD",
+      "Business Intelligence (PowerBI)"
+
+    ],
+    "imgPath": "app/data/images/angebot/Collaboration.png"
+  },
+  {
+    "id": "angEP",
+    "title": "Projektmanagement",
+    "description":  [
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "At vero eos et accusam et justo duo dolores et ea rebum."
+    ],
+    "imgPath": "app/data/images/angebot/PM.png"
+  },
+  {
+    "id": "angSM",
+    "title": "Service Management - Itil",
+    "description":  [
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    ],
+    "imgPath": "app/data/images/angebot/Collaboration.png"
+  },
+  {
+    "id": "angTr",
+    "title": "Training",
+    "description":  [
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "At vero eos et accusam et justo duo dolores et ea rebum."
+    ],
+    "imgPath": "app/data/images/angebot/Training.png"
+  },
+  {
+    "id": "angSDfSP",
+    "title": "SharePoint",
+    "description":  [
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "At vero eos et accusam et justo duo dolores et ea rebum."
+    ],
+    "imgPath": "app/data/images/angebot/SoftEng.png"
+  },
+  {
+    "id": "angAI",
+    "title": "Azure Infrastructure",
+    "description":  [
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "At vero eos et accusam et justo duo dolores et ea rebum."
+    ],
+    "imgPath": "app/data/images/angebot/Azure.png"
+  }
+
+];
+
+
+
+/*
+{
+    "id": "angCo",
+    "title": "Collaboration",
     "description": [
       "Flexibel, effizient, schnell und einfach – so soll die Zusammenarbeit innerhalb des Unternehmens laufen, um sich erfolgreich um das eigene Kerngeschäft kümmern zu können. Kollaboration im Unternehmen ist auf viele Arten möglich: Beispielsweise kann man einen Fileserver betreiben in dem Dateien abgelegt und organisiert, Informationen per E-Mail ausgetauscht und Prozessabläufe im Intranet veröffentlicht werden können. Oder man entscheidet sich für eine Lösung aus einer Hand: Microsoft® SharePoint. SharePoint ist seit vielen Jahren bewährt im Einsatz und hat sich stetig weiterentwickelt. Heute ist SharePoint die wichtigste Kollaborationsplattform im Geschäftsleben. Über SharePoint kann ihre ganze Arbeit laufen, da es alles hierfür Nötige zur Verfügung stellt.",
       "Egal ob Sie sich für Microsoft® SharePoint, SharePoint Online oder Office 365 entscheiden, wir von Corporate Software helfen Ihnen gerne bei der Umsetzung Ihrer Lösung. Ob Analyse, Implementierung, Betrieb oder Trouble-Shooting – wir sind Ihr Partner für Ihre Kollaborationsplattform, damit Sie sich voll und ganz auf Ihr Kerngeschäft konzentrieren können!",
@@ -51,6 +116,4 @@ var angebot = [
     "Wenn Sie sich für den Einstieg ins Cloud-Computing entscheiden, sind wir genau der richtige Ansprechpartner. Wir helfen Ihnen bei der Auswahl und der Implementierung der neuen Infrastruktur und bieten Ihnen selbstverständlich auch Hybrid-Lösungen an, wenn Sie sensible Daten schützen und auf einem separaten Server behalten möchten. Ob Sie sich für Identity Management (Azure AD, AD Sync oder Azure Multifactor Authentication), Web Apps, mobile Backends oder Azure als Disaster Recovery Lösung interessieren, wir bieten Ihnen Consulting in den verschiedensten Bereichen und Möglichkeiten von Azure Infrastructure Services, und finden mit Ihnen heraus, wie Ihre Bedürfnisse optimal gelöst werden."
     ],
     "imgPath": "app/data/images/angebot/Azure.png"
-  }
-
-];
+  }*/

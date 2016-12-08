@@ -2,6 +2,7 @@
 <html> 
 	<head>
 		<title>Corporate Software AG</title> 
+		<meta name="viewport" content="width=device-width">
 
 		<script src="node_modules/jquery/dist/jquery.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -27,19 +28,39 @@
 			System.import('app').catch(function (err) {console.error(err);});
 		</script>
 
-		<!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">-->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="app/style/font-awesome-4.6.3/css/font-awesome.css">
 		<link rel="stylesheet" href="app/style/style.css">
-		
+		<style>
+			.loader {
+				margin: auto;
+				margin-top: 3em;
+				border: 16px solid #f3f3f3; /* Light grey */
+				border-top: 16px solid #2B425C; /* Blue */
+				border-radius: 50%;
+				width: 120px;
+				height: 120px;
+				animation: spin 2s linear infinite;
+			}
+
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+		</style>
 	</head> 
 	<body> 
 		<coso>
 
+
+
+
+
 			<div style="text-align: center">
 				
-				<img style="margin: 2em; width: 80%; background-color: white; border-bottom: 0.5em solid black;" src="/app/data/images/team/profile.png" alt="Das CoSo Team">
-				<h1>Willkommen bei Corporate Software</h1>
-				<h2>Einen Moment Geduld bitte</h2>
+				<!--<img style="margin: 2em; width: 80%; background-color: white; border-bottom: 0.5em solid black;" src="/app/data/images/team/profile.png" alt="Das CoSo Team">
+				<h1>Willkommen</h1>-->
+				<div class="loader"></div>
 			</div>
 
 

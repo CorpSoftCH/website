@@ -1,19 +1,6 @@
-//Header
-.smallDesk header h2 {
-    color: $cosoBlue01;
-}
-.smallDesk header ul {
-    width: 100%;
-    float: none;
-    text-align: center;
-}
-.smallDesk header li {
-    padding: 0.5em;
-    background-color: white;
-    float: none;
-    width: 100%;
-}
+
 //Desktop
+/*
 .desktop #angebot .item {
     width: 33.33%;
 }
@@ -31,36 +18,40 @@
 }
 .desktop #kontakt .row {
     width: 50%;
-}
+}*/
 //smallDesktop
+/*
 .smallDesk #team .item {
     width: calc(33.33% - 3em);
 } 
 .smallDesk #partner .item {
     width: calc(33.33% - 3em);
-}
+}*/
 //Ab Tablet
-.tablet #angebot .item {
+/*
+.tablet #angebot .col-md-4 {
     width: 50%;
 }
-.tablet #produkte .item {
+
+.tablet #produkte .col-md-4 {
     width: calc(100% - 4.4em);
 }
-.tablet #unternehmen .item {
+.tablet #unternehmen .col-md-4 {
     width: calc(100% - 3em);
 }
-.tablet #team .item {
+.tablet #team .col-md-3 {
+    float: left;
     width: calc(50% - 3em);
 }
-.tablet #partner .item {
+.tablet #partner .col-md-4 {
     width: calc(50% - 3em);
 }
 .tablet #kontakt .row {
     width: 100%;
 }
-
+*/
 //Ab grossen Handys
-
+/*
 .mobile-large .item {
     float: left;   
     width: 100%;
@@ -92,4 +83,4 @@
     -ms-transform: rotate(270deg);
     -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
-}
+}*/

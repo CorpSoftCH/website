@@ -25,6 +25,7 @@ export default class CosoComponent implements OnInit {
 	MOBILE: number = 480;	
 	MOBILE_SMALL: number =  300;
 
+	itemRows: number = 3;
 
 	angebote: Item[] = [];
 	referenzen: Referenz[] = [];
@@ -53,7 +54,7 @@ export default class CosoComponent implements OnInit {
 		this.produkte = prodService.getPWI();
 		
 		window.onresize = () => {
-			this.myResize(); 
+			this.setSizeSettings(window.innerWidth);
     	};	
 	}
 
@@ -62,26 +63,11 @@ export default class CosoComponent implements OnInit {
     ngOnInit(): void {
     	this.loadMap();
 		this.activateFirst();
-		this.myResize();
-	}
-
-	myResize() {
-		this.setHeaderClasses(window.innerWidth);
 		this.setSizeSettings(window.innerWidth);
 	}
 
-	deactivateOthers(ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
-		for(let value of this.angebote) {
-			if(value.active && value != ignoreElement) {
-				this.changeView(value);
-			}
-		}
-		for(let value of this.showpartner) {
-			if(value.active && value != ignoreElement) {
-				this.changeView(value);
-			}
-		}
-		for(let value of this.team) {
+	deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
+		for(let value of elements) {
 			if(value.active && value != ignoreElement) {
 				this.changeView(value);
 			}
@@ -92,8 +78,39 @@ export default class CosoComponent implements OnInit {
     changeView(element:any): void  {
     	element.active = !element.active;
     	element.changeOperator();
-    	$("#text-" + element.id ).toggleClass("hide");
-		$("#arrow-" + element.id ).toggleClass("hide");
+		
+		$("#text-" + element.id ).toggleClass("hide");
+		//$("#arrow-" + element.id ).toggleClass("hide");
+		$("#item-" + element.id ).toggleClass("active");
+		$("#field-" + element.id ).toggleClass("hide"); //notlösung
+
+		/*
+		$(".item-").removeClass("col-sm-8");
+		$(".field").removeClass("col-xs-6");
+		$(".text").removeClass("col-xs-6");
+
+		$(".text").removeClass("rightElement");
+		$(".text").removeClass("oneRow");
+		$(".special").removeClass("special");
+		*/
+		//$("#item-" + element.id ).addClass("col-xs-6 col-sm-4");
+		
+		
+		/*
+		if(this.itemRows == 1) {
+			$("#text-" + element.id ).addClass("oneRow");
+		} else if (index%this.itemRows == 0 && element.active) {
+			$("#text-" + element.id ).addClass("rightElement");
+			if(index+this.itemRows-2 < this.angebote.length) {
+				var spez = this.angebote[index+this.itemRows -2];
+				$("#item-" + spez.id).addClass("special");
+			}
+		} else {
+			$("#item-" + element.id ).addClass("col-sm-8");
+			$("#item-" + element.id ).removeClass("col-xs-6 col-sm-4");
+			$("#field-" + element.id ).addClass("col-xs-6");
+			$("#text-" + element.id ).addClass("col-xs-6");
+		}*/
     }
 
 	activateFirst(): void  {
@@ -120,38 +137,7 @@ export default class CosoComponent implements OnInit {
 	};
 
 	setSizeSettings(size: number): void  {
-		if(this.TABLET <= size && size <= this.SMALL_DESKTOP) {
-			$("body").addClass("smallDesk");
-		} else {
-			$("body").removeClass("smallDesk");
-		}
-		
-		if(this.TABLET < size) {
-			$("body").removeClass("tablet");
-			$("body").removeClass("mobile-large");
-			
-			$(".title").removeClass("hide");
-			$("body").addClass("desktop");
-			
-		} else if(this.MOBILE_LARGE < size && size <= this.TABLET) {
-			$("body").removeClass("desktop");
-			$("body").removeClass("mobile-large");
-			
-			$(".title").addClass("hide");
-			$("body").addClass("tablet");
-			
-
-		} else if (size <= this.MOBILE_LARGE) {
-			$("body").removeClass("desktop");
-			$("body").removeClass("tablet");
-			
-			$(".title").addClass("hide");
-			$("body").addClass("mobile-large");
-		}
-	}
-
-
-	setHeaderClasses(size: number): void {
+		//Burgernavigation Ja/Nein
 		if(size < this.SMALL_DESKTOP) {
 			$("#burger").removeClass("hide");
 			$("#navigation").addClass("smallHead hide");
@@ -159,6 +145,50 @@ export default class CosoComponent implements OnInit {
 			$("#burger").addClass("hide");
 			$("#navigation").removeClass("smallHead hide");
 		}
+
+		if (size < this.TABLET) {
+			this.itemRows = 2;
+		}
+
+		if (size <= this.MOBILE) {
+			this.itemRows = 1;
+			$(".col-sm-4").removeClass("col-xs-6");
+			$(".col-sm-3").removeClass("col-xs-4");
+		} else {
+			$(".col-sm-4").addClass("col-xs-6");
+			$(".col-sm-3").addClass("col-xs-4");
+		}
+		
+		/*
+		//Desktop Gross/Klein
+		if(this.TABLET <= size && size <= this.SMALL_DESKTOP) {
+			$("body").addClass("smallDesk");
+		} else {
+			$("body").removeClass("smallDesk");
+		}
+		
+		//Desktop Ja/Nein
+		if(this.TABLET < size) {
+			$("body").removeClass("tablet");
+			$("body").removeClass("mobile-large");
+			
+			$(".title").removeClass("hide");
+			$("body").addClass("desktop");
+		//	
+		} else if(this.MOBILE_LARGE < size && size <= this.TABLET) {
+			$("body").removeClass("desktop");
+			$("body").removeClass("mobile-large");
+			
+			$(".title").addClass("hide");
+			$("body").addClass("tablet");
+
+		} else if (size <= this.MOBILE_LARGE) {
+			$("body").removeClass("desktop");
+			$("body").removeClass("tablet");
+			
+			$(".title").addClass("hide");
+			$("body").addClass("mobile-large");
+		}*/
 	}
 
 	morePartner(): void  {

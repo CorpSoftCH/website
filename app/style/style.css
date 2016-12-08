@@ -5,11 +5,7 @@
   z-index: 0; }
 
 html {
-  margin: auto;
-  max-width: 1500px; }
-
-header {
-  max-width: 1500px; }
+  margin: auto; }
 
 h1,
 h2 {
@@ -19,20 +15,24 @@ h2 {
 p {
   margin: 0.5em; }
 
-#content {
-  margin-top: 8.7em; }
+#angebot {
+  margin-top: 40em; }
 
 .container {
   width: 100%;
   float: left;
-  text-align: center; }
+  text-align: center;
+  background-color: white;
+  border-bottom: rgba(43, 66, 92, 0.4) 0.1em solid;
+  padding-bottom: 1.5em; }
 
+/*
 .container:nth-child(2n+1) {
-  background-color: rgba(43, 66, 92, 0.4); }
-
+	background-color: $background01;
+}
 .container:nth-child(2n) {
-  background-color: white; }
-
+	background-color: white;
+}*/
 .container h1 {
   text-transform: uppercase;
   padding: 0.7em;
@@ -48,7 +48,7 @@ hr {
   width: 20em; }
 
 .hide {
-  display: none; }
+  visibility: hidden; }
 
 .ueberschrift {
   text-transform: uppercase;
@@ -232,30 +232,35 @@ hr {
     left: 20%;
     right: 20%;
     padding-bottom: 30px; } }
-/*my Part*/
 .carousel-img {
-  width: 25%; }
+  width: 25%;
+  margin: 1em auto; }
 
 header {
   top: 0;
   background-color: #2B425C;
   position: fixed;
   width: 100%;
-  z-index: 10; }
+  z-index: 1; }
 
 header h1,
 header h2 {
+  margin: 0;
   text-transform: uppercase;
   font-size: 1.2em;
   color: white; }
 
 header h1 {
   font-size: 1.4em;
-  padding: 1em; }
+  padding: 1.5em 0 1.5em 4.5em; }
+
+header a {
+  text-transform: uppercase; }
 
 header ul {
   float: right;
-  list-style: none; }
+  list-style: none;
+  margin-bottom: 0; }
 
 header li {
   cursor: pointer;
@@ -265,27 +270,49 @@ header li {
 header li:hover h2 {
   color: rgba(0, 131, 195, 0.5); }
 
+/*
 header.smallerHead h1 {
-  display: none; }
+	display: none;
+}
 
 #headerLogo {
-  float: left;
-  border-radius: 50%;
-  background-color: white;
-  margin: 0.2em;
-  padding: 0.5em;
-  font-size: 2em; }
-
+	float: left;
+	border-radius: 50%;
+	background-color: white;
+	margin: 0.2em;
+	padding: 0.5em;
+	font-size: 2em;
+}*/
 header button {
+  position: fixed;
+  left: 0;
   background-color: #2B425C;
   color: white;
-  float: right;
   border: none;
-  padding: 1.5em;
-  top: 0; }
+  padding: 1.8em;
+  top: 0;
+  z-index: 100; }
+
+.smallHead h2 {
+  color: #2B425C; }
+
+.smallHead ul {
+  width: 100%;
+  float: none;
+  text-align: center; }
+
+.smallHead li {
+  padding: 0.5em;
+  background-color: white;
+  float: none;
+  width: 100%; }
 
 #hello {
-  background-color: rgba(0, 131, 195, 0.5); }
+  text-align: center;
+  background-color: rgba(0, 131, 195, 0.5);
+  position: fixed;
+  z-index: -100;
+  padding-top: 5em; }
 
 #hello p {
   margin: 1em;
@@ -301,17 +328,22 @@ header button {
 #hello-profile {
   width: 100%; }
 
-.item {
-  float: left; }
+.arrow {
+  width: 50%; }
 
-.field {
-  position: relative;
-  width: 100%;
-  height: 100%; }
+.item {
+  position: relative; }
+
+.field:hover {
+  box-shadow: 0px 0px 20px #888888; }
+
+.field img {
+  width: 70%;
+  max-width: 20em;
+  margin: auto; }
 
 .field:hover img {
-  cursor: pointer;
-  opacity: 0.5; }
+  cursor: pointer; }
 
 .field i {
   z-index: 6;
@@ -325,71 +357,58 @@ header button {
   opacity: 1;
   visibility: visible; }
 
-#angebot .angebot-container {
-  width: 100%;
-  float: left; }
-
-/*#angebot .fa {
-	position: absolute;
-	margin: auto;
-}*/
 .text {
   position: absolute;
-  left: 0;
+  top: 0;
+  text-align: justify;
+  top: 0;
   z-index: 5;
-  background-color: white;
-  width: 100%; }
+  background-color: transparent;
+  background-color: white; }
 
-#angebot .arrow {
-  width: 50%; }
-
-#produkte .item {
-  padding: 1em;
-  border: 0.2em solid black;
-  margin: 1em; }
-
-#produkte .item span {
-  font-size: 1.2em;
-  font-weight: bold; }
-
-#produkte .item hr {
-  border: 0;
-  height: 0.13em;
-  background-image: linear-gradient(to right, transparent, black, transparent); }
-
-#unternehmen .item {
-  padding: 1.5em; }
+#unternehmen img {
+  width: 30%; }
 
 #unternehmen .item p {
   text-align: justify; }
 
-#unternehmen .item ul {
-  padding: 1em;
+#unternehmen ul {
+  padding-left: 1em;
   list-style: none; }
 
-#unternehmen .item img {
-  width: 50%; }
+#unternehmen li p {
+  margin: 0; }
 
-#team .item {
-  padding: 1.5em; }
-
-#team .fa {
-  position: absolute;
-  margin: 140px 75px 0 75px; }
-
+/*
+.rightElement {
+	top: initial;
+	position: absolute;
+}
+.oneRow {
+	position: relative;
+	left: 0;
+}
+.special {
+	margin-right: 1px;
+}*/
 #partner .item {
-  margin: 1em; }
+  min-height: 10em; }
+
+#partner .field:hover {
+  background-color: lightgray;
+  border-radius: 50%; }
 
 #partner .item img {
-  padding: 0.5em;
-  background-color: white;
-  border-radius: 50%; }
+  height: 100%;
+  padding: 0.5em; }
 
 #partner .fa {
   position: absolute;
-  margin: 110px; }
+  margin-top: 1px;
+  margin-bottom: 1px; }
 
 #partner .pBtn {
+  width: 100%;
   font-size: 1.2em;
   padding: 2em;
   border: none;
@@ -456,92 +475,98 @@ header button {
   letter-spacing: 3px;
   text-transform: uppercase; }
 
-.smallDesk header h2 {
-  color: #2B425C; }
-
-.smallDesk header ul {
+footer {
+  float: left;
   width: 100%;
-  float: none;
+  background-color: #2B425C;
   text-align: center; }
 
-.smallDesk header li {
-  padding: 0.5em;
-  background-color: white;
-  float: none;
-  width: 100%; }
+footer p {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  white-space: wrap;
+  color: white; }
 
+/*
 .desktop #angebot .item {
-  width: 33.33%; }
-
+    width: 33.33%;
+}
 .desktop #produkte .item {
-  width: calc(33.33% - 4.4em); }
-
+    width: calc(33.33% - 4.4em);
+}
 .desktop #unternehmen .item {
-  width: calc(33.33% - 4.4em); }
-
+    width: calc(33.33% - 4.4em);
+}
 .desktop #team .item {
-  width: calc(25% - 3em); }
-
+    width: calc(25% - 3em);
+}
 .desktop #partner .item {
-  width: calc(25% - 3em); }
-
+    width: calc(25% - 3em);
+}
 .desktop #kontakt .row {
-  width: 50%; }
-
+    width: 50%;
+}*/
+/*
 .smallDesk #team .item {
-  width: calc(33.33% - 3em); }
-
+    width: calc(33.33% - 3em);
+} 
 .smallDesk #partner .item {
-  width: calc(33.33% - 3em); }
+    width: calc(33.33% - 3em);
+}*/
+/*
+.tablet #angebot .col-md-4 {
+    width: 50%;
+}
 
-.tablet #angebot .item {
-  width: 50%; }
-
-.tablet #produkte .item {
-  width: calc(100% - 4.4em); }
-
-.tablet #unternehmen .item {
-  width: calc(100% - 3em); }
-
-.tablet #team .item {
-  width: calc(50% - 3em); }
-
-.tablet #partner .item {
-  width: calc(50% - 3em); }
-
+.tablet #produkte .col-md-4 {
+    width: calc(100% - 4.4em);
+}
+.tablet #unternehmen .col-md-4 {
+    width: calc(100% - 3em);
+}
+.tablet #team .col-md-3 {
+    float: left;
+    width: calc(50% - 3em);
+}
+.tablet #partner .col-md-4 {
+    width: calc(50% - 3em);
+}
 .tablet #kontakt .row {
-  width: 100%; }
-
+    width: 100%;
+}
+*/
+/*
 .mobile-large .item {
-  float: left;
-  width: 100%; }
-
+    float: left;   
+    width: 100%;
+}
 .mobile-large .item .title {
-  display: none; }
-
+    display: none;
+}
 .mobile-large .item .text {
-  padding: 1em;
-  padding-left: 1.5em;
-  text-align: justify;
-  left: 30%;
-  position: absolute;
-  width: calc(70% - 2em);
-  background-color: transparent; }
-
+    padding: 1em;
+    padding-left: 1.5em;
+    text-align: justify;
+    left: 30%;
+    position: absolute;
+    width: calc(70% - 2em);
+    background-color: transparent;
+}
 .mobile-large .item .field {
-  float: left;
-  width: 30%; }
-
+    float: left;
+    width: 30%;
+}
 .mobile-large .item .img {
-  width: 100%; }
-
+    width: 100%;
+}
 .mobile-large .arrow {
-  position: absolute;
-  top: 3em;
-  font-size: 1.3em;
-  left: 80%;
-  -ms-transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  transform: rotate(270deg); }
+    position: absolute;
+    top: 3em;
+    font-size: 1.3em;
+    left: 80%;
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}*/
 
 /*# sourceMappingURL=style.css.map */

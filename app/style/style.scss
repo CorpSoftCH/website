@@ -17,14 +17,14 @@ $MAX_WIDTH: 1500px;
 html {
 	//background-color:$cosoBlue02;
 	margin: auto;
-	max-width: $MAX_WIDTH;
+	//max-width: $MAX_WIDTH;
 }
 body {
 	//background-color: $cosoBlue02;
 }
 
 header {
-	max-width: $MAX_WIDTH;
+	//max-width: $MAX_WIDTH;
 }
 
 h1,
@@ -38,19 +38,28 @@ p {
 }
 
 #content {
-	margin-top: 8.7em;
+	//margin-top: 5em;
 }
+#angebot {
+	margin-top: 40em;
+}
+
 .container {
 	width: 100%;
 	float: left;
 	text-align: center;
+	background-color: white;
+	border-bottom: $background01 0.1em solid;
+	padding-bottom: 1.5em;
 }
+
+/*
 .container:nth-child(2n+1) {
 	background-color: $background01;
 }
 .container:nth-child(2n) {
 	background-color: white;
-}
+}*/
 .container h1 {
 	text-transform: uppercase;
 	padding: 0.7em;
@@ -68,7 +77,8 @@ hr {
 }
 
 .hide {
-	display: none;
+	visibility: hidden;
+	//display: none;
 }
 
 .ueberschrift {
@@ -85,5 +95,6 @@ hr {
 @import 'carousel';
 @import 'header';
 @import 'containers';
+@import 'footer';
 
 @import 'responsive';

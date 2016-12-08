@@ -1,17 +1,10 @@
 <header>
 	<h1>Corporate Software AG</h1>
-	<button id="burger" class="" (click)="toggleNav()"><i class="fa fa-bars fa-3x"></i></button>
-	<a href="#"><img id="headerLogo" src="app/data/images/logos/cosologo.png"></a>
-	<nav id="navigation">
-		<ul>
-			<a (click)="smoothScroll('angebot')"><li><h2>Angebot</h2></li></a>
-			<a (click)="smoothScroll('produkte')"><li><h2>Produkte</h2></li></a>
-			<a (click)="smoothScroll('referenzen')"><li><h2>Referenzen</h2></li></a>
-			<a (click)="smoothScroll('unternehmen')"><li><h2>Unternehmen</h2></li></a>
-			<a (click)="smoothScroll('team')"><li><h2>Team</h2></li></a>
-			<a (click)="smoothScroll('partner')"><li><h2>Partner</h2></li></a>
-			<a (click)="smoothScroll('kontakt')"><li><h2>Kontakt</h2></li></a>
-			<a (click)="smoothScroll('standort')"><li><h2>Standort</h2></li></a>
+	<button id="burger" class="" (click)="toggleNav()"><i class="fa fa-bars fa-2x"></i></button>
+	<!--<a href="#"><img id="headerLogo" src="app/data/images/logos/cosologo.png"></a>-->
+	<nav id="navigation" >
+		<ul class="">
+			<li *ngFor="let li of sections"><a (click)="smoothScroll([li.id])">{{li.id}}</a></li>
 		</ul>
 	</nav>
 </header>
