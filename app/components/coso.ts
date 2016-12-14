@@ -2,13 +2,8 @@ import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {SectionService} from 'app/services/section-service';
-/*
-import {AngebotPartnerService} from 'app/services/angebot-partner-service';
 import {ReferenzenService} from 'app/services/referenzen-service';
-import {TeamService} from 'app/services/team-service';
-import {UnternehmenService} from 'app/services/unternehmen-service';
-import {ProduktService} from 'app/services/produkte-service';
-*/
+
 import HeaderComponent from './header';
 import ItemComponent from './item';
 import ProduktComponent from './produkte';
@@ -17,8 +12,8 @@ import UnternehmenComponent from './unternehmen';
 @Component({
 	selector: 'coso',
 	templateUrl: 'app/templates/coso.html',
-	directives: [ ROUTER_DIRECTIVES, HeaderComponent, ItemComponent, ProduktComponent, UnternehmenComponent ],
-	providers: [/*AngebotPartnerService, TeamService, UnternehmenService, ReferenzenService, ProduktService, */HeaderComponent, SectionService],
+	directives: [ ROUTER_DIRECTIVES, HeaderComponent, ItemComponent],
+	providers: [SectionService, ReferenzenService],
 	precompile: []
 	})
 export default class CosoComponent implements OnInit {
@@ -31,39 +26,16 @@ export default class CosoComponent implements OnInit {
 	MOBILE_SMALL: number =  300;
 
 	itemRows: number = 3;
-	/*
-	angebote: Item[] = [];
-	referenzen: Referenz[] = [];
-	unternehmen: Unternehmen;
-	team: Mitarbeiter[] = [];
-	partner: Item[] = [];
-	toppartner: Item[] = [];
-	showpartner: Item[] = [];
-	produkte: Produkt[] = [];*/
 
 	sections: Section[] = [];
+	referenzen: Referenz[] = [];
 
 
-	constructor(
-		private sectionService: SectionService /*,
-		private angPartService: AngebotPartnerService,
-		private refService: ReferenzenService,
-		private teamService: TeamService,
-		private untService: UnternehmenService,
-		private prodService: ProduktService*/
-		) {
+	constructor( private sectionService: SectionService, private refService: ReferenzenService ) {
 			
 		this.sections = sectionService.getSections();
-		/*
-		this.angebote = angPartService.getAngebote();
 		this.referenzen = refService.getReferenzen();
-		this.unternehmen = untService.getUnternehmen();
-		this.team = teamService.getTeam();
-		this.toppartner = angPartService.getTopPartner();
-		this.showpartner = this.toppartner;
-		this.partner = angPartService.getPartner();
-		this.produkte = prodService.getProdukte();
-		*/
+
 		window.onresize = () => {
 			this.setSizeSettings(window.innerWidth);
     	};	
@@ -77,55 +49,8 @@ export default class CosoComponent implements OnInit {
 		this.setSizeSettings(window.innerWidth);
 	}
 
-	deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
-		for(let value of elements) {
-			if(value.active && value != ignoreElement) {
-				this.changeView(value);
-			}
-		}
-	}
-
-
-    changeView(element:any): void  {
-    	element.active = !element.active;
-    	element.changeOperator();
-		
-		$("#text-" + element.id ).toggleClass("hide");
-		//$("#arrow-" + element.id ).toggleClass("hide");
-		$("#item-" + element.id ).toggleClass("active");
-		$("#field-" + element.id ).toggleClass("hide"); //notlösung
-
-		/*
-		$(".item-").removeClass("col-sm-8");
-		$(".field").removeClass("col-xs-6");
-		$(".text").removeClass("col-xs-6");
-
-		$(".text").removeClass("rightElement");
-		$(".text").removeClass("oneRow");
-		$(".special").removeClass("special");
-		*/
-		//$("#item-" + element.id ).addClass("col-xs-6 col-sm-4");
-		
-		
-		/*
-		if(this.itemRows == 1) {
-			$("#text-" + element.id ).addClass("oneRow");
-		} else if (index%this.itemRows == 0 && element.active) {
-			$("#text-" + element.id ).addClass("rightElement");
-			if(index+this.itemRows-2 < this.angebote.length) {
-				var spez = this.angebote[index+this.itemRows -2];
-				$("#item-" + spez.id).addClass("special");
-			}
-		} else {
-			$("#item-" + element.id ).addClass("col-sm-8");
-			$("#item-" + element.id ).removeClass("col-xs-6 col-sm-4");
-			$("#field-" + element.id ).addClass("col-xs-6");
-			$("#text-" + element.id ).addClass("col-xs-6");
-		}*/
-    }
-	
 	activateFirst(): void  {
-		//referenzen[0].state = "active";
+		referenzen[0].state = "active";
 	}
 
     loadMap(): void  {    	

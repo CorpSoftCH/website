@@ -12,8 +12,11 @@ export class Item {
     public descriptionInList: Array<string> = [],
     public imgPath: string,
     public links: Array<string> = [],
+    public isFixText: boolean = false,
+    public isLink: boolean = false,
     public price: string = "",
     public priceFor: string = "",
+    public isProduct: boolean = false,
     public active: boolean = false,
     public operator: string = "plus",
     public maxInRow: number = 3){}
@@ -68,14 +71,14 @@ export class ItemService {
   }
 
   private getPartner(): Array<Item> {
-    return partner.map(p => new Item(p.id, p.title, p.description, [], p.imgPath, p.link));
+    return partner.map(p => new Item(p.id, p.title, p.description, [], p.imgPath, p.link, false, true));
   }
   
   private getUnternehmen(): Array<Item> {
-    return unternehmen.map(u => new Item(u.id, u.title, u.paragraphs, u.list, u.imgPath));
+    return unternehmen.map(u => new Item(u.id, u.title, u.paragraphs, u.list, u.imgPath, [], true));
   }
   private getProdukte(): Array<Item> {
-    return produkte.map(pr => new Item(pr.id, pr.title, pr.description, [], "", [], pr.price, pr.priceFor));
+    return produkte.map(pr => new Item(pr.id, pr.title, pr.description, [], "", [], true, false, pr.price, pr.priceFor, true));
   }
   /*
   getPartner(): Array<Item> {

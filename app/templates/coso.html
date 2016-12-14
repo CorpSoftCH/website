@@ -11,35 +11,16 @@
 		<img id="hello-profile" src="app/data/images/team/profile.png">
 	</section>
 
-	<section *ngFor="let s of sections" id="section-{{s.id}}" class="container">
+	<section *ngFor="let s of sections" id="{{s.id}}" class="container">
 		<h1>{{s.title}}</h1>
 		<hr />
-		<p>{{s.content}}</p>
-		<p>{{s.itemFlag}}</p>
-		<p>{{s.produkteFlag}}</p>
-		<p>{{s.unternehmenFlag}}</p>
 		<p class="ueberschrift" *ngFor="let text of s.subtitles">{{text}}</p>
+		
 		<coso-items *ngIf="[s.itemFlag]" [contentName]="[s.content]"></coso-items>
-	</section>
-	<!--
-	<section id="produkte" class="container">
-		<h1>Produkte</h1>
-		<hr />
-		<div>
-			<p class="ueberschrift" *ngFor="let text of produkte[0].text">{{text}}</p>
-		</div>
-		<div class="col-md-4 item" *ngFor="let prod of produkte[0].produkte" id="{{prod.id}}">
-			<div class="produkt">
-				<h2>{{prod.title}}</h2>
-				<hr />
-				<p><span class="highlighted">{{prod.price}}</span> / {{prod.priceFor}}</p>
-				<hr />
-				<p *ngFor="let para of prod.description">{{para}}</p>
-				<hr />
-				<button class="btn">zum Produkt</button>
-				<hr />
-			</div>
-		</div>
+
+		<!--<div *ngIf="[s.showOnlyFew]">
+        	<button class="btn">Zeige Mehr</button>
+    	</div>-->
 	</section>
 
 	<section id="referenzen" class="container">
@@ -68,57 +49,7 @@
 		</a>
 		</div>
 	</section>
-	<section id="unternehmen" class="container">
-		<h1>Unternehmen</h1>
-		<hr />
-		<p><span class="ueberschrift">{{unternehmen[0].description}}</span></p>
-		
-		
-		<div class="col-md-4 item" *ngFor="let p of unternehmen[0].property">
-			<img src="{{p.imgPath}}">
-			<h3>{{p.title}}</h3>
-			<p *ngFor="let para of p.paragraphs">{{para}}</p>
-			<ul>
-				<li *ngFor="let li of p.list">
-					<p>{{li}}</p>
-				</li>
-			</ul>
-		</div>
-	</section>
-	<section id="team" class="container">
-		<h1>Team</h1>
-		<hr />
-		<div class="team-container">
-			<div class="col-xs-4 col-sm-3 item" *ngFor="let m of team">
-				<div class="field" (click)="deactivateOthers(team, m);changeView(m)">
-					<i class="fa fa-search-{{m.operator}} fa fa-4x"></i>
-					<img class="img-responsive" src="{{m.imgPath}}">
-				</div>
-				<h2>{{m.vorname}}</h2>
-				<div id="text-{{m.id}}" class="hide">
-					<p *ngFor="let p of m.description">{{p}}</p>
-					<a href="mailto:{{m.email}}">Email an {{m.vorname}}</a>
-					<br />
-					<a href="{{m.vCardPath}}">vCard</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="partner" class="container">
-		<h1>Partner</h1>
-		<hr />
-		<div class="partner-container">
-			<div class="col-xs-6 col-sm-4 item" *ngFor="let p of showpartner">
-				<a href="{{p.link}}" target="_blank">
-					<div class="field" (click)="deactivateOthers(showpartner, p);changeView(p)">
-						<img src="{{p.imgPath}}">
-					</div>
-				</a>
-			</div>
-			<button id="mPart" class="pBtn" (click)="morePartner()">Mehr Partner</button>
-			<button id="lPart" class="pBtn hide" (click)="lessPartner()">Weniger Partner</button>
-		</div>
-	</section>-->
+
 	<section id="kontakt" class="container">
 		<h1>Kontakt</h1>
 		<hr />
@@ -176,6 +107,7 @@
 		</div>
 	</section>
 </section>
+
 <footer>
 	<p>Copyright © Corporate Software AG 2017</p>
 </footer>

@@ -6,7 +6,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
   templateUrl: 'app/templates/header.html',
   directives: [ ROUTER_DIRECTIVES],
 })
-export default class HeaderComponent implements OnInit {
+export default class HeaderComponent {
 	sections: any;
 	win: Window;
     private offSet: number = 60;
@@ -17,7 +17,7 @@ export default class HeaderComponent implements OnInit {
 		
 	}
 
-	ngOnInit() {
+	ngAfterViewChecked() {
 		this.sections = $(".container:not(#hello)");
 	}
 

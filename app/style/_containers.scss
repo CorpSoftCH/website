@@ -34,8 +34,8 @@
 	width: 50%;
 }
 
-.item {
-	position: relative;
+.field {
+	width: 100%;
 }
 
 .field:hover {
@@ -67,7 +67,7 @@
 }
 
 .text {
-	position: absolute; //notlösung
+	//position: absolute; //notlösung
 	top: 0; //notlösung
 	text-align: justify;
 	top: 0;
@@ -75,6 +75,11 @@
 	background-color: transparent;
 	background-color: white; //notlösung
 }
+.prodBorder {
+	border-bottom: solid black 0.1em;
+	padding: 1em;
+}
+
 
 #produkte .produkt {
 	background-color: $cosoBlue02;
@@ -90,9 +95,7 @@
 #unternehmen img {
 	width: 30%;
 }
-#unternehmen .item p {
-	text-align: justify;
-}
+
 #unternehmen ul {
 	padding-left: 1em;
 	list-style: none;
@@ -113,16 +116,8 @@
 	margin-right: 1px;
 }*/
 
-//team
-#team .item {
-	text-align: justify;
-}
 
 //partner
-#partner .item {
-	min-height: 10em;
-}
-
 #partner .field:hover {
 	
 	background-color: white;
@@ -138,7 +133,7 @@
 	margin-top: 1px;
 	margin-bottom: 1px;
 }
-#partner .pBtn {
+#partner .btn {
 	width: 100%;
 	font-size: 1.2em;
 	padding: 2em;

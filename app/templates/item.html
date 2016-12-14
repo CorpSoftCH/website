@@ -1,18 +1,52 @@
-<div id="item-{{i.id}}" class="col-xs-6 col-sm-4" *ngFor="let i of items; let index = index">
-    <div id="field-{{i.id}}" class="field" >
-        <i class="fa fa-search-{{i.operator}} fa fa-3x"></i>
-        <img class="img" src="{{i.imgPath}}">
-        <!--<img id="arrow-{{i.id}}" class="arrow hide" src="app/data/images/arrowactive.png">-->
 
+<div id="item-{{i.id}}" class="col-xs-6 col-sm-4" *ngFor="let i of items; let index = index">
+    <div *ngIf="!i.isProduct && i.isFixText">
+        <div id="field-{{i.id}}" class="field" >
+            <img class="img" src="{{i.imgPath}}">
+        </div>
+        <div id="text-{{i.id}}" class="text" >
+            <h2 *ngFor="let t of i.name">{{t}}</h2>
+            <p *ngFor="let p of i.description">{{p}}</p>
+            <ul>
+                <li *ngFor="let li of i.descriptionInList">{{li}}</li>
+            </ul>
+        </div>
     </div>
-    
-    <!--<h2 class="title">{{a.title}}</h2>-->
-    <div id="text-{{i.id}}" class="" >
+
+    <div *ngIf="i.isProduct && i.isFixText">
+        <div id="{{i.id}}" class="produkt">
+            <div class="prodBorder"><h2>{{i.name[0]}}</h2></div>
+            <div class="prodBorder"><p><span class="highlighted">{{i.price}}</span> / {{i.priceFor}}</p></div>
+            <div class="prodBorder"><p *ngFor="let para of i.description">{{para}}</p></div>
+            <div class="prodBorder"><button class="btn">zum Produkt</button></div>
+        </div>
+    </div>
+
+    <div *ngIf="!i.isFixText && !i.isLink">
         
-        <h2 *ngFor="let t of i.name">{{t}}</h2>
-        <p *ngFor="let p of i.description">{{p}}</p>
-        <ul>
-            <li *ngFor="let li of i.list">{{li}}</li>
-        </ul>
+        <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(items, i);changeView(i)">
+            <img src="{{i.imgPath}}">
+            <h3>{{i.name[0]}}</h3>
+            <i class="fa fa-search-{{i.operator}} fa fa-3x"></i>
+        </div>
+        <div id="text-{{i.id}}" class="text hide">
+            <p *ngFor="let para of i.description">{{para}}</p>
+            <ul>
+                <li *ngFor="let li of i.descriptionInList">
+                    <p>{{li}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="i.isLink">
+        <a href="{{i.links[0]}}" target="_blank">
+            <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(items, i);changeView(i)">
+                <img src="{{i.imgPath}}">
+                <i class="fa fa-search-{{i.operator}} fa fa-3x"></i>
+            </div>
+        </a>
     </div>
 </div>
+
+

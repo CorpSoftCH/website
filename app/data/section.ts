@@ -46,6 +46,7 @@ var section = [
             "Unsere Partner"
              ],
         "itemFlag": true,
+        "showOnlyFew": true,
         "content": "partner"   
     }
 ]

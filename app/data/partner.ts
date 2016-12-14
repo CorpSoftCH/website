@@ -10,7 +10,7 @@ var partner = [
         "Besuchen Sie uns auf Microsoft Pinpoint, dem Online Marketingplace von Microsoftpartnern."
     ],
     "imgPath": "app/data/images/partner/microsoft.png",
-    "link": "https://www.microsoft.com/de-ch/"
+    "link": ["https://www.microsoft.com/de-ch/"]
   },{
     "id": "Digi",
     "title": ["Dicicomp"],
@@ -22,7 +22,7 @@ var partner = [
         "Als Bestätigung unserer Expertise ist Matthias der Fachbereichsleiter für den Bereich Private Cloud und Raúl für Microsoft® SharePoint und Lync. Daneben verfassen wir regelmässig Blogbeiträge zu aktuellen Themen für den Digicomp Blog."
     ],
     "imgPath": "app/data/images/partner/digi.png",
-    "link": "https://www.digicomp.ch/"
+    "link": ["https://www.digicomp.ch/"]
   },{
     "id": "SG",
     "title": ["Sharegate"],
@@ -31,7 +31,7 @@ var partner = [
         "Als Partner von Sharegate verfügen wir über die Kompetenz Sie mit Hilfe dieses Tools zum SharePoint-Heldenaufsteigen zu lassen."
     ],
     "imgPath": "app/data/images/partner/sharegate.png",
-    "link": "https://en.share-gate.com/"
+    "link": ["https://en.share-gate.com/"]
   },{
     "id": "BB",
     "title": ["Bamboo"],
@@ -40,7 +40,7 @@ var partner = [
         "Mit den Bamboo Tools wird Ihr SharePoint erweitert und gleichzeitig ermöglicht es Ihnen die Einsparung von Ressourcen. Aus einer Vielzahl von Applikationen, Webparts oder Packages wählen wir für Sie das passende Produkt aus."
     ],
     "imgPath": "app/data/images/partner/bam.png",
-    "link": "http://store.bamboosolutions.com/"
+    "link": ["http://store.bamboosolutions.com/"]
   },{
     "id": "div",
     "title": ["Diventis"],
@@ -50,7 +50,7 @@ var partner = [
         "Durch das reibungslose Zusammenspiel des methodischen Vorgehens, der technischen Umsetzung, Projektleitung sowie Training entsteht für die Kunden ein maximaler Nutzen. Ergänzend zu der gemeinsamen Projektdurchführung setzen wir mit unserem Partner verschiedene Marketing- und Kommunikationsaktivitäten um."
     ],
     "imgPath": "app/data/images/partner/diventis.png",
-    "link": "http://www.diventis.ch/"
+    "link": ["http://www.diventis.ch/"]
   },{
     "id": "Acc",
     "title": ["Acceleratio"],
@@ -59,7 +59,7 @@ var partner = [
         "Mit Ihrem Fokus auf Microsoftprodukte, insbesondere SharePoint, sind Sie ein ausgezeichneter Partner für uns. Mit Hilfe ihrer innovative Lösung SPDocKit, können Dokumentationen von SharePoint-Installationen erstellt, Berechtigungen verwaltet und Änderungen über Zeit kontrolliert werden."
     ],
     "imgPath": "app/data/images/partner/acceleratio.png",
-    "link": "https://acceleratio.net/"
+    "link": ["https://acceleratio.net/"]
   },{
     "id": "citr",
     "title": ["Citrix"],
@@ -68,7 +68,7 @@ var partner = [
         "Als Silver Citrix Solution Advisor haben wir die Kompetenzen zum Vertrieb, Servicebereitstellung, Kundenweiterbildung, technische Implementierung und Support des Citrix-Produktportfolios."
     ],
     "imgPath": "app/data/images/partner/citrix.png",
-    "link": "https://www.citrix.de/"
+    "link": ["https://www.citrix.de/"]
   },{
     "id": "k2",
     "title": ["K2"],
@@ -78,7 +78,7 @@ var partner = [
         "Insbesondere mit dem auf BLACKPEARL aufbauenden K2 for SharePoint nutzen wir zusätzlich unsere langjährige SharePoint-Expertise. Gemeinsam mit dem Kunden werden die Prozesse vereinfachen, optimiert oder neugestaltet."
     ],
     "imgPath": "app/data/images/partner/k2.png",
-    "link": "http://de.k2.com/"
+    "link": ["http://de.k2.com/"]
   },{
     "id": "coll",
     "title": ["Collabion"],
@@ -96,7 +96,7 @@ var partner = [
         "Accellion ist ein mehrfach ausgezeichnetes Privatunternehmen, dessen führende Mobile Content Plattform die geschäftliche Produktivität steigert und zugleich für Datensicherheit und Compliance sorgt. Als einer der führenden Anbieter von Private-Cloud-Lösungen für sicheres Mobile Content Management verschafft Accellion Unternehmen die erforderliche Skalierbarkeit, Flexibilität, Kontrolle und Sicherheit für ihre mobilen Mitarbeiter und bietet diesen die Möglichkeit, von überall sicher auf Daten zugreifen bzw. Daten erstellen oder freigeben zu können."
     ],
     "imgPath": "app/data/images/partner/accellion.png",
-    "link": "http://www.accellion.com/"
+    "link": ["http://www.accellion.com/"]
   },{
     "id": "penta",
     "title": ["Pentalogic"],
@@ -116,18 +116,18 @@ var partner = [
         "Der CloudMigrator365 kann on-premise, an einem Arbeitsplatz oder als Cloud Infrastruktur wie Azure installiert werden. Die Installation und die Verwaltung werden vom Administrator vorgenommen. In jedem Fall hat der Administrator die volle Kontrolle über die Sicherheit und zu keiner Zeit gelangen Zugangsdaten oder Passwörter an Dritte."
     ],
     "imgPath": "app/data/images/partner/cm365.png",
-    "link": "https://www.cloudmigrator365.com/"
+    "link": ["https://www.cloudmigrator365.com/"]
   },{
     "id": "inmi",
     "title": ["Ingram Micro"],
     "description": [],
     "imgPath": "app/data/images/partner/Ingram-Micro.png",
-    "link": "http://ch.ingrammicro.com/ "
+    "link": ["http://ch.ingrammicro.com/ "]
   },{
     "id": "clock",
     "title": ["Clockodo"],
     "description": [],
     "imgPath": "app/data/images/partner/Logo-clockodo.png",
-    "link": "http://www.clockodo.com/de"
+    "link": ["http://www.clockodo.com/de"]
   }
 ]

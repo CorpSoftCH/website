@@ -18,7 +18,7 @@ h2 {
 p {
   margin: 0.5em; }
 
-#section-angebot {
+#angebot {
   margin-top: 40em; }
 
 .container {
@@ -344,8 +344,8 @@ header button {
 .arrow {
   width: 50%; }
 
-.item {
-  position: relative; }
+.field {
+  width: 100%; }
 
 .field:hover {
   box-shadow: 0px 0px 15px lightgray; }
@@ -371,13 +371,16 @@ header button {
   visibility: visible; }
 
 .text {
-  position: absolute;
   top: 0;
   text-align: justify;
   top: 0;
   z-index: 5;
   background-color: transparent;
   background-color: white; }
+
+.prodBorder {
+  border-bottom: solid black 0.1em;
+  padding: 1em; }
 
 #produkte .produkt {
   background-color: rgba(0, 131, 195, 0.5);
@@ -391,9 +394,6 @@ header button {
 
 #unternehmen img {
   width: 30%; }
-
-#unternehmen .item p {
-  text-align: justify; }
 
 #unternehmen ul {
   padding-left: 1em;
@@ -414,12 +414,6 @@ header button {
 .special {
 	margin-right: 1px;
 }*/
-#team .item {
-  text-align: justify; }
-
-#partner .item {
-  min-height: 10em; }
-
 #partner .field:hover {
   background-color: white;
   border-radius: 50%; }
@@ -433,7 +427,7 @@ header button {
   margin-top: 1px;
   margin-bottom: 1px; }
 
-#partner .pBtn {
+#partner .btn {
   width: 100%;
   font-size: 1.2em;
   padding: 2em;
