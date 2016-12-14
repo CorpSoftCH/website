@@ -41,16 +41,17 @@ p {
 	text-align: center;
 	border-bottom: $background01 0.1em solid;
 	padding-bottom: 1.5em;
+	background-color: white;
 }
 
-
+/*
 .container:nth-child(2n+1) {
 	background-color: white;
 	
 }
 .container:nth-child(2n) {
 	background-color: rgba(255,255,255,0.8);
-}
+}*/
 .container h1 {
 	text-transform: uppercase;
 	padding: 0.7em;

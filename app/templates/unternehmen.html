@@ -1,0 +1,10 @@
+<div class="col-md-4 item" *ngFor="let unt of unternehmen">
+    <img src="{{unt.imgPath}}">
+    <h3>{{unt.title}}</h3>
+    <p *ngFor="let para of unt.paragraphs">{{para}}</p>
+    <ul>
+        <li *ngFor="let li of unt.list">
+            <p>{{li}}</p>
+        </li>
+    </ul>
+</div>

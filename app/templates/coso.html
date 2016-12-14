@@ -14,11 +14,14 @@
 	<section *ngFor="let s of sections" id="section-{{s.id}}" class="container">
 		<h1>{{s.title}}</h1>
 		<hr />
-		<p>{{s.mode}}</p>
-		<coso-items *ngIf="[s.itemFlag]" [contentName]="'angebote'"></coso-items>
-
+		<p>{{s.content}}</p>
+		<p>{{s.itemFlag}}</p>
+		<p>{{s.produkteFlag}}</p>
+		<p>{{s.unternehmenFlag}}</p>
+		<p class="ueberschrift" *ngFor="let text of s.subtitles">{{text}}</p>
+		<coso-items *ngIf="[s.itemFlag]" [contentName]="[s.content]"></coso-items>
 	</section>
-
+	<!--
 	<section id="produkte" class="container">
 		<h1>Produkte</h1>
 		<hr />
@@ -65,7 +68,6 @@
 		</a>
 		</div>
 	</section>
-
 	<section id="unternehmen" class="container">
 		<h1>Unternehmen</h1>
 		<hr />
@@ -109,7 +111,6 @@
 			<div class="col-xs-6 col-sm-4 item" *ngFor="let p of showpartner">
 				<a href="{{p.link}}" target="_blank">
 					<div class="field" (click)="deactivateOthers(showpartner, p);changeView(p)">
-						<!--<i class="fa fa-search-{{p.operator}} fa fa-3x"></i>-->
 						<img src="{{p.imgPath}}">
 					</div>
 				</a>
@@ -117,7 +118,7 @@
 			<button id="mPart" class="pBtn" (click)="morePartner()">Mehr Partner</button>
 			<button id="lPart" class="pBtn hide" (click)="lessPartner()">Weniger Partner</button>
 		</div>
-	</section>
+	</section>-->
 	<section id="kontakt" class="container">
 		<h1>Kontakt</h1>
 		<hr />

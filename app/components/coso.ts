@@ -2,20 +2,23 @@ import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {SectionService} from 'app/services/section-service';
+/*
 import {AngebotPartnerService} from 'app/services/angebot-partner-service';
 import {ReferenzenService} from 'app/services/referenzen-service';
 import {TeamService} from 'app/services/team-service';
 import {UnternehmenService} from 'app/services/unternehmen-service';
 import {ProduktService} from 'app/services/produkte-service';
-
+*/
 import HeaderComponent from './header';
 import ItemComponent from './item';
+import ProduktComponent from './produkte';
+import UnternehmenComponent from './unternehmen';
 
 @Component({
 	selector: 'coso',
 	templateUrl: 'app/templates/coso.html',
-	directives: [ ROUTER_DIRECTIVES, HeaderComponent, ItemComponent ],
-	providers: [AngebotPartnerService, TeamService, UnternehmenService, ReferenzenService, ProduktService, HeaderComponent, SectionService],
+	directives: [ ROUTER_DIRECTIVES, HeaderComponent, ItemComponent, ProduktComponent, UnternehmenComponent ],
+	providers: [/*AngebotPartnerService, TeamService, UnternehmenService, ReferenzenService, ProduktService, */HeaderComponent, SectionService],
 	precompile: []
 	})
 export default class CosoComponent implements OnInit {
@@ -28,7 +31,7 @@ export default class CosoComponent implements OnInit {
 	MOBILE_SMALL: number =  300;
 
 	itemRows: number = 3;
-
+	/*
 	angebote: Item[] = [];
 	referenzen: Referenz[] = [];
 	unternehmen: Unternehmen;
@@ -36,19 +39,22 @@ export default class CosoComponent implements OnInit {
 	partner: Item[] = [];
 	toppartner: Item[] = [];
 	showpartner: Item[] = [];
-	produkte: ProdWebInhalt[] = [];
+	produkte: Produkt[] = [];*/
+
 	sections: Section[] = [];
 
 
 	constructor(
-		private sectionService: SectionService,
+		private sectionService: SectionService /*,
 		private angPartService: AngebotPartnerService,
 		private refService: ReferenzenService,
 		private teamService: TeamService,
 		private untService: UnternehmenService,
-		private prodService: ProduktService
+		private prodService: ProduktService*/
 		) {
+			
 		this.sections = sectionService.getSections();
+		/*
 		this.angebote = angPartService.getAngebote();
 		this.referenzen = refService.getReferenzen();
 		this.unternehmen = untService.getUnternehmen();
@@ -56,8 +62,8 @@ export default class CosoComponent implements OnInit {
 		this.toppartner = angPartService.getTopPartner();
 		this.showpartner = this.toppartner;
 		this.partner = angPartService.getPartner();
-		this.produkte = prodService.getPWI();
-		
+		this.produkte = prodService.getProdukte();
+		*/
 		window.onresize = () => {
 			this.setSizeSettings(window.innerWidth);
     	};	
@@ -117,9 +123,9 @@ export default class CosoComponent implements OnInit {
 			$("#text-" + element.id ).addClass("col-xs-6");
 		}*/
     }
-
+	
 	activateFirst(): void  {
-		referenzen[0].state = "active";
+		//referenzen[0].state = "active";
 	}
 
     loadMap(): void  {    	

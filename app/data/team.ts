@@ -1,14 +1,28 @@
 var team = [
 {
-    "vorname": "Andreas",
-    "nachname": "Miloda",
+    "name": ["Andreas", "Miloda"],
     "kuerzel": "andreasm",
     "description": [
       "Mit seinem Fachwissen in Betriebsökonomie und IT ergänzt Andreas Miloda das Team ideal. Momentan studiert er berufsbegleitend Wirtschaftsinformatik und arbeitet an komplexen Projekten im Bereich Microsoft SharePoint und Project Server mit. Dabei greift er auf seine Erfahrung als Techniker und Projektleiter zurück. Seine Fachbereiche liegen in den Bereichen Collaboration, Online Media, Kommunikation und Responsive Design. In seiner Freizeit liest er gerne und beschäftigt sich mit Computertechnik und der Fotografie. Er hat einen Blick für Details und behält dennoch das Gesamtbild im Auge, in der Fotografie wie im Berufsleben."
     ],
-    "email" : "andreas.miloda@corporatesoftware.ch",
     "imgPath": "app/data/images/team/andreas.png",
-    "vCardPath": "app/data/vcards//Andreas%20Miloda.vcf"
+    "links" : ["andreas.miloda@corporatesoftware.ch","app/data/vcards//Andreas%20Miloda.vcf"]
+},{
+    "name": ["Andreas", "Miloda"],
+    "kuerzel": "andreasm2",
+    "description": [
+      "Mit seinem Fachwissen in Betriebsökonomie und IT ergänzt Andreas Miloda das Team ideal. Momentan studiert er berufsbegleitend Wirtschaftsinformatik und arbeitet an komplexen Projekten im Bereich Microsoft SharePoint und Project Server mit. Dabei greift er auf seine Erfahrung als Techniker und Projektleiter zurück. Seine Fachbereiche liegen in den Bereichen Collaboration, Online Media, Kommunikation und Responsive Design. In seiner Freizeit liest er gerne und beschäftigt sich mit Computertechnik und der Fotografie. Er hat einen Blick für Details und behält dennoch das Gesamtbild im Auge, in der Fotografie wie im Berufsleben."
+    ],
+    "imgPath": "app/data/images/team/andreas.png",
+    "links" : ["andreas.miloda@corporatesoftware.ch","app/data/vcards//Andreas%20Miloda.vcf"]
+},{
+    "name": ["Andreas", "Miloda"],
+    "kuerzel": "andreasm3",
+    "description": [
+      "Mit seinem Fachwissen in Betriebsökonomie und IT ergänzt Andreas Miloda das Team ideal. Momentan studiert er berufsbegleitend Wirtschaftsinformatik und arbeitet an komplexen Projekten im Bereich Microsoft SharePoint und Project Server mit. Dabei greift er auf seine Erfahrung als Techniker und Projektleiter zurück. Seine Fachbereiche liegen in den Bereichen Collaboration, Online Media, Kommunikation und Responsive Design. In seiner Freizeit liest er gerne und beschäftigt sich mit Computertechnik und der Fotografie. Er hat einen Blick für Details und behält dennoch das Gesamtbild im Auge, in der Fotografie wie im Berufsleben."
+    ],
+    "imgPath": "app/data/images/team/andreas.png",
+    "links" : ["andreas.miloda@corporatesoftware.ch","app/data/vcards//Andreas%20Miloda.vcf"]
 }/*,{
     "vorname": "Céline",
     "nachname": "Horst",
@@ -19,7 +33,7 @@ var team = [
     "email" : "celine.horst@corporatesoftware.ch",
     "imgPath": "app/data/images/team/celine.png",
     "vCardPath": "app/data/vcards//Céline%20Horst.vcf"
-}*/,{
+},{
     "vorname": "Dario",
     "nachname": "Müller",
     "kuerzel": "dariom",
@@ -29,7 +43,7 @@ var team = [
     "email" : "dario.mueller@corporatesoftware.ch",
     "imgPath": "app/data/images/team/dario.png",
     "vCardPath": "app/data/vcards//Dario%20Müller.vcf"
-}/*,{
+},{
     "vorname": "Joris",
     "nachname": "Baiutti",
     "kuerzel": "jorisb",
@@ -39,7 +53,7 @@ var team = [
     "email" : "joris.baiutti@corporatesoftware.ch",
     "imgPath": "app/data/images/team/joris.png",
     "vCardPath": "app/data/vcards//Joris%20Baiutti.vcf"
-}*/,{
+},{
     "vorname": "Markus",
     "nachname": "Fasnacht",
     "kuerzel": "markusm",
@@ -79,7 +93,7 @@ var team = [
     "email" : "matthias.gessenay@corporatesoftware.ch",
     "imgPath": "app/data/images/team/matthias.png",
     "vCardPath": "app/data/vcards//Matthias%20Gessenay.vcf"
-}/*,{
+},{
     "vorname": "Noah",
     "nachname": "Zani",
     "kuerzel": "noahz",
@@ -89,7 +103,7 @@ var team = [
     "email" : "noah.zani@corporatesoftware.ch",
     "imgPath": "app/data/images/team/noah.png",
     "vCardPath": "app/data/vcards//Noah%20Zani.vcf"
-}*/,{
+},{
     "vorname": "Raphael",
     "nachname": "Fäh",
     "kuerzel": "raphaelf",
@@ -141,5 +155,5 @@ var team = [
     "email" : "",
     "imgPath": "app/data/images/team/you.png",
     "vCardPath": ""
-}
+}*/
 ]

@@ -26,14 +26,17 @@ p {
   float: left;
   text-align: center;
   border-bottom: rgba(43, 66, 92, 0.4) 0.1em solid;
-  padding-bottom: 1.5em; }
-
-.container:nth-child(2n+1) {
+  padding-bottom: 1.5em;
   background-color: white; }
 
+/*
+.container:nth-child(2n+1) {
+	background-color: white;
+	
+}
 .container:nth-child(2n) {
-  background-color: rgba(255, 255, 255, 0.8); }
-
+	background-color: rgba(255,255,255,0.8);
+}*/
 .container h1 {
   text-transform: uppercase;
   padding: 0.7em;

@@ -9,17 +9,10 @@ export class Produkt {
     public description: Array<string>){}
 }
 
-export class ProdWebInhalt {
-    constructor(
-        public text: Array<string>,
-        public produkte: Array<Produkt>,
-    ){}
-}
-
 export class ProduktService {
     
-    getPWI(): ProdWebInhalt {
-        return produkte.map(pwi => new ProdWebInhalt(pwi.text, pwi.produkte.map(p => new Produkt(p.id, p.title, p.price, p.priceFor, p.description))));
+    getProdukte(): Array<Produkt> {
+        return produkte.map(p => new Produkt(p.id, p.title, p.price, p.priceFor, p.description));
     }
 
 }
