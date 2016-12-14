@@ -7,6 +7,9 @@
 html {
   margin: auto; }
 
+body {
+  background-color: transparent; }
+
 h1,
 h2 {
   z-index: 2;
@@ -22,17 +25,15 @@ p {
   width: 100%;
   float: left;
   text-align: center;
-  background-color: white;
   border-bottom: rgba(43, 66, 92, 0.4) 0.1em solid;
   padding-bottom: 1.5em; }
 
-/*
 .container:nth-child(2n+1) {
-	background-color: $background01;
-}
+  background-color: white; }
+
 .container:nth-child(2n) {
-	background-color: white;
-}*/
+  background-color: rgba(255, 255, 255, 0.8); }
+
 .container h1 {
   text-transform: uppercase;
   padding: 0.7em;
@@ -49,11 +50,6 @@ hr {
 
 .hide {
   visibility: hidden; }
-
-.toLeft {
-  transition-timing-function: ease-in;
-  transition: 0.4s;
-  transform: translateX(-100%); }
 
 .highlighted {
   font-weight: bold;
@@ -282,7 +278,13 @@ header ul {
   border-bottom: solid #2B425C 0.1em;
   transition-timing-function: ease-out;
   transition: 0.6s;
-  transform: translateX(0); }
+  transform: translateX(0);
+  box-shadow: 5px 0px 15px #2B425C; }
+
+.toLeft {
+  transition-timing-function: ease-in;
+  transition: 0.4s;
+  transform: translateX(-110%); }
 
 header li {
   cursor: pointer;
@@ -378,7 +380,7 @@ header button {
   background-color: rgba(0, 131, 195, 0.5);
   padding: 1em;
   width: calc(100% - 2em);
-  box-shadow: 10px 10px 15px #2B425C;
+  box-shadow: 5px 5px 10px #2B425C;
   margin: 1em; }
 
 #produkte h2 {
@@ -416,7 +418,7 @@ header button {
   min-height: 10em; }
 
 #partner .field:hover {
-  background-color: lightgray;
+  background-color: white;
   border-radius: 50%; }
 
 #partner .item img {
@@ -507,87 +509,5 @@ footer p {
   padding-bottom: 2em;
   white-space: wrap;
   color: white; }
-
-/*
-.desktop #angebot .item {
-    width: 33.33%;
-}
-.desktop #produkte .item {
-    width: calc(33.33% - 4.4em);
-}
-.desktop #unternehmen .item {
-    width: calc(33.33% - 4.4em);
-}
-.desktop #team .item {
-    width: calc(25% - 3em);
-}
-.desktop #partner .item {
-    width: calc(25% - 3em);
-}
-.desktop #kontakt .row {
-    width: 50%;
-}*/
-/*
-.smallDesk #team .item {
-    width: calc(33.33% - 3em);
-} 
-.smallDesk #partner .item {
-    width: calc(33.33% - 3em);
-}*/
-/*
-.tablet #angebot .col-md-4 {
-    width: 50%;
-}
-
-.tablet #produkte .col-md-4 {
-    width: calc(100% - 4.4em);
-}
-.tablet #unternehmen .col-md-4 {
-    width: calc(100% - 3em);
-}
-.tablet #team .col-md-3 {
-    float: left;
-    width: calc(50% - 3em);
-}
-.tablet #partner .col-md-4 {
-    width: calc(50% - 3em);
-}
-.tablet #kontakt .row {
-    width: 100%;
-}
-*/
-/*
-.mobile-large .item {
-    float: left;   
-    width: 100%;
-}
-.mobile-large .item .title {
-    display: none;
-}
-.mobile-large .item .text {
-    padding: 1em;
-    padding-left: 1.5em;
-    text-align: justify;
-    left: 30%;
-    position: absolute;
-    width: calc(70% - 2em);
-    background-color: transparent;
-}
-.mobile-large .item .field {
-    float: left;
-    width: 30%;
-}
-.mobile-large .item .img {
-    width: 100%;
-}
-.mobile-large .arrow {
-    position: absolute;
-    top: 3em;
-    font-size: 1.3em;
-    left: 80%;
-    -ms-transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-}*/
 
 /*# sourceMappingURL=style.css.map */

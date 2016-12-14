@@ -39,6 +39,14 @@ header ul {
 	transition-timing-function: ease-out;
 	transition: 0.6s;
 	transform: translateX(0);
+	box-shadow: 5px 0px 15px $cosoBlue01;
+
+	
+}
+.toLeft {
+	transition-timing-function: ease-in;
+	transition: 0.4s;
+	transform: translateX(-110%);
 }
 
 header li {

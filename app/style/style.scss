@@ -15,16 +15,10 @@ $MAX_WIDTH: 1500px;
 }
 
 html {
-	//background-color:$cosoBlue02;
 	margin: auto;
-	//max-width: $MAX_WIDTH;
 }
 body {
-	//background-color: $cosoBlue02;
-}
-
-header {
-	//max-width: $MAX_WIDTH;
+	background-color: transparent;
 }
 
 h1,
@@ -37,9 +31,6 @@ p {
 	margin: 0.5em;
 }
 
-#content {
-	//margin-top: 5em;
-}
 #angebot {
 	margin-top: 40em;
 }
@@ -48,18 +39,18 @@ p {
 	width: 100%;
 	float: left;
 	text-align: center;
-	background-color: white;
 	border-bottom: $background01 0.1em solid;
 	padding-bottom: 1.5em;
 }
 
-/*
+
 .container:nth-child(2n+1) {
-	background-color: $background01;
+	background-color: white;
+	
 }
 .container:nth-child(2n) {
-	background-color: white;
-}*/
+	background-color: rgba(255,255,255,0.8);
+}
 .container h1 {
 	text-transform: uppercase;
 	padding: 0.7em;
@@ -81,12 +72,7 @@ hr {
 	//display: none;
 }
 
-.toLeft {
-	transition-timing-function: ease-in;
-	transition: 0.4s;
-	transform: translateX(-100%);
 
-}
 .highlighted {
 	font-weight: bold;
 	font-style: italic;
@@ -112,5 +98,3 @@ hr {
 @import 'header';
 @import 'containers';
 @import 'footer';
-
-@import 'responsive';
