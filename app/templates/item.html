@@ -1,19 +1,18 @@
-<div id="item-{{a.id}}" class="col-xs-6 col-sm-4 item" *ngFor="let a of angebote; let i = index">
-    <div id="field-{{a.id}}" class="field" (click)="deactivateOthers(angebote, a);changeView(a);">
-        <i class="fa fa-search-{{a.operator}} fa fa-3x"></i>
-        <img class="img" src="{{a.imgPath}}">
-        <!--<img id="arrow-{{a.id}}" class="arrow hide" src="app/data/images/arrowactive.png">-->
+<div id="item-{{i.id}}" class="col-xs-6 col-sm-4" *ngFor="let i of items; let index = index">
+    <div id="field-{{i.id}}" class="field" >
+        <i class="fa fa-search-{{i.operator}} fa fa-3x"></i>
+        <img class="img" src="{{i.imgPath}}">
+        <!--<img id="arrow-{{i.id}}" class="arrow hide" src="app/data/images/arrowactive.png">-->
 
     </div>
     
-    
     <!--<h2 class="title">{{a.title}}</h2>-->
-    <div id="text-{{a.id}}" class="hide text" (click)="deactivateOthers(angebote, a);changeView(a);" >
+    <div id="text-{{i.id}}" class="" >
         
-        <h2 class="">{{a.title}}</h2>
-        <p *ngFor="let p of a.description">{{p}}</p>
+        <h2 *ngFor="let t of i.name">{{t}}</h2>
+        <p *ngFor="let p of i.description">{{p}}</p>
         <ul>
-            <li *ngFor="let li of a.list">{{li}}</li>
+            <li *ngFor="let li of i.list">{{li}}</li>
         </ul>
     </div>
 </div>

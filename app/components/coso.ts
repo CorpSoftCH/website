@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
+import {SectionService} from 'app/services/section-service';
 import {AngebotPartnerService} from 'app/services/angebot-partner-service';
 import {ReferenzenService} from 'app/services/referenzen-service';
 import {TeamService} from 'app/services/team-service';
@@ -8,12 +9,13 @@ import {UnternehmenService} from 'app/services/unternehmen-service';
 import {ProduktService} from 'app/services/produkte-service';
 
 import HeaderComponent from './header';
+import ItemComponent from './item';
 
 @Component({
 	selector: 'coso',
 	templateUrl: 'app/templates/coso.html',
-	directives: [ ROUTER_DIRECTIVES, HeaderComponent ],
-	providers: [AngebotPartnerService, TeamService, UnternehmenService, ReferenzenService, ProduktService, HeaderComponent],
+	directives: [ ROUTER_DIRECTIVES, HeaderComponent, ItemComponent ],
+	providers: [AngebotPartnerService, TeamService, UnternehmenService, ReferenzenService, ProduktService, HeaderComponent, SectionService],
 	precompile: []
 	})
 export default class CosoComponent implements OnInit {
@@ -35,15 +37,18 @@ export default class CosoComponent implements OnInit {
 	toppartner: Item[] = [];
 	showpartner: Item[] = [];
 	produkte: ProdWebInhalt[] = [];
+	sections: Section[] = [];
 
 
 	constructor(
+		private sectionService: SectionService,
 		private angPartService: AngebotPartnerService,
 		private refService: ReferenzenService,
 		private teamService: TeamService,
 		private untService: UnternehmenService,
 		private prodService: ProduktService
 		) {
+		this.sections = sectionService.getSections();
 		this.angebote = angPartService.getAngebote();
 		this.referenzen = refService.getReferenzen();
 		this.unternehmen = untService.getUnternehmen();

@@ -32,11 +32,25 @@ export class Item {
 export class ItemService {
   TOP_PARTNER_ANZAHL: number = 3;
 
-
-  getAngebote(): Array<Item> {
-    return angebot.map(a => new Item(a.id, a.title, a.description, a.imgPath, "", a.list));
+  private getTestItems(): Array<Item> {
+    var items: Array<Item> = [];
+    items[0] = new Item("test1", ["Titel", "2. Titel"], ["Des1", "Des2"], ["li1", "li2"], "");
+    items[1] = new Item("test2", ["Titel", "2. Titel"], ["Des1", "Des2"], ["li1", "li2"], "");
+    return items;
   }
 
+  public getItems(values: string): Array<Item> {
+    if(values == "test") {
+      return this.getTestItems();
+    } else if (values == "angebote") {
+      return this.getAngebote();
+    }
+  }
+  
+  private getAngebote(): Array<Item> {
+    return angebot.map(a => new Item(a.id, a.title, a.description, a.list, a.imgPath));
+  }
+  /*
   getPartner(): Array<Item> {
     return partner.map(p => new Item(p.id, p.title, p.description, p.imgPath, p.link));
   }
@@ -48,5 +62,5 @@ export class ItemService {
       tp.push(p[i]);
     }
     return tp; 
-  }
+  }*/
 }

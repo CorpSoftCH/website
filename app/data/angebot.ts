@@ -1,7 +1,7 @@
 var angebot = [
   {
     "id": "angCo",
-    "title": "Collaboration",
+    "title": ["Collaboration"],
     "description":  [
       ""
     ],
@@ -16,7 +16,7 @@ var angebot = [
   },
   {
     "id": "angEP",
-    "title": "Projektmanagement",
+    "title": ["Projektmanagement"],
     "description":  [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
       "At vero eos et accusam et justo duo dolores et ea rebum."
@@ -25,7 +25,7 @@ var angebot = [
   },
   {
     "id": "angSM",
-    "title": "Service Management - Itil",
+    "title": ["Service Management - Itil"],
     "description":  [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     ],
@@ -33,7 +33,7 @@ var angebot = [
   },
   {
     "id": "angTr",
-    "title": "Training",
+    "title": ["Training"],
     "description":  [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
       "At vero eos et accusam et justo duo dolores et ea rebum."
@@ -42,7 +42,7 @@ var angebot = [
   },
   {
     "id": "angSDfSP",
-    "title": "SharePoint",
+    "title": ["SharePoint"],
     "description":  [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
       "At vero eos et accusam et justo duo dolores et ea rebum."
@@ -51,7 +51,7 @@ var angebot = [
   },
   {
     "id": "angAI",
-    "title": "Azure Infrastructure",
+    "title": ["Azure Infrastructure"],
     "description":  [
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
       "At vero eos et accusam et justo duo dolores et ea rebum."

@@ -1,17 +1,28 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
+import {ItemService} from 'app/services/item-service';
+
 @Component({
-  selector: 'coso-item',
+  selector: 'coso-items',
   templateUrl: 'app/templates/item.html',
   directives: [ ROUTER_DIRECTIVES],
+  providers: [ItemService]
 })
-export default class ItemComponent implements OnInit {
+export default class ItemComponent {
 
 
-	constructor() {
+    @Input() contentName: string;
+    items: Array<Item>;
+    service: ItemService;
 
+	constructor(
+        private itemService: ItemService
+    ) {
+        this.service = itemService;
 	}
 
-	ngOnInit() {}
+    ngOnInit() {
+        this.items = this.service.getItems(this.contentName);
+    }
 }

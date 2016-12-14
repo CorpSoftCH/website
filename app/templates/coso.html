@@ -11,31 +11,11 @@
 		<img id="hello-profile" src="app/data/images/team/profile.png">
 	</section>
 
-	<section id="angebot" class="container">
-		<h1>Angebot</h1>
+	<section *ngFor="let s of sections" id="section-{{s.id}}" class="container">
+		<h1>{{s.title}}</h1>
 		<hr />
-		<div class="angebot-container">
-
-			<div id="item-{{a.id}}" class="col-xs-6 col-sm-4 item" *ngFor="let a of angebote; let i = index">
-				<div id="field-{{a.id}}" class="field" (click)="deactivateOthers(angebote, a);changeView(a);">
-					<i class="fa fa-search-{{a.operator}} fa fa-3x"></i>
-					<img class="img" src="{{a.imgPath}}">
-					<!--<img id="arrow-{{a.id}}" class="arrow hide" src="app/data/images/arrowactive.png">-->
-			
-				</div>
-				
-				
-				<!--<h2 class="title">{{a.title}}</h2>-->
-				<div id="text-{{a.id}}" class="hide text" (click)="deactivateOthers(angebote, a);changeView(a);" >
-					
-					<h2 class="">{{a.title}}</h2>
-					<p *ngFor="let p of a.description">{{p}}</p>
-					<ul>
-						<li *ngFor="let li of a.list">{{li}}</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+		<p>{{s.mode}}</p>
+		<coso-items *ngIf="[s.itemFlag]" [contentName]="'angebote'"></coso-items>
 
 	</section>
 
