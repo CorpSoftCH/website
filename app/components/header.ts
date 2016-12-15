@@ -12,33 +12,15 @@ export default class HeaderComponent {
     private offSet: number = 60;
 
 	constructor() {
-		//this.startHeaderListener();
 		this.win = window;
-		
 	}
 
-	ngAfterViewChecked() {
+	ngAfterViewInit() {
 		this.sections = $(".container:not(#hello)");
 	}
 
-	/*
-	startHeaderListener(): void {
-		window.addEventListener('scroll', function(e){
-	        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-	            shrinkOn = 80,
-	            header = document.querySelector("header");
-	        if (distanceY > shrinkOn) {
-	            header.className = "smallerHead";
-	        } else {
-	            if (header.className == "smallerHead") {
-	            	header.className = "";
-	            }
-	        }
-	    });
-	}*/
 
 	toggleNav(): void {
-		
 		$("#navigation ul").toggleClass("toLeft");
 	}
 

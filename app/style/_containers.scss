@@ -1,41 +1,32 @@
 //Hello
 #hello {
 	text-align: center;
-	background-color: $cosoBlue02;
-	position: fixed;
-	z-index: -100;
+	background-color: transparent;
+	position: relative;
 	padding-top: 5em;
-}
-
-#hello p {
-	margin: 1em;
-	font-size: 2em;
-	color: white;
+	height: 100vh;
 }
 
 #hello-logo {
 	margin: 2em;
 }
 
-#hello-ms {
-	width: 30%;
-}
-
 #hello-profile {
-	width: 100%
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 }
 .col-md-3 {
 	margin: 0 !important;
 	padding: 0.2em !important;
 }
 
-
+.hundert {
+	width: 100%;
+}
 .arrow {
 	width: 50%;
-}
-
-.field {
-	width: 100%;
 }
 
 .field:hover {
@@ -48,8 +39,6 @@
 }
 .field:hover img {
 	cursor: pointer;
-	//opacity: 0.5;
-	
 }
 
 .field  i {
@@ -67,13 +56,9 @@
 }
 
 .text {
-	//position: absolute; //notlösung
-	top: 0; //notlösung
 	text-align: justify;
-	top: 0;
 	z-index: 5;
 	background-color: transparent;
-	background-color: white; //notlösung
 }
 .prodBorder {
 	border-bottom: solid black 0.1em;
@@ -103,18 +88,14 @@
 #unternehmen li p{
 	margin: 0;
 }
-/*
+
 .rightElement {
 	top: initial;
 	position: absolute;
 }
-.oneRow {
-	position: relative;
-	left: 0;
-}
 .special {
 	margin-right: 1px;
-}*/
+}
 
 
 //partner
@@ -133,7 +114,9 @@
 	margin-top: 1px;
 	margin-bottom: 1px;
 }
-#partner .btn {
+//Buttons
+.moreItems,
+.lessItems {
 	width: 100%;
 	font-size: 1.2em;
 	padding: 2em;

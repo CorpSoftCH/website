@@ -1,5 +1,5 @@
 
-<div id="item-{{i.id}}" class="col-xs-6 col-sm-4" *ngFor="let i of items; let index = index">
+<div id="item-{{i.id}}" class="col-xs-6 col-sm-4 item" *ngFor="let i of showItems; let ind = index">
     <div *ngIf="!i.isProduct && i.isFixText">
         <div id="field-{{i.id}}" class="field" >
             <img class="img" src="{{i.imgPath}}">
@@ -22,14 +22,13 @@
         </div>
     </div>
 
-    <div *ngIf="!i.isFixText && !i.isLink">
-        
-        <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(items, i);changeView(i)">
+    <div id="standard-{{i.id}}" *ngIf="!i.isFixText && !i.isLink">
+        <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(allItems, i);changeView(i, ind)">
             <img src="{{i.imgPath}}">
-            <h3>{{i.name[0]}}</h3>
             <i class="fa fa-search-{{i.operator}} fa fa-3x"></i>
         </div>
         <div id="text-{{i.id}}" class="text hide">
+            <h3>{{i.name[0]}}</h3>
             <p *ngFor="let para of i.description">{{para}}</p>
             <ul>
                 <li *ngFor="let li of i.descriptionInList">
@@ -41,12 +40,19 @@
 
     <div *ngIf="i.isLink">
         <a href="{{i.links[0]}}" target="_blank">
-            <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(items, i);changeView(i)">
+            <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(allItems, i);changeView(i, ind)">
                 <img src="{{i.imgPath}}">
                 <i class="fa fa-search-{{i.operator}} fa fa-3x"></i>
             </div>
         </a>
     </div>
 </div>
+
+<div class="showMoreLessButtons-{{contentName}} hide">
+    <button class="btn moreItems" (click)="moreItems()">Zeige mehr</button>
+    <button class="btn lessItems hide" (click)="lessItems()">Zeige weniger</button>
+</div>
+
+
 
 

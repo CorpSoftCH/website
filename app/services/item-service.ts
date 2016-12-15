@@ -19,6 +19,7 @@ export class Item {
     public isProduct: boolean = false,
     public active: boolean = false,
     public operator: string = "plus",
+    public isRightElement: boolean = false,
     public maxInRow: number = 3){}
 
   setActive(activate: boolean): void {
@@ -80,17 +81,4 @@ export class ItemService {
   private getProdukte(): Array<Item> {
     return produkte.map(pr => new Item(pr.id, pr.title, pr.description, [], "", [], true, false, pr.price, pr.priceFor, true));
   }
-  /*
-  getPartner(): Array<Item> {
-    return partner.map(p => new Item(p.id, p.title, p.description, p.imgPath, p.link));
-  }
-
-  getTopPartner(): Array<Item> {
-    var p = this.getPartner();
-    var tp: Item[] = [];
-    for (var i:number = 0; i < this.TOP_PARTNER_ANZAHL; i++) {
-      tp.push(p[i]);
-    }
-    return tp; 
-  }*/
 }

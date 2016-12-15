@@ -2,12 +2,6 @@
 <section id="content">
 	<section id="hello" class="">
 		<img id="hello-logo" src="app/data/images/logos/logo_color.png">
-		<div class="col-md-12">
-			<p class="col-md-3">SharePoint</p><p class="col-md-3">Project Server</p><p class="col-md-3">Service Management</p><p class="col-md-3">Project Management</p>
-		</div>
-		<div class="col-md-12">
-			<img id="hello-ms" src="app/data/images/MS-logo_weiss_Feb16_def.png">
-		</div>
 		<img id="hello-profile" src="app/data/images/team/profile.png">
 	</section>
 
@@ -16,11 +10,8 @@
 		<hr />
 		<p class="ueberschrift" *ngFor="let text of s.subtitles">{{text}}</p>
 		
-		<coso-items *ngIf="[s.itemFlag]" [contentName]="[s.content]"></coso-items>
-
-		<!--<div *ngIf="[s.showOnlyFew]">
-        	<button class="btn">Zeige Mehr</button>
-    	</div>-->
+		<coso-items *ngIf="[s.itemFlag]" [contentName]="[s.content]" [showOnlyTopItems]="[s.showOnlyTopItems]"></coso-items>
+		
 	</section>
 
 	<section id="referenzen" class="container">
@@ -31,7 +22,6 @@
 			<li *ngFor="let i of referenzen"></li>
 		</ol>
 		<div class="carousel-inner">
-
 			<div *ngFor="let r of referenzen" class="item {{r.state}}">
 				<p class="highlighted" *ngFor="let para of r.zitat">{{para}}</p>
 				<p>{{r.lecturer}}</p>

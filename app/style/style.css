@@ -8,7 +8,9 @@ html {
   margin: auto; }
 
 body {
-  background-color: transparent; }
+  background-image: url("/app/data/images/cloud-02.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
 
 h1,
 h2 {
@@ -18,25 +20,19 @@ h2 {
 p {
   margin: 0.5em; }
 
-#angebot {
-  margin-top: 40em; }
-
 .container {
   width: 100%;
   float: left;
   text-align: center;
   border-bottom: rgba(43, 66, 92, 0.4) 0.1em solid;
-  padding-bottom: 1.5em;
+  padding-bottom: 1.5em; }
+
+.container:nth-child(2n) {
   background-color: white; }
 
-/*
 .container:nth-child(2n+1) {
-	background-color: white;
-	
-}
-.container:nth-child(2n) {
-	background-color: rgba(255,255,255,0.8);
-}*/
+  background-color: rgba(255, 255, 255, 0.8); }
+
 .container h1 {
   text-transform: uppercase;
   padding: 0.7em;
@@ -318,34 +314,29 @@ header button {
 
 #hello {
   text-align: center;
-  background-color: rgba(0, 131, 195, 0.5);
-  position: fixed;
-  z-index: -100;
-  padding-top: 5em; }
-
-#hello p {
-  margin: 1em;
-  font-size: 2em;
-  color: white; }
+  background-color: transparent;
+  position: relative;
+  padding-top: 5em;
+  height: 100vh; }
 
 #hello-logo {
   margin: 2em; }
 
-#hello-ms {
-  width: 30%; }
-
 #hello-profile {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%; }
 
 .col-md-3 {
   margin: 0 !important;
   padding: 0.2em !important; }
 
+.hundert {
+  width: 100%; }
+
 .arrow {
   width: 50%; }
-
-.field {
-  width: 100%; }
 
 .field:hover {
   box-shadow: 0px 0px 15px lightgray; }
@@ -371,12 +362,9 @@ header button {
   visibility: visible; }
 
 .text {
-  top: 0;
   text-align: justify;
-  top: 0;
   z-index: 5;
-  background-color: transparent;
-  background-color: white; }
+  background-color: transparent; }
 
 .prodBorder {
   border-bottom: solid black 0.1em;
@@ -402,18 +390,13 @@ header button {
 #unternehmen li p {
   margin: 0; }
 
-/*
 .rightElement {
-	top: initial;
-	position: absolute;
-}
-.oneRow {
-	position: relative;
-	left: 0;
-}
+  top: initial;
+  position: absolute; }
+
 .special {
-	margin-right: 1px;
-}*/
+  margin-right: 1px; }
+
 #partner .field:hover {
   background-color: white;
   border-radius: 50%; }
@@ -427,7 +410,8 @@ header button {
   margin-top: 1px;
   margin-bottom: 1px; }
 
-#partner .btn {
+.moreItems,
+.lessItems {
   width: 100%;
   font-size: 1.2em;
   padding: 2em;

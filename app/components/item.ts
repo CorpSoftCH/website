@@ -13,18 +13,44 @@ export default class ItemComponent {
 
 
     @Input() contentName: string;
-    items: Array<Item>;
+	@Input() showOnlyTopItems: boolean;
+    
+	TABLET: number =  768;
+	MOBILE_LARGE: number = 640;
+	MOBILE: number = 480;
+	
+	allItems: Array<Item>;
+	showItems: Array<Item>;
+	topItems: Array<Item> = [];
     service: ItemService;
+	itemRows: number = 3;
+
 
 	constructor(
         private itemService: ItemService
     ) {
         this.service = itemService;
+		window.onresize = () => {
+			this.setItemsPerRow(window.innerWidth);
+    	};
 	}
 
     ngOnInit() {
-        this.items = this.service.getItems(this.contentName);
-    }
+        this.allItems = this.service.getItems(this.contentName);
+		this.showItems = this.allItems;
+		for (var i = 0; i < this.itemRows; i++) {
+			this.topItems[i] = this.allItems[i];
+		}
+		this.setItemsPerRow(window.innerWidth);
+		
+	}
+
+	ngAfterViewInit() {
+		if(this.showOnlyTopItems[0]) {
+			this.showItems = this.topItems;
+			$(".showMoreLessButtons-" + this.contentName[0]).removeClass("hide");
+		}
+	}
 
     deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
 		for(let value of elements) {
@@ -34,15 +60,65 @@ export default class ItemComponent {
 		}
 	}
 
+	private setItemsPerRow(size: number) {
+		if (size > this.TABLET) {
+			this.itemRows = 3;
+		}
+		if (size < this.TABLET) {
+			this.itemRows = 2;
+		}
 
-    changeView(element:any): void  {
+		if (size <= this.MOBILE) {
+			this.itemRows = 1;
+		}
+		this.updateRightElements();
+  	}
+
+	private updateRightElements() {
+		for(var index = 0; index < this.showItems.length; index++) {
+			if((index+1)%this.itemRows == 0) {
+				this.showItems[index].isRightElement = true;
+			} else {
+				this.showItems[index].isRightElement = false;
+			}
+		}
+	}
+
+
+    changeView(element:any, index:number): void  {
+		console.log(index);
     	element.active = !element.active;
     	element.changeOperator();
 		
 		$("#text-" + element.id ).toggleClass("hide");
 		//$("#arrow-" + element.id ).toggleClass("hide");
 		$("#item-" + element.id ).toggleClass("active");
-		//$("#field-" + element.id ).toggleClass("hide"); //notlösung
+		
+		if(element.active && !element.isRightElement) {
+			$("#item-" + element.id ).addClass("col-sm-8");
+			$("#item-" + element.id ).removeClass("col-xs-6 col-sm-4");
+			$("#standard-" + element.id ).addClass("hundert");
+			$("#field-" + element.id ).addClass("col-xs-6");
+			$("#text-" + element.id ).addClass("col-xs-6");
+		} else if(element.active && element.isRightElement && this.itemRows > 1) {
+			$("#text-" + element.id ).addClass("rightElement");
+			if(index < this.showItems.length - this.itemRows) {
+				var spezEle = this.showItems[index-1+this.itemRows];
+				$("#item-" + spezEle.id).addClass("special"); 
+			}
+		} else {
+			$("#item-" + element.id ).removeClass("col-sm-8");
+			$("#item-" + element.id ).addClass("col-xs-6 col-sm-4");
+			$("#standard-" + element.id ).removeClass("hundert");
+			$("#field-" + element.id ).removeClass("col-xs-6");
+			$("#text-" + element.id ).removeClass("col-xs-6");
+			
+			$(".item").removeClass("special");
+			$(".text").removeClass("rightElement");
+
+		}
+
+		
 
 		/*
 		$(".item-").removeClass("col-sm-8");
@@ -72,5 +148,18 @@ export default class ItemComponent {
 			$("#text-" + element.id ).addClass("col-xs-6");
 		}*/
     }
+
+	public moreItems(): void  {
+		this.showItems = this.allItems;
+		$(".moreItems").toggleClass("hide");
+		$(".lessItems").toggleClass("hide");
+	}
+
+	public lessItems(): void  {
+		this.showItems = this.topItems;
+		$(".moreItems").toggleClass("hide");
+		$(".lessItems").toggleClass("hide");
+	}
+
 }
 

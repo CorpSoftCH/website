@@ -7,7 +7,7 @@ export class Section {
     public subtitles: Array<string>,
     public content: string,
     public itemFlag: boolean = false,
-    public showOnlyFew: boolean = false,
+    public showOnlyTopItems: boolean = false,
     public isProduct: boolean = false
     ){}
 
@@ -17,6 +17,6 @@ export class SectionService {
   
 
   public getSections(): Array<Section> {
-    return section.map(s => new Section(s.id, s.title, s.subtitles, s.content, s.itemFlag, s.isProduct, s.showOnlyFew));
+    return section.map(s => new Section(s.id, s.title, s.subtitles, s.content, s.itemFlag, s.showOnlyTopItems, s.isProduct));
   }
 }

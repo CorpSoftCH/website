@@ -25,11 +25,8 @@ export default class CosoComponent implements OnInit {
 	MOBILE: number = 480;	
 	MOBILE_SMALL: number =  300;
 
-	itemRows: number = 3;
-
 	sections: Section[] = [];
 	referenzen: Referenz[] = [];
-
 
 	constructor( private sectionService: SectionService, private refService: ReferenzenService ) {
 			
@@ -40,8 +37,6 @@ export default class CosoComponent implements OnInit {
 			this.setSizeSettings(window.innerWidth);
     	};	
 	}
-
-	
 
     ngOnInit(): void {
     	this.loadMap();
@@ -83,12 +78,8 @@ export default class CosoComponent implements OnInit {
 			$("#navigation").removeClass("smallHead hide");
 		}
 		*/
-		if (size < this.TABLET) {
-			this.itemRows = 2;
-		}
 
 		if (size <= this.MOBILE) {
-			this.itemRows = 1;
 			$(".col-sm-4").removeClass("col-xs-6");
 			$(".col-sm-3").removeClass("col-xs-4");
 		} else {
@@ -126,19 +117,5 @@ export default class CosoComponent implements OnInit {
 			$(".title").addClass("hide");
 			$("body").addClass("mobile-large");
 		}*/
-	}
-
-	morePartner(): void  {
-		this.showpartner = this.partner;
-		this.setSizeSettings(window.innerWidth);
-		$("#mPart").toggleClass("hide");
-		$("#lPart").toggleClass("hide");
-	}
-
-	lessPartner(): void  {
-		this.showpartner = this.toppartner;
-		this.setSizeSettings(window.innerWidth);
-		$("#mPart").toggleClass("hide");
-		$("#lPart").toggleClass("hide");
 	}
 }
