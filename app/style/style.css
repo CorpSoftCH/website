@@ -280,11 +280,6 @@ header ul {
   transform: translateX(0);
   box-shadow: 5px 0px 15px #2B425C; }
 
-.toLeft {
-  transition-timing-function: ease-in;
-  transition: 0.4s;
-  transform: translateX(-110%); }
-
 header li {
   cursor: pointer;
   padding: 0.5em;
@@ -329,11 +324,11 @@ header button {
   width: 100%; }
 
 .col-md-3 {
-  margin: 0 !important;
-  padding: 0.2em !important; }
+  margin: 0 !important; }
 
-.hundert {
-  width: 100%; }
+.col-sm-8 {
+  padding: 0;
+  margin: 0; }
 
 .arrow {
   width: 50%; }
@@ -362,6 +357,7 @@ header button {
   visibility: visible; }
 
 .text {
+  visibility: visible;
   text-align: justify;
   z-index: 5;
   background-color: transparent; }
@@ -490,5 +486,31 @@ footer p {
   padding-bottom: 2em;
   white-space: wrap;
   color: white; }
+
+.toLeft {
+  transition-timing-function: ease-in-out;
+  transition: 0.4s;
+  transform: translateX(-110%); }
+
+.moveShow {
+  animation: showAnimation 0.5s ease-in-out; }
+
+.moveDownShow {
+  animation: showDownAnimation 0.5s ease-in-out; }
+
+@keyframes showAnimation {
+  0% {
+    left: -25%;
+    opacity: 0; }
+  100% {
+    left: 0%;
+    opacity: 1; } }
+@keyframes showDownAnimation {
+  0% {
+    top: 50%;
+    opacity: 0; }
+  100% {
+    top: 100%;
+    opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */

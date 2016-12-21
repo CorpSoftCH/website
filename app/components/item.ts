@@ -86,33 +86,36 @@ export default class ItemComponent {
 
 
     changeView(element:any, index:number): void  {
-		console.log(index);
     	element.active = !element.active;
     	element.changeOperator();
 		
 		$("#text-" + element.id ).toggleClass("hide");
 		//$("#arrow-" + element.id ).toggleClass("hide");
 		$("#item-" + element.id ).toggleClass("active");
-		
+
 		if(element.active && !element.isRightElement) {
 			$("#item-" + element.id ).addClass("col-sm-8");
 			$("#item-" + element.id ).removeClass("col-xs-6 col-sm-4");
-			$("#standard-" + element.id ).addClass("hundert");
 			$("#field-" + element.id ).addClass("col-xs-6");
-			$("#text-" + element.id ).addClass("col-xs-6");
+			$("#text-" + element.id ).addClass("col-xs-6 moveShow");
 		} else if(element.active && element.isRightElement && this.itemRows > 1) {
-			$("#text-" + element.id ).addClass("rightElement");
+			//letztem Element wird die Position nicht absolute (Text ragt nicht über die Section)
+			if (element != this.showItems[this.showItems.length -1]) {
+				$("#text-" + element.id ).addClass("rightElement");
+
+			}
 			if(index < this.showItems.length - this.itemRows) {
 				var spezEle = this.showItems[index-1+this.itemRows];
 				$("#item-" + spezEle.id).addClass("special"); 
 			}
+			$("#text-" + element.id ).addClass("moveDownShow");
 		} else {
 			$("#item-" + element.id ).removeClass("col-sm-8");
 			$("#item-" + element.id ).addClass("col-xs-6 col-sm-4");
-			$("#standard-" + element.id ).removeClass("hundert");
 			$("#field-" + element.id ).removeClass("col-xs-6");
-			$("#text-" + element.id ).removeClass("col-xs-6");
+			$("#text-" + element.id ).removeClass("col-xs-6 moveShow");
 			
+
 			$(".item").removeClass("special");
 			$(".text").removeClass("rightElement");
 

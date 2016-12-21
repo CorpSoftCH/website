@@ -19,12 +19,13 @@
 }
 .col-md-3 {
 	margin: 0 !important;
-	padding: 0.2em !important;
+	//padding: 0.2em !important;
+}
+.col-sm-8 {
+	padding: 0;
+	margin: 0;
 }
 
-.hundert {
-	width: 100%;
-}
 .arrow {
 	width: 50%;
 }
@@ -56,6 +57,7 @@
 }
 
 .text {
+	visibility: visible;
 	text-align: justify;
 	z-index: 5;
 	background-color: transparent;
@@ -157,7 +159,6 @@
     text-transform: none;
     text-decoration: none;
 }
-
 
 .social-media button {
     float: left;
