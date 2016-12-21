@@ -55,7 +55,7 @@ export default class ItemComponent {
     deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
 		for(let value of elements) {
 			if(value.active && value != ignoreElement) {
-				this.changeView(value);
+				this.changeView(value, 0);
 			}
 		}
 	}
@@ -77,28 +77,31 @@ export default class ItemComponent {
 	private updateRightElements() {
 		for(var index = 0; index < this.showItems.length; index++) {
 			if((index+1)%this.itemRows == 0) {
-				this.showItems[index].isRightElement = true;
+				this.showItems[index].setAsRightElement(true);
 			} else {
-				this.showItems[index].isRightElement = false;
+				this.showItems[index].setAsRightElement(false);
 			}
 		}
 	}
 
 
     changeView(element:any, index:number): void  {
-    	element.active = !element.active;
-    	element.changeOperator();
+		if(element.isActive()) {
+			element.setActive(false);
+		} else {
+			element.setActive(true);
+		}
 		
 		$("#text-" + element.id ).toggleClass("hide");
 		//$("#arrow-" + element.id ).toggleClass("hide");
 		$("#item-" + element.id ).toggleClass("active");
 
-		if(element.active && !element.isRightElement) {
+		if(element.isActive() && !element.isRightElement()) {
 			$("#item-" + element.id ).addClass("col-sm-8");
 			$("#item-" + element.id ).removeClass("col-xs-6 col-sm-4");
 			$("#field-" + element.id ).addClass("col-xs-6");
-			$("#text-" + element.id ).addClass("col-xs-6 moveShow");
-		} else if(element.active && element.isRightElement && this.itemRows > 1) {
+			$("#text-" + element.id ).addClass("col-xs-6 moveLeftShow");
+		} else if(element.isActive() && element.isRightElement() && this.itemRows > 1) {
 			//letztem Element wird die Position nicht absolute (Text ragt nicht über die Section)
 			if (element != this.showItems[this.showItems.length -1]) {
 				$("#text-" + element.id ).addClass("rightElement");
@@ -113,43 +116,13 @@ export default class ItemComponent {
 			$("#item-" + element.id ).removeClass("col-sm-8");
 			$("#item-" + element.id ).addClass("col-xs-6 col-sm-4");
 			$("#field-" + element.id ).removeClass("col-xs-6");
-			$("#text-" + element.id ).removeClass("col-xs-6 moveShow");
+			$("#text-" + element.id ).removeClass("col-xs-6");
 			
 
 			$(".item").removeClass("special");
 			$(".text").removeClass("rightElement");
 
 		}
-
-		
-
-		/*
-		$(".item-").removeClass("col-sm-8");
-		$(".field").removeClass("col-xs-6");
-		$(".text").removeClass("col-xs-6");
-
-		$(".text").removeClass("rightElement");
-		$(".text").removeClass("oneRow");
-		$(".special").removeClass("special");
-		*/
-		//$("#item-" + element.id ).addClass("col-xs-6 col-sm-4");
-		
-		
-		/*
-		if(this.itemRows == 1) {
-			$("#text-" + element.id ).addClass("oneRow");
-		} else if (index%this.itemRows == 0 && element.active) {
-			$("#text-" + element.id ).addClass("rightElement");
-			if(index+this.itemRows-2 < this.angebote.length) {
-				var spez = this.angebote[index+this.itemRows -2];
-				$("#item-" + spez.id).addClass("special");
-			}
-		} else {
-			$("#item-" + element.id ).addClass("col-sm-8");
-			$("#item-" + element.id ).removeClass("col-xs-6 col-sm-4");
-			$("#field-" + element.id ).addClass("col-xs-6");
-			$("#text-" + element.id ).addClass("col-xs-6");
-		}*/
     }
 
 	public moreItems(): void  {

@@ -7,43 +7,42 @@ import produkte from 'app/data/produkte';
 export class Item {
   constructor(
     public id: string,
-    public name: Array<string>,
-    public description: Array<string>,
-    public descriptionInList: Array<string> = [],
+    public titles: Array<string>,
     public imgPath: string,
-    public links: Array<string> = [],
-    public isFixText: boolean = false,
-    public isLink: boolean = false,
-    public price: string = "",
-    public priceFor: string = "",
-    public isProduct: boolean = false,
-    public active: boolean = false,
-    public operator: string = "plus",
-    public isRightElement: boolean = false,
-    public maxInRow: number = 3){}
+    public contentStrings: Array<string>,
+    public specialStrings: Array<string>,
+    //active - hasFixText - isLink - isProduct - isRightElement
+    public flags: Array<boolean>){}
 
-  setActive(activate: boolean): void {
-      this.active = activate;
+
+  isActive(): boolean {
+    return this.flags[0];
   }
 
-  changeOperator(): void {
-    if (this.operator == "minus") {
-      this.operator = "plus"
+  isRightElement(): boolean {
+    return this.flags[4];
+  }
+  setAsRightElement(value: boolean) {
+    this.flags[4] = value;
+  }
+
+  setActive(value: boolean): void {
+      this.flags[0] = value;
+  }
+  getOperator(): string {
+    if(this.flags[0]) {
+      return "minus";
     } else {
-      this.operator = "minus";
+      return "plus";
     }
-    
   }
-
 }
 
 export class ItemService {
   TOP_PARTNER_ANZAHL: number = 3;
 
   public getItems(values: string): Array<Item> {
-    if(values == "test") {
-      return this.getTestItems();
-    } else if (values == "angebote") {
+    if (values == "angebote") {
       return this.getAngebote();
     } else if (values == "team") {
       return this.getTeam();
@@ -55,30 +54,23 @@ export class ItemService {
       return this.getProdukte();
     }
   }
-
-  private getTestItems(): Array<Item> {
-    var items: Array<Item> = [];
-    items[0] = new Item("test1", ["Titel", "2. Titel"], ["Des1", "Des2"], ["li1", "li2"], "");
-    items[1] = new Item("test2", ["Titel", "2. Titel"], ["Des1", "Des2"], ["li1", "li2"], "");
-    return items;
-  }
   
   private getAngebote(): Array<Item> {
-    return angebot.map(a => new Item(a.id, a.title, a.description, a.list, a.imgPath));
+    return angebot.map(a => new Item(a.id, [a.title], a.imgPath , a.description, a.list, [false, false, false, false, false]));
   }
 
   private getTeam(): Array<Item> {
-    return team.map(t => new Item(t.kuerzel, t.name, t.description, [] , t.imgPath, t.links));
+    return team.map(t => new Item(t.kuerzel, t.name, t.imgPath, t.description, t.links, [false, false, false, false, false]));
   }
 
   private getPartner(): Array<Item> {
-    return partner.map(p => new Item(p.id, p.title, p.description, [], p.imgPath, p.link, false, true));
+    return partner.map(p => new Item(p.id, p.title, p.imgPath, p.description, p.link, [false, false, true, false, false]));
   }
   
   private getUnternehmen(): Array<Item> {
-    return unternehmen.map(u => new Item(u.id, u.title, u.paragraphs, u.list, u.imgPath, [], true));
+    return unternehmen.map(u => new Item(u.id, u.title, u.imgPath, u.paragraphs, u.list, [false, true, false, false, false], ));
   }
   private getProdukte(): Array<Item> {
-    return produkte.map(pr => new Item(pr.id, pr.title, pr.description, [], "", [], true, false, pr.price, pr.priceFor, true));
+    return produkte.map(pr => new Item(pr.id, pr.title, "" , pr.description, [pr.price, pr.priceFor], [false, true, false, true, false]));
   }
 }

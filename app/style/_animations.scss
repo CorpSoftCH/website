@@ -5,19 +5,19 @@
 	transform: translateX(-110%);
 }
 
-.moveShow {
-    animation: showAnimation 0.5s ease-in-out;
+.moveLeftShow {
+    animation: leftAni 0.5s ease-in-out;
 }
 
 .moveDownShow {
-    animation: showDownAnimation 0.5s ease-in-out;
+    animation: downAni 0.5s ease-in-out;
 }
 
-@keyframes showAnimation {
+@keyframes leftAni {
     0%   { left: -25%; opacity: 0; }
     100% { left: 0%; opacity: 1; }
 }
-@keyframes showDownAnimation {
+@keyframes downAni {
     0%   { top: 50%; opacity: 0; }
     100% { top: 100%; opacity: 1; }
 }

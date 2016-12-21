@@ -17,9 +17,6 @@ h2 {
   z-index: 2;
   font-weight: 700; }
 
-p {
-  margin: 0.5em; }
-
 .container {
   width: 100%;
   float: left;
@@ -333,9 +330,6 @@ header button {
 .arrow {
   width: 50%; }
 
-.field:hover {
-  box-shadow: 0px 0px 15px lightgray; }
-
 .field img {
   width: 70%;
   max-width: 20em;
@@ -418,32 +412,18 @@ header button {
   text-transform: uppercase; }
 
 #kontakt p {
-  text-align: justify;
-  margin-bottom: 1em; }
+  text-align: justify; }
 
-#kontakt label {
-  padding: 0;
-  margin: 0;
-  font-size: 1em;
-  color: #2B425C; }
+#kontakt .contact-us {
+  padding: 1.5em 0; }
 
-.kontakt-info {
+.social-media {
   padding: 2em; }
 
 .contact-icon {
   float: left;
   margin-right: 0.5em;
-  margin-bottom: 2em;
-  width: 1em; }
-
-.contact-us {
-  margin-top: 2em;
-  float: left;
-  width: 50%; }
-
-.contact-us p {
-  text-transform: none;
-  text-decoration: none; }
+  margin-bottom: 0.5em; }
 
 .social-media button {
   float: left;
@@ -457,21 +437,16 @@ header button {
 .form-control {
   font-size: 1.2em;
   padding: 1.2em;
-  width: calc(100% - 5em);
-  border: 0.3em solid #2B425C;
+  width: calc(100% - 1.9em);
+  border: 0.2em solid #2B425C;
   margin: 1em; }
-
-.form-control-2 {
-  border: 0;
-  border-left: 0.3em solid #2B425C;
-  border-bottom: 0.3em solid #2B425C; }
 
 #contact-form-senden {
   font-size: 1.2em;
-  padding: 2em;
+  padding: 1.5em;
   border: none;
-  background-color: white;
-  color: #2B425C;
+  background-color: #2B425C;
+  color: white;
   letter-spacing: 3px;
   text-transform: uppercase; }
 
@@ -492,20 +467,20 @@ footer p {
   transition: 0.4s;
   transform: translateX(-110%); }
 
-.moveShow {
-  animation: showAnimation 0.5s ease-in-out; }
+.moveLeftShow {
+  animation: leftAni 0.5s ease-in-out; }
 
 .moveDownShow {
-  animation: showDownAnimation 0.5s ease-in-out; }
+  animation: downAni 0.5s ease-in-out; }
 
-@keyframes showAnimation {
+@keyframes leftAni {
   0% {
     left: -25%;
     opacity: 0; }
   100% {
     left: 0%;
     opacity: 1; } }
-@keyframes showDownAnimation {
+@keyframes downAni {
   0% {
     top: 50%;
     opacity: 0; }
