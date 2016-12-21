@@ -29,7 +29,7 @@
             <i class="fa fa-search-{{i.getOperator()}} fa fa-3x"></i>
         </div>
         <div id="text-{{i.id}}" class="text hide">
-            <h3>{{i.title}} {{i.title}}</h3>
+            <h3>{{i.titles}}</h3>
             <p *ngFor="let para of i.contentStrings">{{para}}</p>
             <ul>
                 <li *ngFor="let li of i.specialStrings">

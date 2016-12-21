@@ -54,7 +54,7 @@ export default class ItemComponent {
 
     deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
 		for(let value of elements) {
-			if(value.active && value != ignoreElement) {
+			if(value.isActive() && value != ignoreElement) {
 				this.changeView(value, 0);
 			}
 		}
