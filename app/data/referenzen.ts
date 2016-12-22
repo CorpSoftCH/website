@@ -9,7 +9,7 @@ var referenzen = [
     "position": "Senior Coach Informatik",
     "link" : "https://www.post.ch/de",
     "imgPath" : "app/data/images/partner/Post.png",
-    "state" : "active"
+    "state" : true
   },{
     "id": "ref_02",
     "zitat": [

@@ -11,7 +11,6 @@ import {ItemService} from 'app/services/item-service';
 })
 export default class ItemComponent {
 
-
     @Input() contentName: string;
 	@Input() showOnlyTopItems: boolean;
     
@@ -50,6 +49,7 @@ export default class ItemComponent {
 			this.showItems = this.topItems;
 			$(".showMoreLessButtons-" + this.contentName[0]).removeClass("hide");
 		}
+		
 	}
 
     deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.

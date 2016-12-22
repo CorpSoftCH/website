@@ -3,6 +3,7 @@ import partner from 'app/data/partner';
 import team from 'app/data/team';
 import unternehmen from 'app/data/unternehmen';
 import produkte from 'app/data/produkte';
+import referenzen from 'app/data/referenzen';
 
 export class Item {
   constructor(
@@ -52,6 +53,8 @@ export class ItemService {
       return this.getUnternehmen();
     } else if (values == "produkte") {
       return this.getProdukte();
+    } else if (values == "referenzen") {
+      return this.getReferenzen();
     }
   }
   
@@ -72,5 +75,8 @@ export class ItemService {
   }
   private getProdukte(): Array<Item> {
     return produkte.map(pr => new Item(pr.id, pr.title, "" , pr.description, [pr.price, pr.priceFor], [false, true, false, true, false]));
+  }
+  private getReferenzen(): Array<Item> {
+    return referenzen.map(r => new Item(r.id, [r.lecturer, r.position], r.imgPath , r.zitat, [r.link], [r.state]));
   }
 }

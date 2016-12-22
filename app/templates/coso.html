@@ -9,35 +9,8 @@
 		<h1>{{s.title}}</h1>
 		<hr />
 		<p class="ueberschrift" *ngFor="let text of s.subtitles">{{text}}</p>
-		
-		<coso-items *ngIf="[s.itemFlag]" [contentName]="[s.content]" [showOnlyTopItems]="[s.showOnlyTopItems]"></coso-items>
-		
-	</section>
-
-	<section id="referenzen" class="container">
-		<h1>Referenzen</h1>
-		<hr />
-		<div id="div-carousel" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li *ngFor="let i of referenzen"></li>
-		</ol>
-		<div class="carousel-inner">
-			<div *ngFor="let r of referenzen" class="item {{r.state}}">
-				<p class="highlighted" *ngFor="let para of r.zitat">{{para}}</p>
-				<p>{{r.lecturer}}</p>
-				<p>{{r.position}}</p>
-				<a href="{{r.link}}">
-					<img class="carousel-img" src="{{r.imgPath}}">
-				</a>
-			</div>
-		</div>
-		<a class="left carousel-control" href="javascript:$('#div-carousel').carousel('prev');">
-			<span class="fa fa-chevron-left glyphicon-chevron-left"></span>
-		</a>
-		<a class="right carousel-control" href="javascript:$('#div-carousel').carousel('next');">
-			<span class="fa fa-chevron-right glyphicon-chevron-right"></span>
-		</a>
-		</div>
+		<coso-items *ngIf="s.itemFlag" [contentName]="[s.content]" [showOnlyTopItems]="[s.showOnlyTopItems]"></coso-items>
+		<coso-carousel *ngIf="!s.itemFlag" [contentName]="[s.content]"></coso-carousel>
 	</section>
 
 	<section id="kontakt" class="container">

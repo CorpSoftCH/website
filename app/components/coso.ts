@@ -2,18 +2,16 @@ import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {SectionService} from 'app/services/section-service';
-import {ReferenzenService} from 'app/services/referenzen-service';
 
 import HeaderComponent from './header';
 import ItemComponent from './item';
-import ProduktComponent from './produkte';
-import UnternehmenComponent from './unternehmen';
+import CarouselComponent from './carousel';
 
 @Component({
 	selector: 'coso',
 	templateUrl: 'app/templates/coso.html',
-	directives: [ ROUTER_DIRECTIVES, HeaderComponent, ItemComponent],
-	providers: [SectionService, ReferenzenService],
+	directives: [ ROUTER_DIRECTIVES, HeaderComponent, ItemComponent, CarouselComponent],
+	providers: [SectionService],
 	precompile: []
 	})
 export default class CosoComponent implements OnInit {
@@ -26,27 +24,16 @@ export default class CosoComponent implements OnInit {
 	MOBILE_SMALL: number =  300;
 
 	sections: Section[] = [];
-	referenzen: Referenz[] = [];
 
-	constructor( private sectionService: SectionService, private refService: ReferenzenService ) {
+	constructor( private sectionService: SectionService) {
 			
 		this.sections = sectionService.getSections();
-		this.referenzen = refService.getReferenzen();
 
 		window.onresize = () => {
 			this.setSizeSettings(window.innerWidth);
     	};	
 	}
-
-    ngOnInit(): void {
-    	this.loadMap();
-		this.activateFirst();
-		this.setSizeSettings(window.innerWidth);
-	}
-
-	activateFirst(): void  {
-		referenzen[0].state = "active";
-	}
+	
 
     loadMap(): void  {    	
 	    var myLatLng = {lat: 47.1316061, lng: 7.2481453};

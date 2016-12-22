@@ -17,6 +17,9 @@ h2 {
   z-index: 2;
   font-weight: 700; }
 
+ul {
+  list-style-image: url("/app/data/images/logos/cosologo.png"); }
+
 .container {
   width: 100%;
   float: left;
@@ -468,7 +471,8 @@ footer p {
   transform: translateX(-110%); }
 
 .moveLeftShow {
-  animation: leftAni 0.5s ease-in-out; }
+  animation: leftAni 0.5s ease-in-out;
+  z-index: -1; }
 
 .moveDownShow {
   animation: downAni 0.5s ease-in-out; }

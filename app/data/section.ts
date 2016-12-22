@@ -48,5 +48,13 @@ var section = [
         "itemFlag": true,
         "showOnlyTopItems": true,
         "content": "partner"   
+    }, {
+        "id": "referenzen",
+        "title": "Referenzen",
+        "subtitles": [
+            "Unsere Referenzen"
+             ],
+        "itemFlag": false,
+        "content": "referenzen"   
     }
 ]
