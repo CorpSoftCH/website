@@ -30,4 +30,8 @@ export default class CarouselComponent {
 		this.items[0].state = "active";
 	}
 
+    move(id: string, value: string) {
+        $('#' + id).carousel(value);
+    }
+
 }

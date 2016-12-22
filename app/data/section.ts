@@ -2,8 +2,6 @@
  * id: Eindeutige Identifikation der section
  * title: Titel der section
  * subtitles: Array of Subtitles
- * mode[0]: Modus (items, ...)
- * mode[1]: Spezifizierung des Modus
  */
 var section = [
     {
@@ -32,6 +30,14 @@ var section = [
         "itemFlag": true,
         "content": "unternehmen"   
     }, {
+        "id": "referenzen",
+        "title": "Referenzen",
+        "subtitles": [
+            "Unsere Referenzen"
+             ],
+        "itemFlag": false,
+        "content": "referenzen"   
+    }, {
         "id": "team",
         "title": "Team",
         "subtitles": [
@@ -48,13 +54,5 @@ var section = [
         "itemFlag": true,
         "showOnlyTopItems": true,
         "content": "partner"   
-    }, {
-        "id": "referenzen",
-        "title": "Referenzen",
-        "subtitles": [
-            "Unsere Referenzen"
-             ],
-        "itemFlag": false,
-        "content": "referenzen"   
     }
 ]

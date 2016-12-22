@@ -1,4 +1,4 @@
-<div id="div-carousel" class="carousel slide" data-ride="carousel">
+<div id="carousel-{{contentName}}" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li *ngFor="let i of items"></li>
     </ol>
@@ -12,10 +12,10 @@
             </a>
         </div>
     </div>
-    <a class="left carousel-control" href="javascript:$('#div-carousel').carousel('prev');">
+    <a class="left carousel-control" (click)="move('carousel-' + [contentName],'prev')">
         <span class="fa fa-chevron-left glyphicon-chevron-left"></span>
     </a>
-    <a class="right carousel-control" href="javascript:$('#div-carousel').carousel('next');">
+    <a class="right carousel-control"  (click)="move('carousel-' + [contentName],'prev')">
         <span class="fa fa-chevron-right glyphicon-chevron-right"></span>
     </a>
 </div>

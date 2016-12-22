@@ -70,7 +70,13 @@ export default class ItemComponent {
 
 		if (size <= this.MOBILE) {
 			this.itemRows = 1;
+			$(".col-sm-4").removeClass("col-xs-6");
+			$(".col-sm-3").removeClass("col-xs-4");
+		} else {
+			$(".col-sm-4").addClass("col-xs-6");
+			$(".col-sm-3").addClass("col-xs-4");
 		}
+
 		this.updateRightElements();
   	}
 
