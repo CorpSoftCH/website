@@ -26,10 +26,8 @@ export class CarouselComponent {
     }
 
     activateFirst(): void  {
-        console.log("activate!!!")
         try{
             this.items[0].state = "active";
-            console.log(this.items[0].state);
         } catch (err) {
             console.log("catch activate")
         }

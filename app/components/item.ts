@@ -41,14 +41,18 @@ export class ItemComponent {
 			
 		}
 
+		
+
+		this.setItemsPerRow(window.innerWidth);		
+	}
+
+	ngAfterContentChecked() {
 		try {
 			if(this.showOnlyTopItems[0]) {
 				this.showItems = this.topItems;
-				$(".showMoreLessButtons-" + this.contentName[0]).removeClass("hide");
+				$("#showMoreLessButtons-" + this.contentName[0]).removeClass("hide");
 			}
 		} catch (err) {console.log("catch more/less Buttons")} 
-
-		this.setItemsPerRow(window.innerWidth);		
 	}
 
     deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
@@ -81,11 +85,13 @@ export class ItemComponent {
 
 	private updateRightElements() {
 		try {
-			for(var index = 0; index < this.showItems.length; index++) {
-				if((index+1)%this.itemRows == 0) {
-					this.showItems[index].setAsRightElement(true);
-				} else {
-					this.showItems[index].setAsRightElement(false);
+			if(this.showOnlyTopItems[0]) {
+				for(var index = 0; index < this.showItems.length; index++) {
+					if((index+1)%this.itemRows == 0) {
+						this.showItems[index].setAsRightElement(true);
+					} else {
+						this.showItems[index].setAsRightElement(false);
+					}
 				}
 			}
 		} catch (err) {}

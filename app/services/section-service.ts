@@ -1,4 +1,4 @@
-import section from 'app/data/section';
+import section from 'data/section';
 
 export class Section {
   constructor(
