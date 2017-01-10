@@ -1,13 +1,27 @@
-import {enableProdMode} from '@angular/core';
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-import {provideRouter} from '@angular/router';
-import {HTTP_PROVIDERS} from '@angular/http';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import CosoComponent from './components/coso'; 
-enableProdMode()
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-bootstrap(CosoComponent, [
-	HTTP_PROVIDERS,
-	{provide: LocationStrategy, useClass: HashLocationStrategy}
-]);
+import { HeaderComponent }  from 'app/components/header';
+import { SectionComponent }  from 'app/components/section';
+import { ItemComponent }  from 'app/components/item';
+import { CarouselComponent }  from 'app/components/carousel';
+import { MapComponent }  from 'app/components/map';
+
+const cosoComponents = [
+    HeaderComponent,
+    SectionComponent,
+    MapComponent,
+]
+
+
+
+@NgModule({
+    imports:      [ BrowserModule ],
+    declarations: [ ...cosoComponents, ItemComponent, CarouselComponent],
+    bootstrap:    [ ...cosoComponents],
+})
+export class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule);

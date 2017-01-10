@@ -1,12 +1,10 @@
 import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
   selector: 'coso-header',
   templateUrl: 'app/templates/header.html',
-  directives: [ ROUTER_DIRECTIVES],
 })
-export default class HeaderComponent {
+export class HeaderComponent {
 	sections: any;
 	win: Window;
     private offSet: number = 60;
@@ -15,7 +13,7 @@ export default class HeaderComponent {
 		this.win = window;
 	}
 
-	ngAfterViewInit() {
+	ngAfterContentChecked() {
 		this.sections = $(".container:not(#hello)");
 	}
 

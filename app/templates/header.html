@@ -1,9 +1,6 @@
-<header>
-	<h1>Corporate Software</h1>
-	<button id="burger" class="" (click)="toggleNav()"><i class="fa fa-bars fa-2x"></i></button>
-	<nav id="navigation">
-		<ul class="toLeft">
-			<li *ngFor="let li of sections" (click)="smoothScroll([li.id]);toggleNav()"><p>{{li.id}}</p></li>
-		</ul>
-	</nav>
-</header>
+<button id="burger" class="" (click)="toggleNav()"><i class="fa fa-bars fa-2x"></i></button>
+<nav id="navigation">
+	<ul class="toLeft">
+		<li *ngFor="let li of sections" (click)="smoothScroll([li.id]);toggleNav()"><p>{{li.id}}</p></li>
+	</ul>
+</nav>

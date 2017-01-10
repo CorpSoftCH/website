@@ -1,15 +1,12 @@
 import {Component, Input} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
-
 import {ItemService} from 'app/services/item-service';
 
 @Component({
   selector: 'coso-items',
   templateUrl: 'app/templates/item.html',
-  directives: [ ROUTER_DIRECTIVES],
   providers: [ItemService]
 })
-export default class ItemComponent {
+export class ItemComponent {
 
     @Input() contentName: string;
 	@Input() showOnlyTopItems: boolean;
@@ -37,19 +34,21 @@ export default class ItemComponent {
     ngOnInit() {
         this.allItems = this.service.getItems(this.contentName);
 		this.showItems = this.allItems;
-		for (var i = 0; i < this.itemRows; i++) {
-			this.topItems[i] = this.allItems[i];
-		}
-		this.setItemsPerRow(window.innerWidth);
-		
-	}
 
-	ngAfterViewInit() {
-		if(this.showOnlyTopItems[0]) {
-			this.showItems = this.topItems;
-			$(".showMoreLessButtons-" + this.contentName[0]).removeClass("hide");
+		for (var i = 0; i < this.itemRows; i++) {
+			try {this.topItems[i] = this.allItems[i];}
+			catch (err) {console.log("catch topitem")}
+			
 		}
-		
+
+		try {
+			if(this.showOnlyTopItems[0]) {
+				this.showItems = this.topItems;
+				$(".showMoreLessButtons-" + this.contentName[0]).removeClass("hide");
+			}
+		} catch (err) {console.log("catch more/less Buttons")} 
+
+		this.setItemsPerRow(window.innerWidth);		
 	}
 
     deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
@@ -81,13 +80,15 @@ export default class ItemComponent {
   	}
 
 	private updateRightElements() {
-		for(var index = 0; index < this.showItems.length; index++) {
-			if((index+1)%this.itemRows == 0) {
-				this.showItems[index].setAsRightElement(true);
-			} else {
-				this.showItems[index].setAsRightElement(false);
+		try {
+			for(var index = 0; index < this.showItems.length; index++) {
+				if((index+1)%this.itemRows == 0) {
+					this.showItems[index].setAsRightElement(true);
+				} else {
+					this.showItems[index].setAsRightElement(false);
+				}
 			}
-		}
+		} catch (err) {}
 	}
 
 

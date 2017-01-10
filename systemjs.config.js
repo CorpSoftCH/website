@@ -3,7 +3,7 @@ System.config({
     typescriptOptions: {emitDecoratorMetadata: true},
     map: {
         '@angular': 'node_modules/@angular',
-        'ng2-page-scroll/ng2-page-scroll': 'node_modules/ng2-page-scroll',
+        'rxjs'    : 'node_modules/rxjs'
         
     },
     paths: {
@@ -15,6 +15,7 @@ System.config({
     },
     packages: {
         'app'                              : {main: 'main', defaultExtension: 'ts'},
+        'rxjs'                             : {main: 'Rx'},
         '@angular/core'                    : {main: 'core.umd.min.js'},
         '@angular/common'                  : {main: 'common.umd.min.js'},
         '@angular/compiler'                : {main: 'compiler.umd.min.js'},

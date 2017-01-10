@@ -1,15 +1,13 @@
 import {Component, Input} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {ItemService} from 'app/services/item-service';
 
 @Component({
   selector: 'coso-carousel',
   templateUrl: 'app/templates/carousel.html',
-  directives: [ ROUTER_DIRECTIVES],
   providers: [ItemService]
 })
-export default class CarouselComponent {
+export class CarouselComponent {
 
     @Input() contentName: string;
 
@@ -19,6 +17,7 @@ export default class CarouselComponent {
 	constructor(
         private itemService: ItemService) {
         this.service = itemService;
+        
 	}
 
     ngOnInit() {
@@ -27,7 +26,14 @@ export default class CarouselComponent {
     }
 
     activateFirst(): void  {
-		this.items[0].state = "active";
+        console.log("activate!!!")
+        try{
+            this.items[0].state = "active";
+            console.log(this.items[0].state);
+        } catch (err) {
+            console.log("catch activate")
+        }
+		
 	}
 
     move(id: string, value: string) {

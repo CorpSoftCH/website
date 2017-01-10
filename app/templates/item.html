@@ -1,5 +1,20 @@
 
 <div id="item-{{i.id}}" class="col-xs-6 col-sm-4 item" *ngFor="let i of showItems; let ind = index">
+    <div id="standard-{{i.id}}" *ngIf="!i.flags[1] && !i.flags[2]"> <!-- !hasFixText && !isLink -->
+        <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(allItems, i);changeView(i, ind)">
+            <img src="{{i.imgPath}}">
+            <i class="fa fa-search-{{i.getOperator()}} fa fa-3x"></i>
+        </div>
+        <div id="text-{{i.id}}" class="text hide">
+            <h3>{{i.titles[0]}}</h3>
+            <p *ngFor="let para of i.contentStrings">{{para}}</p>
+            <ul>
+                <li *ngFor="let li of i.specialStrings">
+                    <p>{{li}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div *ngIf="!i.flags[3] && i.flags[1]"> <!-- !isProduct && hasFixText-->
         <div id="field-{{i.id}}" class="field" >
@@ -20,22 +35,6 @@
             <div class="prodBorder"><p><span class="highlighted">{{i.specialStrings[0]}}</span> / {{i.specialStrings[1]}}</p></div>
             <div class="prodBorder"><p *ngFor="let para of i.contentStrings">{{para}}</p></div>
             <div class="prodBorder"><button class="btn">zum Produkt</button></div>
-        </div>
-    </div>
-
-    <div id="standard-{{i.id}}" *ngIf="!i.flags[1] && !i.flags[2]"> <!-- !hasFixText && !isLink -->
-        <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(allItems, i);changeView(i, ind)">
-            <img src="{{i.imgPath}}">
-            <i class="fa fa-search-{{i.getOperator()}} fa fa-3x"></i>
-        </div>
-        <div id="text-{{i.id}}" class="text hide">
-            <h3>{{i.titles[0]}}</h3>
-            <p *ngFor="let para of i.contentStrings">{{para}}</p>
-            <ul>
-                <li *ngFor="let li of i.specialStrings">
-                    <p>{{li}}</p>
-                </li>
-            </ul>
         </div>
     </div>
 

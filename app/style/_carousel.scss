@@ -11,7 +11,7 @@
 .carousel-inner {
   position: relative;
   overflow: hidden;
-  //width: 100%;
+  width: 100%;
 }
 .carousel-inner > .item {
   display: none;
@@ -69,18 +69,20 @@
 }
 .carousel-control.left {
   left: 15px;
-  //right: auto;
+  right: auto;
+  background-image: none;
   //background-image: -webkit-linear-gradient(left, color-stop(rgba(255, 255, 255, 1) 100%), color-stop(rgba(255, 255, 255, 0.1) 0));
   //background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 0.1) 0);
-  background-repeat: repeat-x;
+  //background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
 .carousel-control.right {
   left: auto;
   right: 0;
+  background-image: none;
   //background-image: -webkit-linear-gradient(left, color-stop(rgba(255, 255, 255, 0.1) 0), color-stop(rgba(255, 255, 255, 1) 100%));
   //background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 1) 100%);
-  background-repeat: repeat-x;
+  //background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
 .carousel-control:hover,
@@ -180,9 +182,6 @@
     left: 20%;
     right: 20%;
     padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    //bottom: 20px;
   }
 }
 .carousel-img {

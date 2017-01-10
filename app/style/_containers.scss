@@ -8,7 +8,12 @@
 }
 
 #hello-logo {
-	margin: 2em;
+	margin: 2em auto;
+	width: 50%;
+	border: 2em solid transparent;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 50%;
+	box-shadow: 0 0 5em 0 white;
 }
 
 #hello-profile {
@@ -19,7 +24,6 @@
 }
 .col-md-3 {
 	margin: 0 !important;
-	//padding: 0.2em !important;
 }
 .col-sm-8 {
 	padding: 0;
@@ -64,54 +68,13 @@
 	padding: 1em;
 }
 
-
-#produkte .produkt {
-	background-color: $cosoBlue02;
-	padding: 1em;
-	width: calc(100% - 2em);
-	box-shadow: 5px 5px 10px $cosoBlue01;
-	margin: 1em;
-}
-#produkte h2 {
-	text-transform: uppercase;
-}
-
-#unternehmen img {
-	width: 30%;
-}
-
-#unternehmen ul {
-	padding-left: 1em;
-	list-style: none;
-}
-#unternehmen li p{
-	margin: 0;
-}
-
+//Itemverschiebungen
 .rightElement {
 	top: initial;
 	position: absolute;
 }
 .special {
 	margin-right: 1px;
-}
-
-
-//partner
-#partner .field:hover {
-	
-	background-color: white;
-	border-radius: 50%;
-}
-
-#partner .item img {
-	height: 100%;
-	padding: 0.5em;
-}
-#partner .fa {
-	position: absolute;
-	margin-top: 1px;
-	margin-bottom: 1px;
 }
 //Buttons
 .moreItems,
@@ -126,47 +89,106 @@
     text-transform: uppercase;
 }
 
+#produkte {
+	.produkt {
+		background-color: $cosoBlue02;
+		padding: 1em;
+		width: calc(100% - 2em);
+		box-shadow: 5px 5px 10px $cosoBlue01;
+		margin: 1em;
+	}
+
+	h2 {
+		text-transform: uppercase;
+	}
+}
+
+//unternehmen
+#unternehmen {
+	img {
+		width: 30%;
+	}
+
+	ul {
+		padding-left: 1em;
+		list-style: none;
+	}
+	li p {
+		margin: 0;
+	}
+}
+
+//partner
+#partner {
+	.field:hover {
+		background-color: white;
+		border-radius: 50%;
+	}
+
+	.item img {
+		height: 100%;
+		padding: 0.5em;
+	}
+	.fa {
+		position: absolute;
+		margin-top: 1px;
+		margin-bottom: 1px;
+	}
+}
+//team
+#team {
+	img {
+		width: 70%;
+	}
+	.item {
+		height: 25em;
+	}
+}
+
 //Kontakt
-#kontakt p {
-	text-align: justify;
-}
+#kontakt {
+	p {
+		text-align: justify;
+	}
+	
+	.contact-us {
+		padding: 1.5em 0;
+	}
 
-#kontakt .contact-us {
-	padding: 1.5em 0;
-}
-.social-media {
-	padding: 2em;
-}
+	.social-media {
+		padding: 2em;
+	}
 
-.contact-icon {
-    float: left;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-}
+	.contact-icon {
+		float: left;
+		margin-right: 0.5em;
+		margin-bottom: 0.5em;
+	}
 
-.social-media button {
-    float: left;
-    margin: 0.2em;
-    background-color: #2B425C;
-    color: white;
-    border: none;
-    width: 4em;
-    height: 4em;
-}
-.form-control {
-	font-size: 1.2em;
-	padding: 1.2em;
-	width: calc(100% - 1.9em);
-    border: 0.2em solid #2B425C;
-    margin: 1em;
-}
+	.social-media button {
+		float: left;
+		margin: 0.2em;
+		background-color: #2B425C;
+		color: white;
+		border: none;
+		width: 4em;
+		height: 4em;
+	}
+	.form-control {
+		font-size: 1.2em;
+		padding: 1.2em;
+		width: calc(100% - 1.9em);
+		border: 0.2em solid #2B425C;
+		margin: 1em;
+	}
 
-#contact-form-senden {
-	font-size: 1.2em;
-	padding: 1.5em;
-    border: none;
-    background-color: $cosoBlue01;
-    color: white;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
+	#contact-form-senden {
+		font-size: 1.2em;
+		padding: 1.5em;
+		border: none;
+		background-color: $cosoBlue01;
+		color: white;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}
+} 

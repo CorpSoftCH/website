@@ -37,7 +37,7 @@ var section = [
              ],
         "itemFlag": false,
         "content": "referenzen"   
-    }, {
+    },{
         "id": "team",
         "title": "Team",
         "subtitles": [

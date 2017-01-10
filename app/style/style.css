@@ -27,10 +27,10 @@ ul {
   border-bottom: rgba(43, 66, 92, 0.4) 0.1em solid;
   padding-bottom: 1.5em; }
 
-.container:nth-child(2n) {
+.container:nth-child(2n+1) {
   background-color: white; }
 
-.container:nth-child(2n+1) {
+.container:nth-child(2n) {
   background-color: rgba(255, 255, 255, 0.8); }
 
 .container h1 {
@@ -75,7 +75,8 @@ hr {
 
 .carousel-inner {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
 .carousel-inner > .item {
   display: none;
@@ -133,13 +134,14 @@ hr {
 
 .carousel-control.left {
   left: 15px;
-  background-repeat: repeat-x;
+  right: auto;
+  background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }
 
 .carousel-control.right {
   left: auto;
   right: 0;
-  background-repeat: repeat-x;
+  background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }
 
 .carousel-control:hover,
@@ -315,7 +317,12 @@ header button {
   height: 100vh; }
 
 #hello-logo {
-  margin: 2em; }
+  margin: 2em auto;
+  width: 50%;
+  border: 2em solid transparent;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 0 5em 0 white; }
 
 #hello-profile {
   position: absolute;
@@ -363,45 +370,12 @@ header button {
   border-bottom: solid black 0.1em;
   padding: 1em; }
 
-#produkte .produkt {
-  background-color: rgba(0, 131, 195, 0.5);
-  padding: 1em;
-  width: calc(100% - 2em);
-  box-shadow: 5px 5px 10px #2B425C;
-  margin: 1em; }
-
-#produkte h2 {
-  text-transform: uppercase; }
-
-#unternehmen img {
-  width: 30%; }
-
-#unternehmen ul {
-  padding-left: 1em;
-  list-style: none; }
-
-#unternehmen li p {
-  margin: 0; }
-
 .rightElement {
   top: initial;
   position: absolute; }
 
 .special {
   margin-right: 1px; }
-
-#partner .field:hover {
-  background-color: white;
-  border-radius: 50%; }
-
-#partner .item img {
-  height: 100%;
-  padding: 0.5em; }
-
-#partner .fa {
-  position: absolute;
-  margin-top: 1px;
-  margin-bottom: 1px; }
 
 .moreItems,
 .lessItems {
@@ -414,21 +388,50 @@ header button {
   letter-spacing: 3px;
   text-transform: uppercase; }
 
+#produkte .produkt {
+  background-color: rgba(0, 131, 195, 0.5);
+  padding: 1em;
+  width: calc(100% - 2em);
+  box-shadow: 5px 5px 10px #2B425C;
+  margin: 1em; }
+#produkte h2 {
+  text-transform: uppercase; }
+
+#unternehmen img {
+  width: 30%; }
+#unternehmen ul {
+  padding-left: 1em;
+  list-style: none; }
+#unternehmen li p {
+  margin: 0; }
+
+#partner .field:hover {
+  background-color: white;
+  border-radius: 50%; }
+#partner .item img {
+  height: 100%;
+  padding: 0.5em; }
+#partner .fa {
+  position: absolute;
+  margin-top: 1px;
+  margin-bottom: 1px; }
+
+#team img {
+  width: 70%; }
+#team .item {
+  height: 25em; }
+
 #kontakt p {
   text-align: justify; }
-
 #kontakt .contact-us {
   padding: 1.5em 0; }
-
-.social-media {
+#kontakt .social-media {
   padding: 2em; }
-
-.contact-icon {
+#kontakt .contact-icon {
   float: left;
   margin-right: 0.5em;
   margin-bottom: 0.5em; }
-
-.social-media button {
+#kontakt .social-media button {
   float: left;
   margin: 0.2em;
   background-color: #2B425C;
@@ -436,15 +439,13 @@ header button {
   border: none;
   width: 4em;
   height: 4em; }
-
-.form-control {
+#kontakt .form-control {
   font-size: 1.2em;
   padding: 1.2em;
   width: calc(100% - 1.9em);
   border: 0.2em solid #2B425C;
   margin: 1em; }
-
-#contact-form-senden {
+#kontakt #contact-form-senden {
   font-size: 1.2em;
   padding: 1.5em;
   border: none;

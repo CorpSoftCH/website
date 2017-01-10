@@ -1,12 +1,10 @@
 import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
   selector: 'coso-map',
   templateUrl: 'app/templates/map.html',
-  directives: [ ROUTER_DIRECTIVES]
 })
-export default class MapComponent {
+export class MapComponent {
 
 	constructor() {}
 

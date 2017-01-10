@@ -13,7 +13,8 @@ export class Item {
     public contentStrings: Array<string>,
     public specialStrings: Array<string>,
     //active - hasFixText - isLink - isProduct - isRightElement
-    public flags: Array<boolean>){}
+    public flags: Array<boolean>,
+    public state: string = ""){}
 
 
   isActive(): boolean {
@@ -63,7 +64,7 @@ export class ItemService {
   }
 
   private getTeam(): Array<Item> {
-    return team.map(t => new Item(t.kuerzel, t.name, t.imgPath, t.description, t.links, [false, false, false, false, false]));
+    return team.map(t => new Item(t.kuerzel, [t.vorname, t.nachname], t.imgPath, t.description, t.links, [false, false, false, false, false]));
   }
 
   private getPartner(): Array<Item> {

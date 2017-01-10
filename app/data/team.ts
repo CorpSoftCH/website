@@ -1,29 +1,14 @@
 var team = [
 {
-    "name": ["Andreas", "Miloda"],
-    "kuerzel": "andreasm",
-    "description": [
-      "Mit seinem Fachwissen in Betriebsökonomie und IT ergänzt Andreas Miloda das Team ideal. Momentan studiert er berufsbegleitend Wirtschaftsinformatik und arbeitet an komplexen Projekten im Bereich Microsoft SharePoint und Project Server mit. Dabei greift er auf seine Erfahrung als Techniker und Projektleiter zurück. Seine Fachbereiche liegen in den Bereichen Collaboration, Online Media, Kommunikation und Responsive Design. In seiner Freizeit liest er gerne und beschäftigt sich mit Computertechnik und der Fotografie. Er hat einen Blick für Details und behält dennoch das Gesamtbild im Auge, in der Fotografie wie im Berufsleben."
-    ],
-    "imgPath": "app/data/images/team/andreas.png",
-    "links" : ["andreas.miloda@corporatesoftware.ch","app/data/vcards//Andreas%20Miloda.vcf"]
-},{
-    "name": ["Andreas", "Miloda"],
-    "kuerzel": "andreasm2",
-    "description": [
-      "Mit seinem Fachwissen in Betriebsökonomie und IT ergänzt Andreas Miloda das Team ideal. Momentan studiert er berufsbegleitend Wirtschaftsinformatik und arbeitet an komplexen Projekten im Bereich Microsoft SharePoint und Project Server mit. Dabei greift er auf seine Erfahrung als Techniker und Projektleiter zurück. Seine Fachbereiche liegen in den Bereichen Collaboration, Online Media, Kommunikation und Responsive Design. In seiner Freizeit liest er gerne und beschäftigt sich mit Computertechnik und der Fotografie. Er hat einen Blick für Details und behält dennoch das Gesamtbild im Auge, in der Fotografie wie im Berufsleben."
-    ],
-    "imgPath": "app/data/images/team/andreas.png",
-    "links" : ["andreas.miloda@corporatesoftware.ch","app/data/vcards//Andreas%20Miloda.vcf"]
-},{
-    "name": ["Andreas", "Miloda"],
+    "vorname": "Andreas",
+    "nachname": "Miloda",
     "kuerzel": "andreasm3",
     "description": [
       "Mit seinem Fachwissen in Betriebsökonomie und IT ergänzt Andreas Miloda das Team ideal. Momentan studiert er berufsbegleitend Wirtschaftsinformatik und arbeitet an komplexen Projekten im Bereich Microsoft SharePoint und Project Server mit. Dabei greift er auf seine Erfahrung als Techniker und Projektleiter zurück. Seine Fachbereiche liegen in den Bereichen Collaboration, Online Media, Kommunikation und Responsive Design. In seiner Freizeit liest er gerne und beschäftigt sich mit Computertechnik und der Fotografie. Er hat einen Blick für Details und behält dennoch das Gesamtbild im Auge, in der Fotografie wie im Berufsleben."
     ],
     "imgPath": "app/data/images/team/andreas.png",
     "links" : ["andreas.miloda@corporatesoftware.ch","app/data/vcards//Andreas%20Miloda.vcf"]
-}/*,{
+},{
     "vorname": "Céline",
     "nachname": "Horst",
     "kuerzel": "celineh",
@@ -155,5 +140,5 @@ var team = [
     "email" : "",
     "imgPath": "app/data/images/team/you.png",
     "vCardPath": ""
-}*/
+}
 ]
