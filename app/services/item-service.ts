@@ -1,9 +1,9 @@
-import angebot from 'data/angebot';
-import partner from 'data/partner';
-import team from 'data/team';
-import unternehmen from 'data/unternehmen';
-import produkte from 'data/produkte';
-import referenzen from 'data/referenzen';
+import angebot from 'app/data/angebot';
+import partner from 'app/data/partner';
+import team from 'app/data/team';
+import unternehmen from 'app/data/unternehmen';
+import produkte from 'app/data/produkte';
+import referenzen from 'app/data/referenzen';
 
 export class Item {
   constructor(
