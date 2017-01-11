@@ -85,13 +85,11 @@ export class ItemComponent {
 
 	private updateRightElements() {
 		try {
-			if(this.showOnlyTopItems[0]) {
-				for(var index = 0; index < this.showItems.length; index++) {
-					if((index+1)%this.itemRows == 0) {
-						this.showItems[index].setAsRightElement(true);
-					} else {
-						this.showItems[index].setAsRightElement(false);
-					}
+			for(var index = 0; index < this.showItems.length; index++) {
+				if((index+1)%this.itemRows == 0) {
+					this.showItems[index].setAsRightElement(true);
+				} else {
+					this.showItems[index].setAsRightElement(false);
 				}
 			}
 		} catch (err) {}
