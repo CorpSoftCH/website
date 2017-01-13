@@ -10,18 +10,17 @@ var section = [
         "subtitles": ["some Subtitle"],
         "itemFlag": true,
         "content": "angebote"        
-    },/* {
+    }, {
         "id": "produkte",
         "title": "Produkte",
         "subtitles": [
-            "Bei unseren Produkten profitieren Sie von unserer 3 in 1 Formel:",
-            "Coaching + Customizing + Training = nachhaltige und innovative Beratung.",
-            "Dabei fokussieren wir uns nicht nur auf die einzelnen Bereiche, sondern betrachten die gesamte Schnittstelle zwischen IT und Wirtschaft.",
-            "Als Microsoft Partner arbeiten wir stets mit auf dem neusten technologischen Stand."
+            "Wählen Sie eines unsere Produkte und profitieren Sie von unserem Know-How.",
+            "Wir beraten und helfen Ihnen gerne bei Ihrem Einstieg in die Cloud.",
+            "Dabei fokussieren wir uns nicht nur auf die einzelnen Bereiche, sondern betrachten die gesamte Schnittstelle zwischen IT und Wirtschaft."
         ],
         "itemFlag": true,
         "content": "produkte"   
-    },*/ {
+    }, {
         "id": "unternehmen",
         "title": "Unternehmen",
         "subtitles": [

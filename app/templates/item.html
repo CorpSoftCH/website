@@ -31,9 +31,38 @@
 
     <div *ngIf="i.flags[3]"> <!--isProduct -->
         <div id="{{i.id}}" class="produkt">
-            <div class="prodBorder"><h2>{{i.name[0]}}</h2></div>
-            <div class="prodBorder"><p><span class="highlighted">{{i.specialStrings[0]}}</span> / {{i.specialStrings[1]}}</p></div>
+            <div class="prodBorder"><h2>{{i.titles[0]}}</h2></div>
             <div class="prodBorder"><p *ngFor="let para of i.contentStrings">{{para}}</p></div>
+            <div>
+                <img src="app/data/images/produkte/customizing.png">
+                <div class="prodText">
+                    <h3>Customizing</h3>
+                    <ul>
+                        <li>Bedürfnisanpassung</li>
+                        <li>Branding</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <img src="app/data/images/produkte/consulting.png">
+                <div class="prodText">
+                    <h3>Consulting</h3>
+                    <ul>
+                        <li>Analyse Aktuelle Umgebung</li>
+                        <li>Anforderungsaufnahme</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <img src="app/data/images/produkte/training.png">
+                <div class="prodText">
+                    <h3>Training</h3>
+                    <ul>
+                        <li>Schulung Mitarbeiter</li>
+                        <li>1 x p. Jahr Schulung über Neuerungen</li>
+                    </ul>
+                </div>
+            </div>
             <div class="prodBorder"><button class="btn">zum Produkt</button></div>
         </div>
     </div>

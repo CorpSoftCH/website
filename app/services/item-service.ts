@@ -75,7 +75,7 @@ export class ItemService {
     return unternehmen.map(u => new Item(u.id, u.title, u.imgPath, u.paragraphs, u.list, [false, true, false, false, false], ));
   }
   private getProdukte(): Array<Item> {
-    return produkte.map(pr => new Item(pr.id, pr.title, "" , pr.description, [pr.price, pr.priceFor], [false, true, false, true, false]));
+    return produkte.map(pr => new Item(pr.id, pr.title, "" , pr.description, [], [false, true, false, true, false]));
   }
   private getReferenzen(): Array<Item> {
     return referenzen.map(r => new Item(r.id, [r.lecturer, r.position], r.imgPath , r.zitat, [r.link], [r.state]));

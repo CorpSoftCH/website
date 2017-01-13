@@ -2,6 +2,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { HeaderComponent }  from 'app/components/header';
 import { SectionComponent }  from 'app/components/section';
@@ -19,6 +20,7 @@ const cosoComponents = [
 
 @NgModule({
     imports:      [ BrowserModule ],
+    providers:    [{provide: APP_BASE_HREF, useValue: '/'}],
     declarations: [ ...cosoComponents, ItemComponent, CarouselComponent],
     bootstrap:    [ ...cosoComponents],
 })

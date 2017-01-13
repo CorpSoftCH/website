@@ -63,10 +63,6 @@
 	z-index: 5;
 	background-color: transparent;
 }
-.prodBorder {
-	border-bottom: solid black 0.1em;
-	padding: 1em;
-}
 
 //Itemverschiebungen
 .rightElement {
@@ -91,15 +87,46 @@
 
 #produkte {
 	.produkt {
-		background-color: $cosoBlue02;
+		background-color: white;
 		padding: 1em;
 		width: calc(100% - 2em);
-		box-shadow: 5px 5px 10px $cosoBlue01;
-		margin: 1em;
+		box-shadow: 5px 5px 10px lightgrey;
+		margin: 0.5em;
+		position: relative;
+
+		p {
+			text-align: justify;
+		}
+
+		.prodBorder {
+			border-bottom: solid black 0.1em;
+			padding: 1em;
+		}
+		.btn {
+			margin-top: 1em;
+			background-color: $cosoBlue01;
+			color: white;
+		}
 	}
 
 	h2 {
+		font-size: 1.4em;
 		text-transform: uppercase;
+	}
+	
+	img {
+		padding: 1.5em 0.5em;
+		float: left;
+		width: calc(30% - 1em);
+	}
+	.prodText {
+		padding-left: 2em;
+		text-align: left;
+		float: left;
+		width: calc(70% - 2em);
+		li {
+			margin-left: 1em;
+		}
 	}
 }
 

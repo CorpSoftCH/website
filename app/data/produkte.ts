@@ -1,30 +1,23 @@
 var produkte = [
     {
         "id": "prod_01",
-        "title": ["Produkt 1"],
-        "price": "100$",
-        "priceFor" : "Jahr",
+        "title": ["Collaboration"],
         "description": [
-            "Lorem Ipsum",
-            "Lorem Ipsum 2"
+            "Nutzen Sie die vertrauten Office-Anwendungen für bessere Zusammen-arbeit. Nutzen Sie SharePoint, die wichtigste Kollaboration Plattform.",
+            "So arbeiten Sie jederzeit und überall produktiver."
         ]
     },{
         "id": "prod_02",
-        "title": ["Produkt 2"],
-        "price": "10$",
-        "priceFor" : "Monat",
+        "title": ["Project Online"],
         "description": [
-            "Lorem Ipsum",
-            "Lorem Ipsum 2"
+            "Organisieren Sie Ihre Arbeit mit Project Online und erhalten Sie Werkzeuge um Projekte problemlos zu starten, schnell zu planen und plangemäß durchzuführen.",
         ]
     },{
         "id": "prod_03",
-        "title": ["Produkt 3"],
-        "price": "1500$",
-        "priceFor" : "Jahr",
+        "title": ["Azure"],
         "description": [
-            "Lorem Ipsum",
-            "Lorem Ipsum 2"
+            "Entscheiden Sie sich für die Zukunft, entscheiden Sie sich für Microsoft Azure.",
+            "Es ist eine offene und flexible Cloudplattform, mit der Sie Anwendungen schnell aufbauen, bereitstellen und verwalten können."
         ]
     }
 ]
