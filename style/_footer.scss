@@ -3,12 +3,10 @@ footer {
     width: 100%;
     background-color: $cosoBlue01;
     text-align: center;
-}
-footer p {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    //line-height: 5em;
-    
-    white-space: wrap;
-    color: white;
+    p {
+        padding-top: 2em;
+        padding-bottom: 2em;    
+        white-space: wrap;
+        color: white;
+    }
 }

@@ -8,7 +8,7 @@ var team = [
     ],
     "imgPath": "app/data/images/team/andreas.png",
     "links" : ["andreas.miloda@corporatesoftware.ch","app/data/vcards//Andreas%20Miloda.vcf"]
-},{
+}/*,{
     "vorname": "Céline",
     "nachname": "Horst",
     "kuerzel": "celineh",
@@ -18,7 +18,7 @@ var team = [
     "email" : "celine.horst@corporatesoftware.ch",
     "imgPath": "app/data/images/team/celine.png",
     "vCardPath": "app/data/vcards//Céline%20Horst.vcf"
-},{
+}*/,{
     "vorname": "Dario",
     "nachname": "Müller",
     "kuerzel": "dariom",
@@ -28,7 +28,7 @@ var team = [
     "email" : "dario.mueller@corporatesoftware.ch",
     "imgPath": "app/data/images/team/dario.png",
     "vCardPath": "app/data/vcards//Dario%20Müller.vcf"
-},{
+}/*,{
     "vorname": "Joris",
     "nachname": "Baiutti",
     "kuerzel": "jorisb",
@@ -68,7 +68,7 @@ var team = [
     "email" : "martin.bialas@corporatesoftware.ch",
     "imgPath": "app/data/images/team/Martin.png",
     "vCardPath": "app/data/vcards//Martin%20Bialas.vcf"
-},{
+}*/,{
     "vorname": "Matthias",
     "nachname": "Gessenay",
     "kuerzel": "matthiasg",
@@ -78,7 +78,7 @@ var team = [
     "email" : "matthias.gessenay@corporatesoftware.ch",
     "imgPath": "app/data/images/team/matthias.png",
     "vCardPath": "app/data/vcards//Matthias%20Gessenay.vcf"
-},{
+}/*,{
     "vorname": "Noah",
     "nachname": "Zani",
     "kuerzel": "noahz",
@@ -108,7 +108,7 @@ var team = [
     "email" : "raul.heiduk@corporatesoftware.ch",
     "imgPath": "app/data/images/team/heiduk.png",
     "vCardPath": "app/data/vcards//Raúl%20B.%20Heiduk.vcf"
-},{
+}*/, {
     "vorname": "Roman",
     "nachname": "A. Kahr",
     "kuerzel": "patricks",

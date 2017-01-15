@@ -434,10 +434,11 @@ header button {
   margin-top: 1px;
   margin-bottom: 1px; }
 
-#team img {
-  width: 70%; }
-#team .item {
-  height: 25em; }
+#team .field {
+  position: relative;
+  padding-bottom: 1em; }
+#team .field img {
+  height: 27em; }
 
 #kontakt p {
   text-align: justify; }
@@ -477,12 +478,11 @@ footer {
   width: 100%;
   background-color: #2B425C;
   text-align: center; }
-
-footer p {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  white-space: wrap;
-  color: white; }
+  footer p {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    white-space: wrap;
+    color: white; }
 
 .toLeft {
   transition-timing-function: ease-in-out;

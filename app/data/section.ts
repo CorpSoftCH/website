@@ -10,7 +10,7 @@ var section = [
         "subtitles": ["some Subtitle"],
         "itemFlag": true,
         "content": "angebote"        
-    }, {
+    }/*, {
         "id": "produkte",
         "title": "Produkte",
         "subtitles": [
@@ -20,7 +20,7 @@ var section = [
         ],
         "itemFlag": true,
         "content": "produkte"   
-    }, {
+    }*/, {
         "id": "unternehmen",
         "title": "Unternehmen",
         "subtitles": [

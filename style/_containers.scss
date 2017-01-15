@@ -164,11 +164,12 @@
 }
 //team
 #team {
-	img {
-		width: 70%;
+	.field {
+		position: relative;
+		padding-bottom: 1em;
 	}
-	.item {
-		height: 25em;
+	.field img {
+		height: 27em;
 	}
 }
 

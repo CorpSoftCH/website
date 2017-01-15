@@ -1,5 +1,8 @@
 import {Component} from '@angular/core';
 
+/**
+ * Diese Komponente wird für den Header eingesetzt.
+ */
 @Component({
   selector: 'coso-header',
   templateUrl: 'app/templates/header.html',
@@ -8,27 +11,42 @@ export class HeaderComponent {
 	sections: any;
 	win: Window;
     private offSet: number = 60;
-
+	
+	/**
+	 * Der Konstruktor speichert die Fensterdaten in einer Variablen.
+	 */
 	constructor() {
 		this.win = window;
 	}
-
-	ngAfterContentChecked() {
+	/**
+	 * Nachdem der Content geladen wurde werden alle Sektionen, ausser der ersten ins section-Array geladen.
+	 */
+	private ngAfterContentChecked() {
 		this.sections = $(".container:not(#hello)");
 	}
 
-
-	toggleNav(): void {
+	/**
+	 * In dieser Funktion wird die Navigation ein- / ausgeblendet.
+	 */
+	private toggleNav(): void {
 		$("#navigation ul").toggleClass("toLeft");
 	}
-
-	scrollTo(yPoint: number, duration: number) {
+	 /**
+	  * Diese Funktion initiiert eine Bewegung durch die Seite.
+	  * @yPoint gibt den Ort auf der Page an.
+	  * @duration gibt die Dauer an, bis die Seite an der Stelle sein soll.
+	  */
+	private scrollTo(yPoint: number, duration: number) {
 		setTimeout(() => {
 			this.win.window.scrollTo(0, yPoint- this.offSet);
 		}, duration);
 		return;
 	}
-    smoothScroll(eID) {
+	/**
+	 * Diese Funktion wird aufgerufen, um mit einer Bewegung zu einer Sektion zu gelangen.
+	 * @eID die ID der Sektion, zu der gescrollt werden soll.
+	 */
+    private smoothScroll(eID: any) {
 		var startY = this.currentYPosition();
 		var stopY = this.elmYPosition(eID);
 		var distance = stopY > startY ? stopY - startY : startY - stopY;
@@ -52,7 +70,10 @@ export class HeaderComponent {
 		}
 	}
 
-	currentYPosition() {
+	/**
+	 * Hier wird ermittelt. Wo man sich auf der Webseite befindent.
+	 */
+	private currentYPosition() {
 		// Firefox, Chrome, Opera, Safari
 		if (self.pageYOffset) return self.pageYOffset;
 		// Internet Explorer 6 - standards mode
@@ -62,7 +83,11 @@ export class HeaderComponent {
 		if (document.body.scrollTop) return document.body.scrollTop;
 		return 0;
 	}
-	elmYPosition(eID) {
+
+	/**
+	 * Hier wird ermittelt, wo sich die Zielsektion befindet.
+	 */
+	private elmYPosition(eID: any) {
 		var elm = document.getElementById(eID);
 		var y = elm.offsetTop;
 		var node = elm;

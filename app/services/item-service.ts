@@ -5,6 +5,21 @@ import unternehmen from 'app/data/unternehmen';
 import produkte from 'app/data/produkte';
 import referenzen from 'app/data/referenzen';
 
+/**
+ * Die Item Klasse definiert ein Item.
+ * @id eindeutige Itdentifikation des Items
+ * @titles Ein Array aus titeln und subtiteln
+ * @imgPath Ein String in dem der Pfad zu einem Bild drin ist.
+ * @contentStrings In diesem Array sind die Strings mit dem Hauptinhalt
+ * @specialStrings In diesem Array sind Item-spezifisch andere Strings mit spezifischem Inhalt
+ * @flags Hier sind mehrere Flags gesetzt, um die Art des Items zu ermitteln
+ *  [0] Ist dieses Flag gesetzt, ist es "aktiv", heisst zu beginn unsichtbare Inhalte zum Item werden angezeigt.
+ *  [1] Ist dieses Flag gesetzt, handelt es sich um ein Item, welches von anfang an schon alle Infos offenbart.
+ *  [2] Ist dieses Flag gesetzt, handelt es sich beim Item schlicht um ein verlinktes Bild.
+ *  [3] Ist dieses Flag gesetzt, handelt es sich um Produkte. (In diesem Staduim noch nicht relevant)
+ *  [4] Ist dieses Flag gesetzt, befindet sich das Element auf der rechten Seite des Fensters und verhält sich nicht wie die anderen
+ * @state dieser wird benötigt, um das Bootstrap-Carousel zu nutzen. Bei den anderen ist dieser Leer
+ */
 export class Item {
   constructor(
     public id: string,
@@ -16,22 +31,35 @@ export class Item {
     public flags: Array<boolean>,
     public state: string = ""){}
 
-
-  isActive(): boolean {
+  /**
+   * Diese Funktion gibt zurück, ob das Item aktiv ist.
+   */
+  private isActive(): boolean {
     return this.flags[0];
   }
-
-  isRightElement(): boolean {
-    return this.flags[4];
-  }
-  setAsRightElement(value: boolean) {
-    this.flags[4] = value;
-  }
-
-  setActive(value: boolean): void {
+  /**
+   * Diese Funktion setzt ein Item aktiv oder deaktiviert es.
+   */
+  private setActive(value: boolean): void {
       this.flags[0] = value;
   }
-  getOperator(): string {
+
+  /**
+   * Diese Funktion gibt zurück, ob es sich beim Element um eines handelt, welches sich am rechten Rand befindet.
+   */
+  private isRightElement(): boolean {
+    return this.flags[4];
+  }
+  /**
+   * Diese Funktion markiert ein Element dazu, dass es sich am rechten Rand befindet.
+   */
+  private setAsRightElement(value: boolean) {
+    this.flags[4] = value;
+  }
+  /**
+   * Diese Funktion gibt einen String zurück welche die Lupe zu einem Minus oder Plus macht.
+   */
+  private getOperator(): string {
     if(this.flags[0]) {
       return "minus";
     } else {
@@ -40,8 +68,10 @@ export class Item {
   }
 }
 
+/**
+ * Diese Klasse stellt die Funktionen bereit, welche die richtigen Inhalte der Items lädt und diese in einem Array von Items den Komponenten Übergit.
+ */
 export class ItemService {
-  TOP_PARTNER_ANZAHL: number = 3;
 
   public getItems(values: string): Array<Item> {
     if (values == "angebote") {

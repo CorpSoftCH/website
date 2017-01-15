@@ -1,18 +1,23 @@
 import {Component} from '@angular/core';
-
+/**
+ * Diese Komponente wird bei einer Karte verwendet
+ */
 @Component({
   selector: 'coso-map',
   templateUrl: 'app/templates/map.html',
 })
 export class MapComponent {
 
-	constructor() {}
-
-    ngOnInit() {
+	/** 
+	 * bei der Initialisierung wird die Karte geladen.
+	 */
+    private ngOnInit() {
         this.loadMap();
     }
-
-    loadMap(): void  {    	
+	/**
+	 * Hier wird die Karte zusammengesetzt und von Google initiiert.
+	 */
+    private loadMap(): void  {    	
 	    var myLatLng = {lat: 47.1316061, lng: 7.2481453};
 
 	    var mapProp = {
