@@ -4,18 +4,37 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { APP_BASE_HREF } from '@angular/common';
 
-import { HeaderComponent }  from 'app/components/header';
-import { SectionComponent }  from 'app/components/section';
-import { ItemComponent }  from 'app/components/item';
-import { CarouselComponent }  from 'app/components/carousel';
-import { MapComponent }  from 'app/components/map';
+import { HeaderComponent }  from './components/header';
+import { SectionComponent }  from './components/section';
+import { ItemComponent }  from './components/item';
+import { CarouselComponent }  from './components/carousel';
+import { MapComponent }  from './components/map';
+import { ContentComponent }  from './components/content';
+import { ProductsComponent }  from './components/products';
+
+import { TestComponent }  from './components/test';
+
+import { RouterModule, Routes }   from '@angular/router';
 
 //Diese Komponenten müssen deklariert und gebootstrapped werden.
 const cosoComponents = [
     HeaderComponent,
-    SectionComponent,
-    MapComponent,
+    ContentComponent
 ]
+
+const routes: Routes = [
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
+  { path: 'home',  component: SectionComponent },
+  { path: 'products',  component: ProductsComponent },
+  { path: 'test', component: TestComponent },
+];
+
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
+})
+class AppRoutingModule {}
+
 
 /**
  * Dies ist das Hauptmodule und auch das einzige für diesen Umfang.
@@ -24,12 +43,12 @@ const cosoComponents = [
  * Die unter bootstrap definierten Komponente werden bereits im Index HTML gebootstrapped.
  */
 @NgModule({
-    imports:      [ BrowserModule ],
-    providers:    [{provide: APP_BASE_HREF, useValue: '/'}],
-    declarations: [ ...cosoComponents, ItemComponent, CarouselComponent],
+    imports:      [ BrowserModule, AppRoutingModule],
+    //providers:    [{provide: APP_BASE_HREF, useValue: '/'}],
+    declarations: [ ...cosoComponents, ItemComponent, CarouselComponent, TestComponent, SectionComponent, MapComponent, ProductsComponent],
     bootstrap:    [ ...cosoComponents],
 })
-export class AppModule {}
+class AppModule {}
 
 //Dieses Modul wird gebootstrapped
 platformBrowserDynamic().bootstrapModule(AppModule);
