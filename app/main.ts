@@ -2,7 +2,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { APP_BASE_HREF } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { HeaderComponent }  from './components/header';
 import { SectionComponent }  from './components/section';
@@ -44,8 +44,8 @@ class AppRoutingModule {}
  */
 @NgModule({
     imports:      [ BrowserModule, AppRoutingModule],
-    //providers:    [{provide: APP_BASE_HREF, useValue: '/'}],
     declarations: [ ...cosoComponents, ItemComponent, CarouselComponent, TestComponent, SectionComponent, MapComponent, ProductsComponent],
+    providers:    [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap:    [ ...cosoComponents],
 })
 class AppModule {}
