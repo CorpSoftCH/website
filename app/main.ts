@@ -11,6 +11,7 @@ import { CarouselComponent }  from './components/carousel';
 import { MapComponent }  from './components/map';
 import { ContentComponent }  from './components/content';
 import { ProductsComponent }  from './components/products';
+import { HelloComponent }  from './components/hello';
 
 import { TestComponent }  from './components/test';
 
@@ -19,7 +20,8 @@ import { RouterModule, Routes }   from '@angular/router';
 //Diese Komponenten müssen deklariert und gebootstrapped werden.
 const cosoComponents = [
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    HelloComponent
 ]
 
 const routes: Routes = [
