@@ -1,15 +1,25 @@
 
-<div id="item-{{i.id}}" class="col-xs-6 col-sm-4 item" *ngFor="let i of showItems; let ind = index">
+<div id="item-{{i.id}}" class="item" *ngFor="let i of showItems; let ind = index">
     <div id="standard-{{i.id}}" *ngIf="!i.flags[1] && !i.flags[2]"> <!-- !hasFixText && !isLink -->
         <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(allItems, i);changeView(i, ind)">
             <img src="{{i.imgPath}}">
             <i class="fa fa-search-{{i.getOperator()}} fa fa-3x"></i>
         </div>
+        <h3>{{i.titles[0]}}</h3>
         <div id="text-{{i.id}}" class="text hide">
-            <h3>{{i.titles[0]}}</h3>
             <p *ngFor="let para of i.contentStrings">{{para}}</p>
-            <ul>
+            <ul class="col-xs-4">
                 <li *ngFor="let li of i.specialStrings">
+                    <p>{{li}}</p>
+                </li>
+            </ul>
+            <ul class="col-xs-4">
+                <li *ngFor="let li of i.specialStrings2">
+                    <p>{{li}}</p>
+                </li>
+            </ul>
+            <ul class="col-xs-4">
+                <li *ngFor="let li of i.specialStrings3">
                     <p>{{li}}</p>
                 </li>
             </ul>

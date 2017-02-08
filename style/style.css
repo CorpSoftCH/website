@@ -55,7 +55,6 @@ hr {
   font-style: italic; }
 
 .ueberschrift {
-  text-transform: uppercase;
   font-weight: 700;
   font-size: 1em;
   color: #2B425C; }
@@ -326,13 +325,14 @@ header button {
   bottom: 0;
   width: 100%; }
 
+/*
 .col-md-3 {
-  margin: 0 !important; }
-
+	margin: 0 !important;
+}
 .col-sm-8 {
-  padding: 0;
-  margin: 0; }
-
+	padding: 0;
+	margin: 0;
+}*/
 .arrow {
   width: 50%; }
 
@@ -360,7 +360,10 @@ header button {
   visibility: visible;
   text-align: justify;
   z-index: 5;
-  background-color: transparent; }
+  background-color: transparent;
+  /*position: relative;
+  width: 400%;
+  left: -300%;*/ }
 
 .rightElement {
   top: initial;

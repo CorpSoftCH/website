@@ -15,6 +15,7 @@ export class Section {
     public content: string,
     public itemFlag: boolean = false,
     public showOnlyTopItems: boolean = false,
+    public itemsPerRow: number = 0,
     ){}
 
 }
@@ -25,6 +26,6 @@ export class Section {
 export class SectionService {
   
   public getSections(): Array<Section> {
-    return section.map(s => new Section(s.id, s.title, s.subtitles, s.content, s.itemFlag, s.showOnlyTopItems));
+    return section.map(s => new Section(s.id, s.title, s.subtitles, s.content, s.itemFlag, s.showOnlyTopItems, s.itemsPerRow));
   }
 }

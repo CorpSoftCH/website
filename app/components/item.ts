@@ -14,6 +14,7 @@ export class ItemComponent {
 	//Als Input wird der Name der Items übergeben, und ob zu beginn nur die ersten oder schon Alle Items anggezeigt werden sollen.
     @Input() contentName: string;
 	@Input() showOnlyTopItems: boolean;
+	@Input() itemRows: number;
     
 	TABLET: number =  768;
 	MOBILE_LARGE: number = 640;
@@ -23,7 +24,7 @@ export class ItemComponent {
 	showItems: Array<Item>;
 	topItems: Array<Item> = [];
     service: ItemService;
-	itemRows: number = 3;
+	//itemRows: number = 3;
 
 	/**
 	 * Im Konstruktor wird der Service geladen, welcher die Items zur verfügung stellt.
@@ -46,9 +47,9 @@ export class ItemComponent {
 		for (var i = 0; i < this.itemRows; i++) {
 			try {this.topItems[i] = this.allItems[i];}
 			catch (err) {console.log("catch topitem")}
-			
 		}
-		this.setItemsPerRow(window.innerWidth);		
+		
+		
 	}
 	/**
 	 * Nachdem der Kontent initialisiert wurde, werden dort, wo nur die TopItems dargestellt werden Buttens sichtbar gemacht,
@@ -61,6 +62,8 @@ export class ItemComponent {
 				$("#showMoreLessButtons-" + this.contentName[0]).removeClass("hide");
 			}
 		} catch (err) {console.log("catch more/less Buttons")} 
+
+		this.setItemsPerRow(window.innerWidth);		
 	}
 
 	/**
@@ -77,7 +80,7 @@ export class ItemComponent {
 	 * Hier werden die Items per Reihe gesetzt.
 	 */
 	private setItemsPerRow(size: number) {
-		if (size > this.TABLET) {
+		/*if (size > this.TABLET) {
 			this.itemRows = 3;
 		}
 		if (size < this.TABLET) {
@@ -92,9 +95,16 @@ export class ItemComponent {
 		} else {
 			$(".col-sm-4").addClass("col-xs-6");
 			$(".col-sm-3").addClass("col-xs-4");
+		}*/
+		for(let element of this.allItems) {
+			if(this.itemRows == 4){
+				$("#item-" + element.id ).addClass("col-md-6 col-lg-3");
+			} else if (this.itemRows == 3) {
+				$("#item-" + element.id ).addClass("col-md-4");
+			}
 		}
 
-		this.updateRightElements();
+		//this.updateRightElements();
   	}
 	/**
 	 * Hier werden die sich am rechten Rand befindenden Items markiert.
@@ -127,8 +137,8 @@ export class ItemComponent {
 		//$("#arrow-" + element.id ).toggleClass("hide");
 		$("#item-" + element.id ).toggleClass("active");
 
-		if(element.isActive() && !element.isRightElement()) {
-			$("#item-" + element.id ).addClass("col-sm-8");
+		/*if(element.isActive() && !element.isRightElement()) {
+			/*$("#item-" + element.id ).addClass("col-sm-8");
 			$("#item-" + element.id ).removeClass("col-xs-6 col-sm-4");
 			$("#field-" + element.id ).addClass("col-xs-6");
 			$("#text-" + element.id ).addClass("col-xs-6 moveLeftShow");
@@ -144,7 +154,7 @@ export class ItemComponent {
 			}
 			$("#text-" + element.id ).addClass("moveDownShow");
 		} else {
-			$("#item-" + element.id ).removeClass("col-sm-8");
+			/*$("#item-" + element.id ).removeClass("col-sm-8");
 			$("#item-" + element.id ).addClass("col-xs-6 col-sm-4");
 			$("#field-" + element.id ).removeClass("col-xs-6");
 			$("#text-" + element.id ).removeClass("col-xs-6");
@@ -153,7 +163,7 @@ export class ItemComponent {
 			$(".item").removeClass("special");
 			$(".text").removeClass("rightElement");
 
-		}
+		}*/
     }
 	/**
 	 * Das Wechseln von wenigen Items zu allen Items

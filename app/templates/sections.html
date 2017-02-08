@@ -2,7 +2,7 @@
     <h1>{{s.title}}</h1>
     <hr />
     <p class="ueberschrift" *ngFor="let text of s.subtitles">{{text}}</p>
-    <coso-items *ngIf="s.itemFlag" [contentName]="[s.content]" [showOnlyTopItems]="[s.showOnlyTopItems]"><div class="loader"></div></coso-items>
+    <coso-items *ngIf="s.itemFlag" [contentName]="[s.content]" [showOnlyTopItems]="[s.showOnlyTopItems]" [itemRows]="[s.itemsPerRow]"><div class="loader"></div></coso-items>
     <coso-carousel *ngIf="!s.itemFlag" [contentName]="[s.content]"><div class="loader"></div></coso-carousel>
 </section>
 

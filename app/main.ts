@@ -3,6 +3,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { RouterModule, Routes }   from '@angular/router';
 
 import { HeaderComponent }  from './components/header';
 import { SectionComponent }  from './components/section';
@@ -15,7 +16,6 @@ import { HelloComponent }  from './components/hello';
 
 import { TestComponent }  from './components/test';
 
-import { RouterModule, Routes }   from '@angular/router';
 
 //Diese Komponenten müssen deklariert und gebootstrapped werden.
 const cosoComponents = [

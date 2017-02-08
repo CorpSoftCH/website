@@ -7,9 +7,14 @@ var section = [
     {
         "id": "angebot",
         "title": "Angebot",
-        "subtitles": ["some Subtitle"],
+        "subtitles": [
+            "Verbesserte Zusammenarbeit. Sichere Daten in der Cloud. Produktive Projekt Organisation. Beseitigung von Ineffizienzen.",
+            "Unser Diensleistungsangebot bietet Ihnen genau das an.",
+            "Sei es als Cloud- oder OnPremis-Lösung, wir verfügen über das nötige Know How Als Microsoft- Partner und  -Trainer kenne wir uns mit den neusten Produkte und Trends aus."
+        ],
         "itemFlag": true,
-        "content": "angebote"        
+        "content": "angebote",
+        "itemsPerRow": 4,        
     }/*, {
         "id": "produkte",
         "title": "Produkte",
@@ -27,7 +32,8 @@ var section = [
             "Wir bringen Sie voran - Professionelle Lösungen an den Schnittstellen von Business und IT"
              ],
         "itemFlag": true,
-        "content": "unternehmen"   
+        "content": "unternehmen",
+        "itemsPerRow": 3,          
     }, {
         "id": "referenzen",
         "title": "Referenzen",
@@ -35,7 +41,7 @@ var section = [
             "Unsere Referenzen"
              ],
         "itemFlag": false,
-        "content": "referenzen"   
+        "content": "referenzen"     
     },{
         "id": "team",
         "title": "Team",
@@ -43,7 +49,8 @@ var section = [
             "Unser Team"
              ],
         "itemFlag": true,
-        "content": "team"   
+        "content": "team",
+        "itemsPerRow": 4,          
     }, {
         "id": "partner",
         "title": "Partner",
@@ -52,6 +59,7 @@ var section = [
              ],
         "itemFlag": true,
         "showOnlyTopItems": true,
-        "content": "partner"   
+        "content": "partner",
+        "itemsPerRow": 4,         
     }
 ]
