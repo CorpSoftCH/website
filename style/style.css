@@ -325,14 +325,6 @@ header button {
   bottom: 0;
   width: 100%; }
 
-/*
-.col-md-3 {
-	margin: 0 !important;
-}
-.col-sm-8 {
-	padding: 0;
-	margin: 0;
-}*/
 .arrow {
   width: 50%; }
 
@@ -380,34 +372,37 @@ header button {
   letter-spacing: 3px;
   text-transform: uppercase; }
 
-#produkte .produkt {
+.produkt {
   background-color: white;
   padding: 0.5em;
   width: calc(100% - 2em);
   box-shadow: 5px 5px 10px lightgrey;
   margin: 0em; }
-  #produkte .produkt p {
+  .produkt p {
     text-align: justify; }
-  #produkte .produkt .prodBorder {
+  .produkt .prodBorder {
     border-bottom: solid black 0.1em;
     padding: 1em; }
-  #produkte .produkt .btn {
+  .produkt .btn {
     margin-top: 1em;
     background-color: #2B425C;
     color: white; }
-#produkte h2 {
+
+.produkt h2 {
   font-size: 1.4em;
   text-transform: uppercase; }
-#produkte img {
+
+.produkt img {
   padding: 1.5em 0.5em;
   float: left;
   width: calc(30% - 1em); }
-#produkte .prodText {
+
+.prodText {
   padding-left: 2em;
   text-align: left;
   float: left;
   width: calc(70% - 2em); }
-  #produkte .prodText li {
+  .prodText li {
     margin-left: 1em; }
 
 #unternehmen img {
