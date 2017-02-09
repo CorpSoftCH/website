@@ -15,7 +15,7 @@ var section = [
         "itemFlag": true,
         "content": "angebote",
         "itemsPerRow": 4,        
-    }/*, {
+    }, {
         "id": "produkte",
         "title": "Produkte",
         "subtitles": [
@@ -24,8 +24,9 @@ var section = [
             "Dabei fokussieren wir uns nicht nur auf die einzelnen Bereiche, sondern betrachten die gesamte Schnittstelle zwischen IT und Wirtschaft."
         ],
         "itemFlag": true,
-        "content": "produkte"   
-    }*/, {
+        "content": "produkte",
+        "itemsPerRow": 3,    
+    }, {
         "id": "unternehmen",
         "title": "Unternehmen",
         "subtitles": [

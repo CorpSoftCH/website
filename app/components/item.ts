@@ -80,39 +80,36 @@ export class ItemComponent {
 	 * Hier werden die Items per Reihe gesetzt.
 	 */
 	private setItemsPerRow(size: number) {
-		/*if (size > this.TABLET) {
-			this.itemRows = 3;
+		var value: number;
+		if (size > this.TABLET && this.itemRows == 3) {
+			value = 3;
+		} else {
+			value = 4;
 		}
 		if (size < this.TABLET) {
-			this.itemRows = 2;
+			value = 2;
+		}
+		if (size <= this.MOBILE) {
+			value = 1;
 		}
 
-		if (size <= this.MOBILE) {
-			this.itemRows = 1;
-			
-			$(".col-sm-4").removeClass("col-xs-6");
-			$(".col-sm-3").removeClass("col-xs-4");
-		} else {
-			$(".col-sm-4").addClass("col-xs-6");
-			$(".col-sm-3").addClass("col-xs-4");
-		}*/
 		for(let element of this.allItems) {
 			if(this.itemRows == 4){
-				$("#item-" + element.id ).addClass("col-md-6 col-lg-3");
+				$("#item-" + element.id ).addClass("col-sm-6 col-lg-3");
 			} else if (this.itemRows == 3) {
-				$("#item-" + element.id ).addClass("col-md-4");
+				$("#item-" + element.id ).addClass("col-sm-4");
 			}
 		}
 
-		//this.updateRightElements();
+		this.updateRightElements(value);
   	}
 	/**
 	 * Hier werden die sich am rechten Rand befindenden Items markiert.
 	 */
-	private updateRightElements() {
+	private updateRightElements(value: number) {
 		try {
 			for(var index = 0; index < this.showItems.length; index++) {
-				if((index+1)%this.itemRows == 0) {
+				if((index+1)%value == 0) {
 					this.showItems[index].setAsRightElement(true);
 				} else {
 					this.showItems[index].setAsRightElement(false);

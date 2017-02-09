@@ -3,7 +3,7 @@
 	text-align: center;
 	background-color: transparent;
 	position: relative;
-	padding-top: 5em;
+	padding-top: 7em;
 	height: 100vh;
 }
 
@@ -59,9 +59,7 @@
 	text-align: justify;
 	z-index: 5;
 	background-color: transparent;
-	/*position: relative;
-	width: 400%;
-	left: -300%;*/
+
 }
 
 //Itemverschiebungen
@@ -88,11 +86,11 @@
 #produkte {
 	.produkt {
 		background-color: white;
-		padding: 1em;
+		padding: 0.5em;
 		width: calc(100% - 2em);
 		box-shadow: 5px 5px 10px lightgrey;
-		margin: 0.5em;
-		position: relative;
+		margin: 0em;
+		//position: absolute;
 
 		p {
 			text-align: justify;

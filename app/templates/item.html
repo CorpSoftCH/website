@@ -8,17 +8,20 @@
         <h3>{{i.titles[0]}}</h3>
         <div id="text-{{i.id}}" class="text hide">
             <p *ngFor="let para of i.contentStrings">{{para}}</p>
-            <ul class="col-xs-4">
+            <ul class="col-sm-4">
+                <p class="ueberschrift">Wir helfen Ihnen bei:</p>
                 <li *ngFor="let li of i.specialStrings">
                     <p>{{li}}</p>
                 </li>
             </ul>
-            <ul class="col-xs-4">
+            <ul class="col-sm-4">
+                <p class="ueberschrift">Profitieren Sie von:</p>
                 <li *ngFor="let li of i.specialStrings2">
                     <p>{{li}}</p>
                 </li>
             </ul>
-            <ul class="col-xs-4">
+            <ul class="col-sm-4">
+                <p class="ueberschrift">Wir arbeiten mit:</p>
                 <li *ngFor="let li of i.specialStrings3">
                     <p>{{li}}</p>
                 </li>
@@ -43,7 +46,7 @@
         <div id="{{i.id}}" class="produkt">
             <div class="prodBorder"><h2>{{i.titles[0]}}</h2></div>
             <div class="prodBorder"><p *ngFor="let para of i.contentStrings">{{para}}</p></div>
-            <div>
+            <div class="col-xs-12">
                 <img src="app/data/images/produkte/customizing.png">
                 <div class="prodText">
                     <h3>Customizing</h3>
@@ -53,7 +56,7 @@
                     </ul>
                 </div>
             </div>
-            <div>
+            <div class="col-xs-12">
                 <img src="app/data/images/produkte/consulting.png">
                 <div class="prodText">
                     <h3>Consulting</h3>
@@ -63,7 +66,7 @@
                     </ul>
                 </div>
             </div>
-            <div>
+            <div class="col-xs-12">
                 <img src="app/data/images/produkte/training.png">
                 <div class="prodText">
                     <h3>Training</h3>
@@ -73,7 +76,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="prodBorder"><button class="btn">zum Produkt</button></div>
+            <div class="prodBorder"><button [routerLink]="['/products']" class="btn">zum Produkt</button></div>
         </div>
     </div>
 
