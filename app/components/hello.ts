@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 import {HelloService} from 'app/services/hello-service'
 /**
  * Diese Komponente beinhaltet die Hello-Section
@@ -10,8 +11,20 @@ import {HelloService} from 'app/services/hello-service'
 })
 export class HelloComponent {
     hello: Hello;
-    value: string = "home";
-	constructor( private service: HelloService) {
-        this.hello = service.getHello(this.value);
+    hellos: Array<Hello>;
+    value: string = "products";
+	mode: Array<String>;
+
+	constructor( private service: HelloService, private route: Router) {
+        this.hellos = this.service.getHellos();
     }
+
+	private ngAfterContentChecked() {
+        this.mode = this.route.url.split("/");
+        if(this.mode[1] == "home") {
+            this.hello = this.hellos[0];
+        } else {
+            this.hello = this.hellos[1];
+        }
+	}
 }

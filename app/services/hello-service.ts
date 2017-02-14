@@ -29,4 +29,9 @@ export class HelloService {
         }
     }
   }
+
+  public getHellos():Array<Hello> {
+    var pages: Array<Hello> = hello.map(h => new Hello(h.where, h.title, h.subtitles));
+    return pages;
+  }
 }

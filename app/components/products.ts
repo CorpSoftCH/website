@@ -9,11 +9,12 @@ import {ProduktService} from 'app/services/produkte-service'
   providers: [ProduktService]
 })
 export class ProductsComponent {
-    products: any;
+    sections: any;
     
     constructor(private service: ProduktService) {}
 
     ngOnInit() {
-      this.products = this.service.getProdukte();
+      this.sections = this.service.getProdukte();
+      
     }
 }

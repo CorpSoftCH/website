@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-
+import {Router} from '@angular/router'
 /**
  * Diese Komponente wird für den Header eingesetzt.
  */
@@ -11,11 +11,13 @@ export class HeaderComponent {
 	sections: any;
 	win: Window;
     private offSet: number = 60;
-	
+	state: string;
+	mode: Array<String>;
+
 	/**
 	 * Der Konstruktor speichert die Fensterdaten in einer Variablen.
 	 */
-	constructor() {
+	constructor(private route: Router) {
 		this.win = window;
 	}
 	/**
@@ -23,6 +25,8 @@ export class HeaderComponent {
 	 */
 	private ngAfterContentChecked() {
 		this.sections = $(".container:not(#hello)");
+		this.state = this.route.url;
+		this.mode = this.route.url.split("/");	
 	}
 
 	/**

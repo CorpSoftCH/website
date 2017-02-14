@@ -4,6 +4,6 @@ import {Component} from '@angular/core';
  */
 @Component({
   selector: 'content',
-  template: '<router-outlet></router-outlet> ',
+  template: '<coso-hello>hello-page loading...</coso-hello><router-outlet></router-outlet> ',
 })
 export class ContentComponent {}

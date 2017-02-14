@@ -1,5 +1,6 @@
 var allProducts = [
     {
+        "id": "Office",
         "title":"Office 365",
         "products": [
             {
@@ -67,6 +68,7 @@ var allProducts = [
             }
         ]
     },{
+        "id": "SharePoint",
         "title":"SharePoint",
         "products": [
             {
@@ -134,6 +136,7 @@ var allProducts = [
             },
         ]
     },{
+        "id":"Project",
         "title":"Project Online Professional",
         "products": [
             {
@@ -201,6 +204,7 @@ var allProducts = [
             }
         ]
     },{
+        "id":"Azure",
         "title":"Azure Infrastruktur",
         "products": [
             {

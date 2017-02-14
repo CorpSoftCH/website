@@ -25,10 +25,12 @@ const cosoComponents = [
 ]
 
 const routes: Routes = [
-  { path: '', redirectTo: '/products', pathMatch: 'full' },
-  { path: 'home',  component: SectionComponent },
-  { path: 'products',  component: ProductsComponent },
-  { path: 'test', component: TestComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home',              component: SectionComponent },
+  { path: 'home/:title',       component: SectionComponent },
+  { path: 'products',          component: ProductsComponent },
+  { path: 'products/:title',   component: ProductsComponent },
+  { path: 'test',              component: TestComponent },
 ];
 
 @NgModule({

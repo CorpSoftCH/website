@@ -12,7 +12,8 @@ var hello = [
         "where": "products",
         "title": "Products",
         "subtitles": [
-            "Collaboration.",
+            "Office 365.",
+            "SharePoint.",
             "Project Online Professional.",
             "Azure.",
         ]

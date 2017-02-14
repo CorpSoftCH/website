@@ -24,7 +24,6 @@ export class ItemComponent {
 	showItems: Array<Item>;
 	topItems: Array<Item> = [];
     service: ItemService;
-	//itemRows: number = 3;
 
 	/**
 	 * Im Konstruktor wird der Service geladen, welcher die Items zur verfügung stellt.
@@ -64,6 +63,10 @@ export class ItemComponent {
 		} catch (err) {console.log("catch more/less Buttons")} 
 
 		this.setItemsPerRow(window.innerWidth);		
+	}
+
+	goToTop() {
+		$('html,body').scrollTop(0);
 	}
 
 	/**

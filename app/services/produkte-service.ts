@@ -3,6 +3,7 @@ import allProducts from 'app/data/allProdukte';
 
 export class ProduktClass {
     constructor(
+        public id: string,
         public title: string,
         public products: Array<Produkt>,
     ){}
@@ -30,7 +31,7 @@ export class Content {
 export class ProduktService {
   
   public getProdukte(): Array<ProduktClass> {
-    var all = allProducts.map(pc => new ProduktClass(pc.title, pc.products.map(p => new Produkt(p.size, p.content.map(c => new Content(c.title, c.list, c.imgPath)) ,p.button))))
+    var all = allProducts.map(pc => new ProduktClass(pc.id, pc.title, pc.products.map(p => new Produkt(p.size, p.content.map(c => new Content(c.title, c.list, c.imgPath)) ,p.button))))
     return all;  
   }
 }
