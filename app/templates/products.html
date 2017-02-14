@@ -1,6 +1,7 @@
 <section class="container" *ngFor="let class of products">
     <h1>{{class.title}}</h1>
-    <div *ngFor="let p of class.products" class="produkt col-sm-4">
+    <div *ngFor="let p of class.products" class="col-md-4">
+        <div class="produkt">
         <div class="prodBorder"><h2>{{p.size}}</h2></div>
         <div class="col-xs-12" *ngFor="let c of p.content">
             <img src="{{c.imgPath}}">
@@ -12,5 +13,6 @@
             </div>
         </div>
         <div class="prodBorder"><button [routerLink]="['/products']" class="btn">{{p.button}}</button></div>
+        </div>
     </div>
 </section>
