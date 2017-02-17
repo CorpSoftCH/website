@@ -24,7 +24,7 @@ var allProducts = [
                     },
                     {
                         "title":"Training",
-                        "price":[
+                        "list":[
                             "Schulung Mitarbeiter",
                             "1 x p. Jahr Schulung über Neuerung",
                             ],
@@ -57,7 +57,7 @@ var allProducts = [
                     },
                     {
                         "title":"Training",
-                        "price":[
+                        "list":[
                             "Schulung Mitarbeiter",
                             "1 x p. Jahr Schulung über Neuerung",
                             ],
@@ -92,7 +92,7 @@ var allProducts = [
                     },
                     {
                         "title":"Training",
-                        "price":[
+                        "list":[
                             "Schulung Mitarbeiter",
                             "1 x p. Jahr Schulung über Neuerung",
                             ],
@@ -125,7 +125,7 @@ var allProducts = [
                     },
                     {
                         "title":"Training",
-                        "price":[
+                        "list":[
                             "Schulung Mitarbeiter",
                             "1 x p. Jahr Schulung über Neuerung",
                             ],
@@ -160,7 +160,7 @@ var allProducts = [
                     },
                     {
                         "title":"Training",
-                        "price":[
+                        "list":[
                             "Schulung Mitarbeiter",
                             "1 x p. Jahr Schulung über Neuerung",
                             ],
@@ -193,7 +193,7 @@ var allProducts = [
                     },
                     {
                         "title":"Training",
-                        "price":[
+                        "list":[
                             "Schulung Mitarbeiter",
                             "1 x p. Jahr Schulung über Neuerung",
                             ],
@@ -226,7 +226,7 @@ var allProducts = [
                     },
                     {
                         "title":"Training",
-                        "price":[
+                        "list":[
                             "Schulung Mitarbeiter",
                             "1 x p. Jahr Schulung über Neuerung",
                             ],
@@ -259,7 +259,7 @@ var allProducts = [
                     },
                     {
                         "title":"Training",
-                        "price":[
+                        "list":[
                             "Schulung Mitarbeiter",
                             "1 x p. Jahr Schulung über Neuerung",
                             ],

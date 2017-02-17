@@ -7,8 +7,9 @@ var team = [
       "Mit seinem Fachwissen in Betriebsökonomie und IT ergänzt Andreas Miloda das Team ideal. Momentan studiert er berufsbegleitend Wirtschaftsinformatik und arbeitet an komplexen Projekten im Bereich Microsoft SharePoint und Project Server mit. Dabei greift er auf seine Erfahrung als Techniker und Projektleiter zurück. Seine Fachbereiche liegen in den Bereichen Collaboration, Online Media, Kommunikation und Responsive Design. In seiner Freizeit liest er gerne und beschäftigt sich mit Computertechnik und der Fotografie. Er hat einen Blick für Details und behält dennoch das Gesamtbild im Auge, in der Fotografie wie im Berufsleben."
     ],
     "imgPath": "app/data/images/team/andreas.png",
-    "links" : ["andreas.miloda@corporatesoftware.ch","app/data/vcards//Andreas%20Miloda.vcf"]
-}/*,{
+    "email" : "andreas.miloda@corporatesoftware.ch",
+    "vCardPath": "app/data/vcards//Andreas%20Miloda.vcf"
+},{
     "vorname": "Céline",
     "nachname": "Horst",
     "kuerzel": "celineh",
@@ -18,7 +19,7 @@ var team = [
     "email" : "celine.horst@corporatesoftware.ch",
     "imgPath": "app/data/images/team/celine.png",
     "vCardPath": "app/data/vcards//Céline%20Horst.vcf"
-}*/,{
+},{
     "vorname": "Dario",
     "nachname": "Müller",
     "kuerzel": "dariom",
@@ -28,7 +29,7 @@ var team = [
     "email" : "dario.mueller@corporatesoftware.ch",
     "imgPath": "app/data/images/team/dario.png",
     "vCardPath": "app/data/vcards//Dario%20Müller.vcf"
-}/*,{
+},{
     "vorname": "Joris",
     "nachname": "Baiutti",
     "kuerzel": "jorisb",
@@ -68,7 +69,7 @@ var team = [
     "email" : "martin.bialas@corporatesoftware.ch",
     "imgPath": "app/data/images/team/Martin.png",
     "vCardPath": "app/data/vcards//Martin%20Bialas.vcf"
-}*/,{
+},{
     "vorname": "Matthias",
     "nachname": "Gessenay",
     "kuerzel": "matthiasg",
@@ -78,7 +79,7 @@ var team = [
     "email" : "matthias.gessenay@corporatesoftware.ch",
     "imgPath": "app/data/images/team/matthias.png",
     "vCardPath": "app/data/vcards//Matthias%20Gessenay.vcf"
-}/*,{
+},{
     "vorname": "Noah",
     "nachname": "Zani",
     "kuerzel": "noahz",
@@ -99,6 +100,16 @@ var team = [
     "imgPath": "app/data/images/team/raphael.png",
     "vCardPath": "app/data/vcards//Raphael%20Fäh.vcf"
 },{
+    "vorname": "Patrick",
+    "nachname": "Sommer",
+    "kuerzel": "patricks",
+    "description": [
+      "Patrick Sommer führt gemeinsam mit Matthias Gessenay das Unternehmen. Er besitzt ein breitgefächertes Wissen zu unterschiedlichen Branchen und verfügt über einen dipl. Ing. FH wie auch ein MBA in Integrated Management. Seine Fachgebiete liegen in IT-Service- und Agile Project Management wie auch in der optimalen Nutzung der dazugehörigen technischen Lösungen (Microsoft SharePoint, Project Server). Er ist seit über 10 Jahren ein zertifizierter Microsoft Trainer und hält regelmässig Schulungen zu verschiedenen Microsofttechnologien wie auch zu ITIL. Zusätzlich leitet er versiert interdisziplinäre Projekte im internationalen Umfeld. "
+    ],
+    "email" : "patrick.sommer@corporatesoftware.ch",
+    "imgPath": "app/data/images/team/patrick.png",
+    "vCardPath": "app/data/vcards//Patrick%20Sommer.vcf"
+},{
     "vorname": "Raúl",
     "nachname": "B. Heiduk",
     "kuerzel": "raulh",
@@ -108,10 +119,10 @@ var team = [
     "email" : "raul.heiduk@corporatesoftware.ch",
     "imgPath": "app/data/images/team/heiduk.png",
     "vCardPath": "app/data/vcards//Raúl%20B.%20Heiduk.vcf"
-}*/, {
+}, {
     "vorname": "Roman",
     "nachname": "A. Kahr",
-    "kuerzel": "patricks",
+    "kuerzel": "romank",
     "description": [
       "Roman A. Kahr hat an der Universität Fribourg Wirtschaftsinformatik studiert und ist seit Anfang 2014 bei uns als Consultant tätig. Roman berät unsere Kunden in den Bereichen Collaboration und Prozessmanagement sowie Cloud Computing und Data Analytics. Nebst seiner beratenden Tätigkeit ist Roman Trainer bei der Digicomp in den Gebieten SharePoint, Office 365 und Business Intelligence und zeichnet sich als „Microsoft Certified Trainer“ aus. "
     ],

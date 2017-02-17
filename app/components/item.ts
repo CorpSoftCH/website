@@ -50,11 +50,7 @@ export class ItemComponent {
 		
 		
 	}
-	/**
-	 * Nachdem der Kontent initialisiert wurde, werden dort, wo nur die TopItems dargestellt werden Buttens sichtbar gemacht,
-	 * um die anderen Items sichtbar machen zu können.
-	 */
-	private ngAfterContentChecked() {
+	private ngAfterViewInit() {
 		try {
 			if(this.showOnlyTopItems[0]) {
 				this.showItems = this.topItems;
@@ -62,10 +58,16 @@ export class ItemComponent {
 			}
 		} catch (err) {console.log("catch more/less Buttons")} 
 
+	}
+	/**
+	 * Nachdem der Kontent initialisiert wurde, werden dort, wo nur die TopItems dargestellt werden Buttens sichtbar gemacht,
+	 * um die anderen Items sichtbar machen zu können.
+	 */
+	private ngAfterContentChecked() {
 		this.setItemsPerRow(window.innerWidth);		
 	}
 
-	goToTop() {
+	private goToTop() {
 		$('html,body').scrollTop(0);
 	}
 
@@ -100,7 +102,7 @@ export class ItemComponent {
 			if(this.itemRows == 4){
 				$("#item-" + element.id ).addClass("col-sm-6 col-lg-3");
 			} else if (this.itemRows == 3) {
-				$("#item-" + element.id ).addClass("col-sm-4");
+				$("#item-" + element.id ).addClass("col-md-4");
 			}
 		}
 
@@ -134,7 +136,7 @@ export class ItemComponent {
 		}
 		
 		$("#text-" + element.id ).toggleClass("hide");
-		//$("#arrow-" + element.id ).toggleClass("hide");
+		$("#arrow-" + element.id ).toggleClass("hide");
 		$("#item-" + element.id ).toggleClass("active");
 
 		/*if(element.isActive() && !element.isRightElement()) {
@@ -169,10 +171,7 @@ export class ItemComponent {
 	 * Das Wechseln von wenigen Items zu allen Items
 	 */
 	private moreItems(): void  {
-		console.log("more");
-		console.log(this.showItems);
 		this.showItems = this.allItems;
-		console.log(this.showItems);
 		$(".moreItems").toggleClass("hide");
 		$(".lessItems").toggleClass("hide");
 	}

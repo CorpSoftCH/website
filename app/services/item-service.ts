@@ -29,7 +29,7 @@ export class Item {
     public specialStrings: Array<string>,
     public specialStrings2: Array<string>,
     public specialStrings3: Array<string>,
-    //active - hasFixText - isLink - isProduct - isRightElement
+    //active - hasFixText - isLink - isProduct - isRightElement - isTeam
     public flags: Array<boolean>,
     public state: string = ""){}
 
@@ -92,22 +92,22 @@ export class ItemService {
   }
   
   private getAngebote(): Array<Item> {
-    return angebot.map(a => new Item(a.id, [a.title], a.imgPath , a.description, a.list1, a.list2, a.list3, [false, false, false, false, false]));
+    return angebot.map(a => new Item(a.id, [a.title], a.imgPath , a.description, a.list1, a.list2, a.list3, [false, false, false, false, false, false]));
   }
 
   private getTeam(): Array<Item> {
-    return team.map(t => new Item(t.kuerzel, [t.vorname, t.nachname], t.imgPath, t.description, t.links,[],[], [false, false, false, false, false]));
+    return team.map(t => new Item(t.kuerzel, [t.vorname, t.nachname], t.imgPath, t.description, [t.email, t.vCardPath],[],[], [false, false, false, false, false, true]));
   }
 
   private getPartner(): Array<Item> {
-    return partner.map(p => new Item(p.id, p.title, p.imgPath, p.description, p.link,[],[], [false, false, true, false, false]));
+    return partner.map(p => new Item(p.id, p.title, p.imgPath, p.description, p.link,[],[], [false, false, true, false, false, false]));
   }
   
   private getUnternehmen(): Array<Item> {
-    return unternehmen.map(u => new Item(u.id, u.title, u.imgPath, u.paragraphs, u.list,[],[], [false, true, false, false, false], ));
+    return unternehmen.map(u => new Item(u.id, u.title, u.imgPath, u.paragraphs, u.list,[],[], [false, true, false, false, false, false], ));
   }
   private getProdukte(): Array<Item> {
-    return produkte.map(pr => new Item(pr.id, pr.title, "" , pr.description, [],[],[], [false, true, false, true, false]));
+    return produkte.map(pr => new Item(pr.id, pr.title, "" , pr.description, [],[],[], [false, true, false, true, false, false]));
   }
   private getReferenzen(): Array<Item> {
     return referenzen.map(r => new Item(r.id, [r.lecturer, r.position], r.imgPath , r.zitat,[],[], [r.link], [r.state]));

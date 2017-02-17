@@ -21,10 +21,12 @@ export class HelloComponent {
 
 	private ngAfterContentChecked() {
         this.mode = this.route.url.split("/");
-        if(this.mode[1] == "home") {
-            this.hello = this.hellos[0];
-        } else {
+        if(this.mode[1] == "products") {
             this.hello = this.hellos[1];
+        } else if(this.mode[1] == "services") {
+            this.hello = this.hellos[2];
+        } else {
+            this.hello = this.hellos[0];
         }
 	}
 }

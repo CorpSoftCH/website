@@ -13,6 +13,7 @@ import { MapComponent }  from './components/map';
 import { ContentComponent }  from './components/content';
 import { ProductsComponent }  from './components/products';
 import { HelloComponent }  from './components/hello';
+import { ServicesComponent }  from './components/services';
 
 import { TestComponent }  from './components/test';
 
@@ -30,6 +31,8 @@ const routes: Routes = [
   { path: 'home/:title',       component: SectionComponent },
   { path: 'products',          component: ProductsComponent },
   { path: 'products/:title',   component: ProductsComponent },
+  { path: 'services',          component: ServicesComponent },
+  { path: 'services/:title',   component: ServicesComponent },
   { path: 'test',              component: TestComponent },
 ];
 
@@ -48,7 +51,7 @@ class AppRoutingModule {}
  */
 @NgModule({
     imports:      [ BrowserModule, AppRoutingModule],
-    declarations: [ ...cosoComponents, ItemComponent, CarouselComponent, TestComponent, SectionComponent, MapComponent, ProductsComponent],
+    declarations: [ ...cosoComponents, ItemComponent, CarouselComponent, TestComponent, SectionComponent, MapComponent, ProductsComponent, ServicesComponent],
     providers:    [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap:    [ ...cosoComponents],
 })

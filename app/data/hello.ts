@@ -17,5 +17,12 @@ var hello = [
             "Project Online Professional.",
             "Azure.",
         ]
+    },{
+        "where": "services",
+        "title": "Dienstleistungen",
+        "subtitles": [
+            "Angebot.",
+            "Produkte.",
+        ]
     }
 ]

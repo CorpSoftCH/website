@@ -1,5 +1,10 @@
 <section id="hello">
-    <h1>{{hello.title}}</h1>
-    <h2 *ngFor="let sub of hello.subtitles" class="col-sm-6 col-lg-3">{{sub}}</h2>
-    <img id="hello-profile" src="app/data/images/team/profile.png">
+    <div class="maxWidth">
+        <h1>{{hello.title}}</h1>
+        <hr />
+        <div class="subtitles">
+            <div *ngFor="let sub of hello.subtitles" class="subtitle">{{sub}}</div>
+        </div>
+        <img id="hello-profile" src="app/data/images/team/profile.png">
+    </div>
 </section>

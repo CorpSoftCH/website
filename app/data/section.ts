@@ -38,26 +38,17 @@ var section = [
     }, {
         "id": "referenzen",
         "title": "Referenzen",
-        "subtitles": [
-            "Unsere Referenzen"
-             ],
         "itemFlag": false,
         "content": "referenzen"     
     },{
         "id": "team",
         "title": "Team",
-        "subtitles": [
-            "Unser Team"
-             ],
         "itemFlag": true,
         "content": "team",
         "itemsPerRow": 4,          
     }, {
         "id": "partner",
         "title": "Partner",
-        "subtitles": [
-            "Unsere Partner"
-             ],
         "itemFlag": true,
         "showOnlyTopItems": true,
         "content": "partner",

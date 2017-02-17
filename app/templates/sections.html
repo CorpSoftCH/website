@@ -1,12 +1,15 @@
 <section *ngFor="let s of sections" id="{{s.id}}" class="container">
-    <h1>{{s.title}}</h1>
-    <hr />
-    <p class="ueberschrift" *ngFor="let text of s.subtitles">{{text}}</p>
-    <coso-items *ngIf="s.itemFlag" [contentName]="[s.content]" [showOnlyTopItems]="[s.showOnlyTopItems]" [itemRows]="[s.itemsPerRow]"><div class="loader"></div></coso-items>
-    <coso-carousel *ngIf="!s.itemFlag" [contentName]="[s.content]"><div class="loader"></div></coso-carousel>
+    <div class="maxWidth">
+        <h1>{{s.title}}</h1>
+        <hr />
+        <p class="ueberschrift" *ngFor="let text of s.subtitles">{{text}}</p>
+        <coso-items *ngIf="s.itemFlag" [contentName]="[s.content]" [showOnlyTopItems]="[s.showOnlyTopItems]" [itemRows]="[s.itemsPerRow]"><div class="loader"></div></coso-items>
+        <coso-carousel *ngIf="!s.itemFlag" [contentName]="[s.content]"><div class="loader"></div></coso-carousel>
+    </div>
 </section>
 
 <section id="kontakt" class="container">
+    <div class="maxWidth">
     <h1>Kontakt</h1>
     <hr />
     <div class="col-md-6">
@@ -53,10 +56,13 @@
             <button type="submit" id="contact-form-senden" class="btn btn-success btn-lg">Senden</button>
         </form>
     </div>
+    </div>
 </section>
 
 <section id="standort" class="container">
+    <div class="maxWidth">
     <h1>Standort</h1>
     <hr />
     <coso-map></coso-map>
+    </div>
 </section>

@@ -4,8 +4,8 @@
     </ol>
     <div class="carousel-inner">
         <div *ngFor="let r of items" class="item {{r.state}}">
-            <p class="highlighted" *ngFor="let para of r.contentStrings">{{para}}</p>
-            <p>{{r.titles[0]}}</p>
+            <p class="zitat" *ngFor="let para of r.contentStrings">{{para}}</p>
+            <p class="highlighted">{{r.titles[0]}}</p>
             <p>{{r.titles[1]}}</p>
             <a href="{{r.specialStrings[0]}}">
                 <img class="carousel-img" src="{{r.imgPath}}">
@@ -15,7 +15,7 @@
     <a class="left carousel-control" (click)="move('carousel-' + [contentName],'prev')">
         <span class="fa fa-chevron-left glyphicon-chevron-left"></span>
     </a>
-    <a class="right carousel-control"  (click)="move('carousel-' + [contentName],'prev')">
+    <a class="right carousel-control"  (click)="move('carousel-' + [contentName],'next')">
         <span class="fa fa-chevron-right glyphicon-chevron-right"></span>
     </a>
 </div>

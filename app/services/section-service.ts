@@ -28,4 +28,21 @@ export class SectionService {
   public getSections(): Array<Section> {
     return section.map(s => new Section(s.id, s.title, s.subtitles, s.content, s.itemFlag, s.showOnlyTopItems, s.itemsPerRow));
   }
+  
+  public getServices(): Array<Section> {
+    var sections: Array<Section> = this.getSections();
+    var ids: Array<string> = ["angebot","produkte"];
+    var services: Array<Section> = [];
+    
+    console.log(sections);
+    for(let s of sections) {
+      for(let id of ids) {
+        if(s.id == id) {
+          services.push(s);
+        }
+      }
+    }
+    
+    return services;
+  } 
 }
