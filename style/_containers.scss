@@ -102,16 +102,15 @@
 }
 
 
-
 //#produkte {
 	.produkt {
+		max-width: 30em;
+		margin: auto;
+		margin-bottom: 1.5em;
 		background-color: white;
+		border: 0.1em solid black;
 		padding: 0.5em;
-		width: calc(100% - 2em);
 		box-shadow: 5px 5px 10px lightgrey;
-		margin: 0em;
-		//position: absolute;
-
 		p {
 			text-align: justify;
 		}
@@ -125,18 +124,24 @@
 			background-color: $cosoBlue01;
 			color: white;
 		}
+		.btn-div {
+			position: absolute;
+			bottom: 3em;
+			left: -0.5em; //Augenkorrektur
+			
+		}
+		h2 {
+			font-size: 1.4em;
+			text-transform: uppercase;
+		}
+	
+		img {
+			padding: 1.5em 0.5em;
+			float: left;
+			width: calc(30% - 1em);
+		}
 	}
 
-	.produkt h2 {
-		font-size: 1.4em;
-		text-transform: uppercase;
-	}
-	
-	.produkt img {
-		padding: 1.5em 0.5em;
-		float: left;
-		width: calc(30% - 1em);
-	}
 	.prodText {
 		padding-left: 2em;
 		text-align: left;
@@ -184,24 +189,26 @@
 	}
 }
 //team
-
+/*
 #team {
 	img {
 		width: 10%;
 		position: absolute;
 		float: left;
 	}
-}
-/*
+}*/
+
 #team {
 	.field {
 		position: relative;
 		padding-bottom: 1em;
 	}
 	.field img {
-		height: 27em;
+		display: block;
+		position: absolute;
+		width: 100%;
 	}
-}*/
+}
 
 //Kontakt
 #kontakt {
@@ -250,3 +257,25 @@
 		text-transform: uppercase;
 	}
 } 
+
+#Kontaktformular {
+	.form-control {
+		//font-size: 1.2em;
+		padding: 1.2em;
+		//width: calc(100% - 6em);
+		border: 0.2em solid #2B425C;
+		margin: 1em;
+		input {
+			width: calc(100% - 6em);
+		}
+	}
+	#contact-form-senden {
+		font-size: 1.2em;
+		padding: 1.5em;
+		border: none;
+		background-color: $cosoBlue01;
+		color: white;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}
+}

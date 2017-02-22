@@ -17,4 +17,18 @@ export class ProductsComponent {
       this.sections = this.service.getProdukte();
       
     }
+
+    ngAfterViewChecked() {
+      var prd = $(".produkt");
+      prd = [...prd];
+      var height = 0;
+      for(let e of prd) {
+        if (e.offsetHeight > height) {
+          height = e.offsetHeight;
+        }
+      }
+      for(let e of prd) {
+        e.style.height = height + 30 + "px";
+      }
+    }
 }

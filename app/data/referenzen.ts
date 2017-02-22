@@ -39,5 +39,14 @@ var referenzen = [
     "position": "Stv. Geschäftsführer & Leiter Informatik",
     "link" : "https://www.post.ch/de",
     "imgPath" : "app/data/images/partner/Bbc_Logo.png"
+  },{
+    "id": "ref_05",
+    "zitat": [
+        "\"Dank Corporate Software war die Migration in die Cloud ein voller Erfolg! Das Gesamtpaket mit Beratung, Umsetzung und Betrieb hat uns überzeugt und dank Office 365 und SharePoint Online arbeiten wir heute effizienter und kostengünstiger.\""
+    ],
+    "lecturer": "Georg Dubach",
+    "position": "Geschäftsführer Revor Sammelstiftung ",
+    "link" : "http://www.revor.swiss/",
+    "imgPath" : "app/data/images/partner/logoRevor.gif"
   },
 ]

@@ -1,7 +1,9 @@
 $cosoBlue01: #2B425C;
 $cosoBlue02: rgba(0,131,195,0.5);
+$cosoBlue03: rgba(0,131,195,0.5);
 
 $background01: rgba(43, 66, 92, 0.4);
+
 
 $font: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
@@ -28,6 +30,19 @@ h1,
 h2 {
 	z-index: 2;
 	font-weight: 700;
+}
+
+h1 {
+  font-size: 5.5vw;
+}
+h2 {
+  font-size: 3.0vw;
+}
+h3 {
+  font-size: 3vh;
+}
+p {
+  font-size: 2.5vmin;
 }
 
 ul {
@@ -63,8 +78,8 @@ ul > li:before {
 }
 .container h1 {
 	text-transform: uppercase;
-	padding: 0.7em;
-	font-size: 2.2em;
+	padding: 0.5em;
+	font-size: 1.9em;
 	color: $cosoBlue01;
 }
 
@@ -90,10 +105,15 @@ hr {
 	font-size: 1.2em;
 	font-style: italic;
 }
-.ueberschrift {
-	//text-transform: uppercase;
+.ueberschrift,
+.first {
 	font-weight: 700;
 	font-size: 1em;
+	color: $cosoBlue01;
+}
+.last,
+.ueberschrift2 {
+	font-size: 0.8em;
 	color: $cosoBlue01;
 }
 
@@ -106,6 +126,14 @@ hr {
 	background-color: white;
 }
 
+.order {
+	position: absolute;
+	//width: 80%;
+	background-color: white;
+	top: 6em;
+	margin: auto;
+
+}
 @import 'carousel';
 @import 'header';
 @import 'containers';

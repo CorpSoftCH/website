@@ -10,6 +10,7 @@ var unternehmen = [
             "Enterprise Project Management",
             "Collaboration",
             "Service Management",
+            "Cloud Computing",
             "Training"
         ],
         "imgPath" : "app/data/images/unternehmen/Vision.png"

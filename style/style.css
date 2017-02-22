@@ -17,6 +17,18 @@ h2 {
   z-index: 2;
   font-weight: 700; }
 
+h1 {
+  font-size: 5.5vw; }
+
+h2 {
+  font-size: 3.0vw; }
+
+h3 {
+  font-size: 3vh; }
+
+p {
+  font-size: 2.5vmin; }
+
 ul {
   list-style-type: disc; }
 
@@ -47,8 +59,8 @@ ul > li:before {
 
 .container h1 {
   text-transform: uppercase;
-  padding: 0.7em;
-  font-size: 2.2em;
+  padding: 0.5em;
+  font-size: 1.9em;
   color: #2B425C; }
 
 hr {
@@ -69,9 +81,15 @@ hr {
   font-size: 1.2em;
   font-style: italic; }
 
-.ueberschrift {
+.ueberschrift,
+.first {
   font-weight: 700;
   font-size: 1em;
+  color: #2B425C; }
+
+.last,
+.ueberschrift2 {
+  font-size: 0.8em;
   color: #2B425C; }
 
 .row {
@@ -80,6 +98,12 @@ hr {
 
 .btn {
   background-color: white; }
+
+.order {
+  position: absolute;
+  background-color: white;
+  top: 6em;
+  margin: auto; }
 
 /*Bootstrap - Part*/
 .carousel {
@@ -434,11 +458,13 @@ header button {
   background-color: white; }
 
 .produkt {
+  max-width: 30em;
+  margin: auto;
+  margin-bottom: 1.5em;
   background-color: white;
+  border: 0.1em solid black;
   padding: 0.5em;
-  width: calc(100% - 2em);
-  box-shadow: 5px 5px 10px lightgrey;
-  margin: 0em; }
+  box-shadow: 5px 5px 10px lightgrey; }
   .produkt p {
     text-align: justify; }
   .produkt .prodBorder {
@@ -448,15 +474,17 @@ header button {
     margin-top: 1em;
     background-color: #2B425C;
     color: white; }
-
-.produkt h2 {
-  font-size: 1.4em;
-  text-transform: uppercase; }
-
-.produkt img {
-  padding: 1.5em 0.5em;
-  float: left;
-  width: calc(30% - 1em); }
+  .produkt .btn-div {
+    position: absolute;
+    bottom: 3em;
+    left: -0.5em; }
+  .produkt h2 {
+    font-size: 1.4em;
+    text-transform: uppercase; }
+  .produkt img {
+    padding: 1.5em 0.5em;
+    float: left;
+    width: calc(30% - 1em); }
 
 .prodText {
   padding-left: 2em;
@@ -487,21 +515,22 @@ header button {
   margin-top: 1px;
   margin-bottom: 1px; }
 
-#team img {
-  width: 10%;
-  position: absolute;
-  float: left; }
-
 /*
 #team {
-	.field {
-		position: relative;
-		padding-bottom: 1em;
-	}
-	.field img {
-		height: 27em;
+	img {
+		width: 10%;
+		position: absolute;
+		float: left;
 	}
 }*/
+#team .field {
+  position: relative;
+  padding-bottom: 1em; }
+#team .field img {
+  display: block;
+  position: absolute;
+  width: 100%; }
+
 #kontakt p {
   text-align: justify; }
 #kontakt .contact-us {
@@ -527,6 +556,21 @@ header button {
   border: 0.2em solid #2B425C;
   margin: 1em; }
 #kontakt #contact-form-senden {
+  font-size: 1.2em;
+  padding: 1.5em;
+  border: none;
+  background-color: #2B425C;
+  color: white;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
+
+#Kontaktformular .form-control {
+  padding: 1.2em;
+  border: 0.2em solid #2B425C;
+  margin: 1em; }
+  #Kontaktformular .form-control input {
+    width: calc(100% - 6em); }
+#Kontaktformular #contact-form-senden {
   font-size: 1.2em;
   padding: 1.5em;
   border: none;

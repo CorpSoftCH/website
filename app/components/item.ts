@@ -67,6 +67,21 @@ export class ItemComponent {
 		this.setItemsPerRow(window.innerWidth);		
 	}
 
+	private ngAfterViewChecked() {
+      var prd = $(".produkt .text");
+      prd = [...prd];
+	  console.log(prd);
+      var height = 0;
+      for(let e of prd) {
+        if (e.offsetHeight > height) {
+          height = e.offsetHeight;
+        }
+      }
+      for(let e of prd) {
+        e.style.height = height + "px";
+      }
+    }
+
 	private goToTop() {
 		$('html,body').scrollTop(0);
 	}
@@ -103,6 +118,8 @@ export class ItemComponent {
 				$("#item-" + element.id ).addClass("col-sm-6 col-lg-3");
 			} else if (this.itemRows == 3) {
 				$("#item-" + element.id ).addClass("col-md-4");
+			} else if (this.itemRows == 6) {
+				$("#item-" + element.id ).addClass("col-xs-3 col-sm-2 col-md-2");
 			}
 		}
 
@@ -183,6 +200,8 @@ export class ItemComponent {
 		$(".moreItems").toggleClass("hide");
 		$(".lessItems").toggleClass("hide");
 	}
+
+	
 
 }
 
