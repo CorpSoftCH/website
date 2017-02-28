@@ -20,17 +20,27 @@ h2 {
 h1 {
   font-size: 5.5vw; }
 
-@media all and (min-width: 1200px) {
-  h1 {
-    font-size: 60px; } }
 h2 {
-  font-size: 3.0vh; }
+  font-size: 3.0vw; }
 
 h3 {
-  font-size: 3vh; }
+  font-size: 3vw; }
 
+@media all and (min-width: 1200px) {
+  h1 {
+    font-size: 60px; }
+
+  h2 {
+    font-size: 25px; }
+
+  h3 {
+    font-size: 20px; } }
+@media all and (min-width: 992px) {
+  h3 {
+    font-size: 18px; } }
 ul {
-  list-style-type: disc; }
+  list-style-type: disc;
+  text-align: left; }
 
 /*
 ul > li {
@@ -400,8 +410,16 @@ header button {
   bottom: 0;
   width: 100%; }
 
+#angebote-details {
+  margin-top: 2em; }
+
+#team-details {
+  margin-top: 1em; }
+
 .arrow {
-  width: 50%; }
+  width: 50%;
+  position: absolute;
+  left: 25%; }
 
 .field img {
   width: 70%;
@@ -415,7 +433,7 @@ header button {
   z-index: 6;
   position: absolute;
   width: 100%;
-  bottom: 50%;
+  bottom: 55%;
   left: 0;
   visibility: hidden; }
 
@@ -429,13 +447,6 @@ header button {
   z-index: 5;
   background-color: transparent; }
 
-.rightElement {
-  top: initial;
-  position: absolute; }
-
-.special {
-  margin-right: 1px; }
-
 .moreItems,
 .lessItems {
   width: 100%;
@@ -446,16 +457,6 @@ header button {
   color: #2B425C;
   letter-spacing: 3px;
   text-transform: uppercase; }
-
-#angebot .item {
-  position: inherit;
-  margin-bottom: inherit; }
-#angebot .text {
-  left: 0;
-  position: absolute;
-  width: calc(100%);
-  padding: 2em;
-  background-color: white; }
 
 .produkt {
   max-width: 30em;
@@ -515,14 +516,6 @@ header button {
   margin-top: 1px;
   margin-bottom: 1px; }
 
-/*
-#team {
-	img {
-		width: 10%;
-		position: absolute;
-		float: left;
-	}
-}*/
 #team .field {
   position: relative;
   padding-bottom: 1em; }

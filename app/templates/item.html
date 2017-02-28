@@ -1,48 +1,20 @@
 <div id="item-{{i.id}}" class="item" *ngFor="let i of showItems; let ind = index">
     <div id="angebot-{{i.id}}" class="innerItem" *ngIf="!i.flags[1] && !i.flags[2] && !i.flags[5]"> <!-- !hasFixText && !isLink && !isTeam -->
-        <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(allItems, i);changeView(i, ind)">
+        <div id="field-{{i.id}}" class="field" (click)="showDetailAngebote(i, ind);">
             <img src="{{i.imgPath}}">
             <i class="fa fa-search-{{i.getOperator()}} fa fa-3x"></i>
-            <img id="arrow-{{i.id}}" class="hide" src="app/data/images/arrowactive.png">
         </div>
         <h3>{{i.titles[0]}}</h3>
-        <div id="text-{{i.id}}" class="text hide">
-            
-            <p *ngFor="let para of i.contentStrings">{{para}}</p>
-            <ul class="col-sm-4">
-                <p class="ueberschrift">Wir helfen Ihnen bei:</p>
-                <li *ngFor="let li of i.specialStrings">
-                    <p>{{li}}</p>
-                </li>
-            </ul>
-            <ul class="col-sm-4">
-                <p class="ueberschrift">Profitieren Sie von:</p>
-                <li *ngFor="let li of i.specialStrings2">
-                    <p>{{li}}</p>
-                </li>
-            </ul>
-            <ul class="col-sm-4">
-                <p class="ueberschrift">Wir arbeiten mit:</p>
-                <li *ngFor="let li of i.specialStrings3">
-                    <p>{{li}}</p>
-                </li>
-            </ul>
-        </div>
+        <img id="arrow-{{i.id}}" class="arrow hide" src="app/data/images/arrowactive.png">
     </div>
 
     <div id="team-{{i.id}}" *ngIf="!i.flags[1] && !i.flags[2] && i.flags[5]"> <!-- !hasFixText && !isLink -->
-        <div id="field-{{i.id}}" class="field" (click)="deactivateOthers(allItems, i);changeView(i, ind)">
+        <div id="field-{{i.id}}" class="field" (click)="showDetailTeam(i, ind)">
             <div><img src="{{i.imgPath}}"></div>
             <i class="fa fa-search-{{i.getOperator()}} fa fa-3x"></i>
         </div>
         <h3>{{i.titles[0]}}</h3>
-        <div id="text-{{i.id}}" class="text hide">
-            <p *ngFor="let para of i.contentStrings">{{para}}</p>
-            <ul>
-                <li><a href="mailto:{{i.specialStrings[0]}}">Email an {{i.titles[0]}}</a></li>
-                <li><a href="{{i.specialStrings[1]}}">vCard von {{i.titles[0]}}</a></li>
-            </ul>
-        </div>
+        <img id="arrow-{{i.id}}" class="arrow hide" src="app/data/images/arrowactive.png">
     </div>
 
     <div *ngIf="!i.flags[3] && i.flags[1]"> <!-- !isProduct && hasFixText-->
@@ -110,7 +82,7 @@
     <button class="btn moreItems" (click)="moreItems()">Zeige mehr</button>
     <button class="btn lessItems hide" (click)="lessItems()">Zeige weniger</button>
 </div>
-
+<div id="{{contentName}}-details"></div>
 
 
 

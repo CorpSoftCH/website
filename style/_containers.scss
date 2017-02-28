@@ -29,9 +29,17 @@
 	width: 100%;
 }
 
+#angebote-details {
+	margin-top: 2em;
+}
+#team-details {
+	margin-top: 1em;
+}
 
 .arrow {
 	width: 50%;
+	position: absolute;
+	left: 25%;
 }
 
 .field img {
@@ -47,7 +55,7 @@
 	z-index: 6;
 	position: absolute;
 	width: 100%;
-	bottom: 50%;
+	bottom: 55%;
     left:0;
 	visibility: hidden;
 }
@@ -65,14 +73,6 @@
 
 }
 
-//Itemverschiebungen
-.rightElement {
-	top: initial;
-	position: absolute;
-}
-.special {
-	margin-right: 1px;
-}
 //Buttons
 .moreItems,
 .lessItems {
@@ -84,21 +84,6 @@
     color: $cosoBlue01;
     letter-spacing: 3px;
     text-transform: uppercase;
-}
-
-#angebot {
-	.item {
-		position: inherit;
-		margin-bottom: inherit;
-	}
-
-	.text {
-		left: 0;
-		position: absolute;
-		width: calc(100%);
-		padding: 2em;
-		background-color: white;
-	}
 }
 
 
@@ -188,16 +173,9 @@
 		margin-bottom: 1px;
 	}
 }
-//team
-/*
-#team {
-	img {
-		width: 10%;
-		position: absolute;
-		float: left;
-	}
-}*/
 
+
+//team
 #team {
 	.field {
 		position: relative;
