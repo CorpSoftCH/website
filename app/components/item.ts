@@ -58,17 +58,12 @@ export class ItemComponent {
 			}
 		} catch (err) {console.log("catch more/less Buttons")} 
 
-	}
-	/**
-	 * Nachdem der Kontent initialisiert wurde, werden dort, wo nur die TopItems dargestellt werden Buttens sichtbar gemacht,
-	 * um die anderen Items sichtbar machen zu können.
-	 */
-	private ngAfterContentChecked() {
-		this.setItemsPerRow(window.innerWidth);		
+		this.fixHoehe();
+
 	}
 
-	private ngAfterViewChecked() {
-      var prd = $(".produkt .text");
+	fixHoehe() {
+		var prd = $(".produkt .text");
       prd = [...prd];
 	  console.log(prd);
       var height = 0;
@@ -80,7 +75,16 @@ export class ItemComponent {
       for(let e of prd) {
         e.style.height = height + "px";
       }
-    }
+	}
+	/**
+	 * Nachdem der Kontent initialisiert wurde, werden dort, wo nur die TopItems dargestellt werden Buttens sichtbar gemacht,
+	 * um die anderen Items sichtbar machen zu können.
+	 */
+	private ngAfterContentChecked() {
+		this.setItemsPerRow(window.innerWidth);		
+	}
+
+
 
 	private goToTop() {
 		$('html,body').scrollTop(0);

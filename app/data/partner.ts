@@ -121,13 +121,13 @@ var partner = [
     "id": "inmi",
     "title": ["Ingram Micro"],
     "description": [],
-    "imgPath": "app/data/images/partner/Ingram-Micro.png",
+    "imgPath": "app/data/images/partner/Ingram neu.png",
     "link": ["http://ch.ingrammicro.com/ "]
   },{
     "id": "clock",
     "title": ["Clockodo"],
     "description": [],
-    "imgPath": "app/data/images/partner/Logo-clockodo.png",
+    "imgPath": "app/data/images/partner/clockodo neu.png",
     "link": ["http://www.clockodo.com/de"]
   }
 ]

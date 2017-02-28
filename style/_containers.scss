@@ -112,7 +112,7 @@
 		padding: 0.5em;
 		box-shadow: 5px 5px 10px lightgrey;
 		p {
-			text-align: justify;
+			text-align: left;
 		}
 
 		.prodBorder {
@@ -204,8 +204,7 @@
 		padding-bottom: 1em;
 	}
 	.field img {
-		display: block;
-		position: absolute;
+		display: inline-block;
 		width: 100%;
 	}
 }

@@ -52,4 +52,18 @@ export class CarouselComponent {
         $('#' + id).carousel(value);
     }
 
+    ngAfterViewInit() {
+      var prd = $(".carousel");
+      prd = [...prd];
+      var height = 0;
+      for(let e of prd) {
+        if (e.offsetHeight > height) {
+          height = e.offsetHeight;
+        }
+      }
+      for(let e of prd) {
+        e.style.height = height + 40 + "px";
+      }
+    }
+
 }

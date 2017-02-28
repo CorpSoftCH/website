@@ -20,14 +20,14 @@ h2 {
 h1 {
   font-size: 5.5vw; }
 
+@media all and (min-width: 1200px) {
+  h1 {
+    font-size: 60px; } }
 h2 {
-  font-size: 3.0vw; }
+  font-size: 3.0vh; }
 
 h3 {
   font-size: 3vh; }
-
-p {
-  font-size: 2.5vmin; }
 
 ul {
   list-style-type: disc; }
@@ -307,10 +307,10 @@ hr {
     right: 20%;
     padding-bottom: 30px; } }
 .carousel-img {
-  width: 20%;
+  width: 15%;
   margin: 1em auto;
-  min-width: 8em;
-  max-width: 10em; }
+  min-width: 6em;
+  max-width: 8em; }
 
 header {
   top: 0;
@@ -466,7 +466,7 @@ header button {
   padding: 0.5em;
   box-shadow: 5px 5px 10px lightgrey; }
   .produkt p {
-    text-align: justify; }
+    text-align: left; }
   .produkt .prodBorder {
     border-bottom: solid black 0.1em;
     padding: 1em; }
@@ -527,8 +527,7 @@ header button {
   position: relative;
   padding-bottom: 1em; }
 #team .field img {
-  display: block;
-  position: absolute;
+  display: inline-block;
   width: 100%; }
 
 #kontakt p {
