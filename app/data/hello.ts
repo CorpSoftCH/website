@@ -10,7 +10,7 @@ var hello = [
         ]
     },{
         "where": "products",
-        "title": "Products",
+        "title": "Produkte",
         "subtitles": [
             "Office 365.",
             "SharePoint.",
