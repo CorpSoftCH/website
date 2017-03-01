@@ -9,6 +9,7 @@ $font: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
 $MAX_WIDTH: 1200px;
 $LARGE_WIDTH: 992px;
+$SMALL_WIDTH: 576px;
 
 * {
 	margin: 0;
@@ -34,13 +35,15 @@ h2 {
 }
 
 h1 {
-  font-size: 5.5vw;
+  	font-size: 5.5vw;
 }
 h2 {
-  font-size: 3.0vw;
+  	font-size: 3.0vw;
 }
 h3 {
-  font-size: 3vw;
+	text-transform: uppercase;
+	color: $cosoBlue01;
+  	font-size: 1.8vw;
 }
 @media all and (min-width: $MAX_WIDTH) {
 	h1 {
@@ -56,6 +59,11 @@ h3 {
 @media all and (min-width: $LARGE_WIDTH) {
 	h3 {
 		font-size: 18px;
+	}
+}
+@media all and (max-width: $SMALL_WIDTH) {
+	h3 {
+		font-size: 12px;
 	}
 }
 
@@ -148,6 +156,9 @@ hr {
 	top: 6em;
 	margin: auto;
 
+}
+.inactive {
+	opacity: 0.3;
 }
 @import 'carousel';
 @import 'header';

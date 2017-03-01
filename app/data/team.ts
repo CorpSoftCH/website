@@ -87,7 +87,7 @@ var team = [
       "Noah Zani ist angehender Wirtschaftsinformatiker und sucht seit Studienbeginn den praktischen Bezug. Er leistet einen grossen Beitrag im Support der Corporate Software. Er ist unser interner Support- und Serverspezialist. Mit seiner ruhigen, geduldigen und freundlichen Art unterstützt er uns im Hintergrund. Zusätzlich arbeitet er bei Kundenprojekten mit. Er liest gerne, hauptsächlich IT Fachbücher oder Romane. "
     ],
     "email" : "noah.zani@corporatesoftware.ch",
-    "imgPath": "app/data/images/team/Noah_neu.png",
+    "imgPath": "app/data/images/team/noah_neu.png",
     "vCardPath": "app/data/vcards//Noah%20Zani.vcf"
 },{
     "vorname": "Raphael",

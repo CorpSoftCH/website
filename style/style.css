@@ -24,7 +24,9 @@ h2 {
   font-size: 3.0vw; }
 
 h3 {
-  font-size: 3vw; }
+  text-transform: uppercase;
+  color: #2B425C;
+  font-size: 1.8vw; }
 
 @media all and (min-width: 1200px) {
   h1 {
@@ -38,6 +40,9 @@ h3 {
 @media all and (min-width: 992px) {
   h3 {
     font-size: 18px; } }
+@media all and (max-width: 576px) {
+  h3 {
+    font-size: 12px; } }
 ul {
   list-style-type: disc;
   text-align: left; }
@@ -114,6 +119,9 @@ hr {
   background-color: white;
   top: 6em;
   margin: auto; }
+
+.inactive {
+  opacity: 0.3; }
 
 /*Bootstrap - Part*/
 .carousel {
@@ -317,7 +325,10 @@ hr {
     right: 20%;
     padding-bottom: 30px; } }
 .carousel-img {
-  width: 15%;
+  /*position: absolute;
+  left: 42%;
+  bottom: -70px;*/
+  width: 16%;
   margin: 1em auto;
   min-width: 6em;
   max-width: 8em; }
@@ -410,16 +421,50 @@ header button {
   bottom: 0;
   width: 100%; }
 
-#angebote-details {
-  margin-top: 2em; }
+#angebote-details p {
+  margin-bottom: 5px; }
+#angebote-details .text p {
+  margin-bottom: 0; }
+#angebote-details .text {
+  margin-bottom: 0.3em; }
+#angebote-details .container {
+  width: 100%;
+  margin: auto; }
 
 #team-details {
-  margin-top: 1em; }
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em; }
+  #team-details #container {
+    max-width: 40em; }
+  #team-details div {
+    margin: auto; }
+  #team-details .img-c {
+    position: relative;
+    max-width: 25em;
+    height: 15em;
+    overflow: hidden;
+    margin-bottom: 1em; }
+  #team-details .text {
+    margin: auto;
+    text-align: left; }
+  #team-details img {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -42%);
+    -ms-transform: translate(-50%, -42%);
+    transform: translate(-50%, -42%); }
+  #team-details img.portrait {
+    width: 100%;
+    height: auto; }
 
 .arrow {
-  width: 50%;
+  width: 100%;
   position: absolute;
-  left: 25%; }
+  left: 0; }
 
 .field img {
   width: 70%;
@@ -443,7 +488,6 @@ header button {
 
 .text {
   visibility: visible;
-  text-align: justify;
   z-index: 5;
   background-color: transparent; }
 
@@ -522,6 +566,12 @@ header button {
 #team .field img {
   display: inline-block;
   width: 100%; }
+#team .arrow {
+  width: 100%;
+  position: absolute;
+  left: 0; }
+#team .text {
+  padding: 1em; }
 
 #kontakt p {
   text-align: justify; }

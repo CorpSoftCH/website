@@ -62,7 +62,7 @@ export class CarouselComponent {
         }
       }
       for(let e of prd) {
-        e.style.height = height + 40 + "px";
+        e.style.height = height + 70 + "px";
       }
     }
 

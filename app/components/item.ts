@@ -72,18 +72,31 @@ export class ItemComponent {
 	}
 
 	private showDetailAngebote(i:any, index: number) {
-		
+		for(let item of this.allItems) {
+			$("#item-" + item.id).addClass("inactive");
+			$("#title-" + item.id).removeClass("hide");
+		}
+		$("#item-" + i.id).removeClass("inactive");
 		let nextRightItem = this.nextRightElement(index);
 		$("#angebote-details").remove();
 		$("#item-" + nextRightItem.id).after("<div class='col-xs-12' id='angebote-details'></div>");
 		$(".arrow").addClass("hide");
 		$("#arrow-" + i.id ).toggleClass("hide");
+		$("#title-" + i.id).addClass("hide");
 
 		if(i.isActive()) {
 			i.setActive(false);
+			for(let item of this.allItems) {
+				$("#item-" + item.id).removeClass("inactive");
+				$("#arrow-" + item.id ).addClass("hide");
+			}
+			$("#title-" + i.id).removeClass("hide");
 		} else {
+			for(let item of this.allItems) {
+				item.setActive(false);
+			}
 			i.setActive(true);
-			$("#angebote-details").append("<div id='text-" + i.id + "'></div>");
+			$("#angebote-details").append("<div class='text' id='text-" + i.id + "'><h3>" + i.titles[0] + "</h3></div>");
 
 			for(let para of i.contentStrings) {
 				$("#text-" + i.id).append("<p>" + para + "</p>");
@@ -108,6 +121,10 @@ export class ItemComponent {
 	}
 
 	private showDetailTeam(i:any, index: number) {
+		for(let item of this.allItems) {
+			$("#item-" + item.id).addClass("inactive");
+		}
+		$("#item-" + i.id).removeClass("inactive");
 		let nextRightItem = this.nextRightElement(index);
 		$("#team-details").remove();
 		$("#item-" + nextRightItem.id).after("<div class='col-xs-12' id='team-details'></div>");
@@ -116,19 +133,26 @@ export class ItemComponent {
 
 		if(i.isActive()) {
 			i.setActive(false);
+			for(let item of this.allItems) {
+				$("#item-" + item.id).removeClass("inactive");
+				$("#arrow-" + item.id ).addClass("hide");
+			}
 		} else {
 			i.setActive(true);
-			$("#team-details").append("<div id='text-" + i.id + "'></div>");
+			$("#team-details").append("<div id='container'></div>");
+			
+			
+			$("#container").append("<div class='img-c col-sm-6'><img class='portrait' src='" + i.imgPath + "'></div><div class='text col-sm-6' id='text-" + i.id + "'></div>");
 			for(let para of i.contentStrings) {
 				$("#text-" + i.id).append("<p>" + para + "</p>");
 			}
 
 			if(index < this.showItems.length - 1) {
-				$("#team-details").append(`
-					<ul id='ul-"` + i.id + `"'>
-						<li><a href="mailto:` + i.specialStrings[0] + `">Email an ` + i.titles[0] + `</a></li>
-						<li><a href="` + i.specialStrings[1] + `">vCard von  ` + i.titles[0] + `</a></li>
-					</ul>`
+				$("#text-" + i.id).append(`
+					<!--<ul id='ul-"` + i.id + `"'>-->
+						<a href="mailto:` + i.specialStrings[0] + `">Email an ` + i.titles[0] + `</a><br />
+						<a href="` + i.specialStrings[1] + `">vCard von  ` + i.titles[0] + `</a>
+					<!--</ul>-->`
 				);
 			}
 		}
