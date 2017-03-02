@@ -18,7 +18,24 @@ export class ProductsComponent {
       
     }
 
-    ngAfterViewChecked() {
+    ngAfterViewInit() {
+      this.fixHoehe();
+    }
+
+    createSlider(content: string, title: string) {
+      console.log("created " + content + " " + title);
+      $("#slider-" + content + "-" + title).slider();
+
+
+      $("#destroySlider-" + content + "-" + title).click(function() {
+
+        $("#slider-" + content + "-" + title).slider('destroy');
+
+      });
+    }
+
+
+    fixHoehe() {
       var prd = $(".produkt");
       prd = [...prd];
       var height = 0;
@@ -30,5 +47,11 @@ export class ProductsComponent {
       for(let e of prd) {
         e.style.height = height + 30 + "px";
       }
+    }
+
+    
+
+    goTo(ziel: string) {
+      $("html, body").animate({ scrollTop: $('#' + ziel).offset().top }, 1000);
     }
 }

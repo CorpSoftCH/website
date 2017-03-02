@@ -1,4 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
 
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -57,5 +58,6 @@ class AppRoutingModule {}
 })
 class AppModule {}
 
+enableProdMode();
 //Dieses Modul wird gebootstrapped
 platformBrowserDynamic().bootstrapModule(AppModule);

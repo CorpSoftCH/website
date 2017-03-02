@@ -112,7 +112,14 @@ hr {
   width: 50%; }
 
 .btn {
-  background-color: white; }
+  background-color: #2B425C;
+  border-color: #2B425C;
+  color: white; }
+
+.btn:hover {
+  color: #2B425C;
+  background-color: white;
+  border-color: #2B425C; }
 
 .order {
   position: absolute;
@@ -445,9 +452,6 @@ header button {
     height: 15em;
     overflow: hidden;
     margin-bottom: 1em; }
-  #team-details .text {
-    margin: auto;
-    text-align: left; }
   #team-details img {
     position: absolute;
     left: 50%;
@@ -487,6 +491,8 @@ header button {
   visibility: visible; }
 
 .text {
+  margin: auto;
+  text-align: left;
   visibility: visible;
   z-index: 5;
   background-color: transparent; }
@@ -501,6 +507,11 @@ header button {
   color: #2B425C;
   letter-spacing: 3px;
   text-transform: uppercase; }
+
+.btn {
+  margin-top: 1em;
+  background-color: #2B425C;
+  color: white; }
 
 .produkt {
   max-width: 30em;
@@ -544,8 +555,7 @@ header button {
 #unternehmen img {
   width: 30%; }
 #unternehmen ul {
-  padding-left: 1em;
-  list-style: none; }
+  padding-left: 1em; }
 #unternehmen li p {
   margin: 0; }
 
@@ -575,15 +585,19 @@ header button {
 
 #kontakt p {
   text-align: justify; }
-#kontakt .contact-us {
+
+.contact-us {
   padding: 1.5em 0; }
-#kontakt .social-media {
+
+.social-media {
   padding: 2em; }
-#kontakt .contact-icon {
+
+.contact-icon {
   float: left;
   margin-right: 0.5em;
   margin-bottom: 0.5em; }
-#kontakt .social-media button {
+
+.social-media button {
   float: left;
   margin: 0.2em;
   background-color: #2B425C;
@@ -591,13 +605,15 @@ header button {
   border: none;
   width: 4em;
   height: 4em; }
-#kontakt .form-control {
+
+.form-control {
   font-size: 1.2em;
   padding: 1.2em;
   width: calc(100% - 1.9em);
   border: 0.2em solid #2B425C;
   margin: 1em; }
-#kontakt #contact-form-senden {
+
+#contact-form-senden {
   font-size: 1.2em;
   padding: 1.5em;
   border: none;
@@ -606,21 +622,26 @@ header button {
   letter-spacing: 3px;
   text-transform: uppercase; }
 
-#Kontaktformular .form-control {
-  padding: 1.2em;
-  border: 0.2em solid #2B425C;
-  margin: 1em; }
-  #Kontaktformular .form-control input {
-    width: calc(100% - 6em); }
-#Kontaktformular #contact-form-senden {
-  font-size: 1.2em;
-  padding: 1.5em;
-  border: none;
-  background-color: #2B425C;
-  color: white;
-  letter-spacing: 3px;
-  text-transform: uppercase; }
-
+/*
+	.form-control {
+		//font-size: 1.2em;
+		padding: 1.2em;
+		//width: calc(100% - 6em);
+		border: 0.2em solid #2B425C;
+		margin: 1em;
+		input {
+			width: calc(100% - 6em);
+		}
+	}
+	#contact-form-senden {
+		font-size: 1.2em;
+		padding: 1.5em;
+		border: none;
+		background-color: $cosoBlue01;
+		color: white;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}*/
 footer {
   float: left;
   width: 100%;

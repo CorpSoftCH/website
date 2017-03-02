@@ -11,14 +11,52 @@
                     <ul>
                         <li *ngFor="let li of c.list">{{li}}</li>
                     </ul>
+                    <div (load)="createSlider(class.id,c.title)" *ngIf="c.lizenzen.length > 1">
+                        <input id="slider-{{class.id}}-{{c.title}}" type="text" data-slider-min="0" data-slider-max="25" data-slider-step="1" data-slider-value="0"/>
+                        <button id="destroySlider-{{class.id}}-{{c.title}}" class='btn'>Other Value</button>
+                    </div>
                 </div>
             </div>
-            <div class=""><button [routerLink]="['/products']" class="btn">{{p.button}}</button></div>
+            <div class=""><a href="#Kontaktformular"><button [routerLink]="['/products']" (click)="goTo('Kontaktformular');" class="btn">{{p.button}}</button></a></div>
         </div>
     </div>
 </section>
-<section class="container">
+<section id="Kontaktformular" class="container">
     <h1>Kontaktformular</h1>
     <hr />
-    
+    <form onchange="mail(this)" name="sendOrder" id="contactProdForm" novalidate>
+        <div class="col-xs-12">
+            <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="Firmenname*" id="name" required data-validation-required-message="Please enter your Firm.">
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Name*" id="name" required data-validation-required-message="Please enter your name.">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Vorname*" id="vorname" required data-validation-required-message="Please enter your name.">
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Strasse/Nr.*" id="strasse" required data-validation-required-message="Please enter your address.">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="PLZ/Ort*" id="plz" required data-validation-required-message="Please enter your plz.">
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-sm-6">
+                <input type="email" class="form-control" placeholder="Email*" id="email" required data-validation-required-message="Please enter your email address.">
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-xs-12">
+                <textarea rows="5" class="form-control" placeholder="Kommentar" id="message"></textarea>
+            </div>
+        </div>
+        <p style="color:grey;text-align: left;margin-left:3.5em;">* Dies sind Pflichtfelder</p>
+        <button type="submit" id="order-form-senden" class="btn btn-success btn-lg">Offerte Anfordern</button>
+    </form>
 </section>

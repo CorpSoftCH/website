@@ -24,7 +24,10 @@ export class HeaderComponent {
 	 * Nachdem der Content geladen wurde werden alle Sektionen, ausser der ersten ins section-Array geladen.
 	 */
 	private ngAfterContentChecked() {
-		this.sections = $(".container:not(#hello)");
+		var tempsections =  $(".container:not(#hello)");
+		//debugger;
+		this.sections = Array.from(tempsections);
+		//debugger;
 		this.state = this.route.url;
 		this.mode = this.route.url.split("/");	
 	}

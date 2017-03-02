@@ -64,10 +64,7 @@
 		margin-bottom: 1em;
 		//background-color: indianred;
 	}
-	.text {
-		margin: auto;
-		text-align: left;
-	}
+	
 	img {
 		position: absolute;
 		left: 50%;
@@ -112,8 +109,9 @@
 	opacity: 1;
 	visibility: visible;
 }
-
 .text {
+	margin: auto;
+	text-align: left;
 	visibility: visible;
 	z-index: 5;
 	background-color: transparent;
@@ -132,7 +130,11 @@
     text-transform: uppercase;
 }
 
-
+.btn {
+	margin-top: 1em;
+	background-color: $cosoBlue01;
+	color: white;
+}
 //#produkte {
 	.produkt {
 		max-width: 30em;
@@ -195,7 +197,7 @@
 
 	ul {
 		padding-left: 1em;
-		list-style: none;
+		//list-style: none;
 	}
 	li p {
 		margin: 0;
@@ -246,7 +248,7 @@
 	p {
 		text-align: justify;
 	}
-	
+}
 	.contact-us {
 		padding: 1.5em 0;
 	}
@@ -287,9 +289,7 @@
 		letter-spacing: 3px;
 		text-transform: uppercase;
 	}
-} 
-
-#Kontaktformular {
+/*
 	.form-control {
 		//font-size: 1.2em;
 		padding: 1.2em;
@@ -308,5 +308,5 @@
 		color: white;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-	}
-}
+	}*/
+

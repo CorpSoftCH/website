@@ -146,7 +146,15 @@ hr {
 }
 
 .btn {
+	background-color: $cosoBlue01;
+	border-color: $cosoBlue01;
+	color: white;
+}
+
+.btn:hover {
+	color: $cosoBlue01;
 	background-color: white;
+	border-color: $cosoBlue01;
 }
 
 .order {

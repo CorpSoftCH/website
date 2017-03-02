@@ -22,6 +22,7 @@ export class Content {
         public title: string,
         public list: Array<String>,
         public imgPath: string,
+        public lizenzen: Array<number> = []
     ){}
 }
 
@@ -31,7 +32,7 @@ export class Content {
 export class ProduktService {
   
   public getProdukte(): Array<ProduktClass> {
-    var all = allProducts.map(pc => new ProduktClass(pc.id, pc.title, pc.products.map(p => new Produkt(p.size, p.content.map(c => new Content(c.title, c.list, c.imgPath)) ,p.button))))
+    var all = allProducts.map(pc => new ProduktClass(pc.id, pc.title, pc.products.map(p => new Produkt(p.size, p.content.map(c => new Content(c.title, c.list, c.imgPath, c.lizenzen)) ,p.button))))
     return all;  
   }
 }

@@ -23,7 +23,5 @@ System.config({
         '@angular/platform-browser-dynamic': {main: 'platform-browser-dynamic.umd.min.js'},
         '@angular/router'                  : {main: 'router.umd.min.js'},
         '@angular/http'                    : {main: 'http.umd.min.js'},
-        'ng2-page-scroll'                  : {main: 'ng2-page-scroll/bundles/ng2-page-scroll.umd.js'}
-        
     }
 });
