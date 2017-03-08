@@ -8,7 +8,6 @@ System.config({
     },
     paths: {
         'node_modules/@angular/*': 'node_modules/@angular/*/bundles',
-        'node_modules/ng2-page-scroll/*': 'node_modules/*'
     },
     meta: {
         '@angular/*': {'format': 'cjs'}

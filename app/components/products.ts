@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
-import {ProduktService} from '../services/produkte-service'
+import {ProduktService, Produkt } from '../services/produkte-service.ts';
+//import  * as $ from 'jquery';
+
 /**
  * Diese Komponente wird für die Produkte-Page verwendet
  */
@@ -23,7 +25,7 @@ export class ProductsComponent {
       this.setBtnBottom();
     }
 
-    createSlider(content: string, title: string) {
+    /*createSlider(content: string, title: string) {
       console.log("created " + content + " " + title);
       $("#slider-" + content + "-" + title).slider();
 
@@ -33,7 +35,7 @@ export class ProductsComponent {
         $("#slider-" + content + "-" + title).slider('destroy');
 
       });
-    }
+    }*/
 
     setBtnBottom() {
       $(".btn-div").css({ position: "absolute", left: "1px", right: "1px"});
@@ -41,7 +43,7 @@ export class ProductsComponent {
 
 
     fixHoehe() {
-      var prd = $(".produkt");
+      var prd:any = $(".produkt");
       prd = [...prd];
       var height = 0;
       for(let e of prd) {

@@ -12,5 +12,10 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'ts-loader'
             },]
+    },
+    resolve: {
+        alias: {
+            jquery: "jquery/dist/jquery"
+        }
     }
 };

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
+//import  * as $ from 'jquery';
 /**
  * Diese Komponente wird für den Header eingesetzt.
  */
@@ -97,7 +98,7 @@ export class HeaderComponent {
 	private elmYPosition(eID: any) {
 		var elm = document.getElementById(eID);
 		var y = elm.offsetTop;
-		var node = elm;
+		var node:any = elm;
 		while (node.offsetParent && node.offsetParent != document.body) {
 			node = node.offsetParent;
 			y += node.offsetTop;

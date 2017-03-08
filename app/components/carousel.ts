@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {ItemService} from '../services/item-service';
+import {ItemService, Item} from '../services/item-service.ts';
 
 /**
  * Diese Komponente wird eingesetzt, wenn ein Carousel gebraucht wird.
@@ -49,7 +49,7 @@ export class CarouselComponent {
      * Diese führt dann die carousel-Funktion von Bootstrap aus, welche die Bewegung des Carousels entspricht.
      */
     private move(id: string, value: string) {
-        $('#' + id).carousel(value);
+       //$('#' + id).carousel(value);
     }
 
     ngAfterViewInit() {
@@ -58,7 +58,7 @@ export class CarouselComponent {
     }
 
     private fixHoehe(myclass: string, offset: number):void {
-        var prd = $("." + myclass);
+        var prd:any = $("." + myclass);
         prd = [...prd];
         var height = 0;
         for(let e of prd) {

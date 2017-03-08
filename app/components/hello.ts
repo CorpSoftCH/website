@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {HelloService} from '../services/hello-service'
+import {HelloService, Hello} from '../services/hello-service.ts'
 /**
  * Diese Komponente beinhaltet die Hello-Section
  */

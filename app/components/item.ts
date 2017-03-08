@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {ItemService} from 'app/services/item-service';
+import {ItemService, Item} from '../services/item-service.ts';
+//import  * as $ from 'jquery';
 
 /**
  * Diese Komponente wird dort eingesetzt, wo die Items in Reihen auf der Page sind.
@@ -171,7 +172,7 @@ export class ItemComponent {
 	}
 
 	private fixHoehe() {
-		var prd = $(".produkt .text");
+	var prd:any = $(".produkt .text");
       prd = [...prd];
       var height = 0;
       for(let e of prd) {

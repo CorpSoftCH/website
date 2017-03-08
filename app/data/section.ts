@@ -52,4 +52,4 @@ var section = [
         "content": "partner",
         "itemsPerRow": 4,         
     }
-]
+];

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+
 /**
  * Diese Komponente wird bei einer Karte verwendet
  */

@@ -11,18 +11,18 @@
                     <ul>
                         <li *ngFor="let li of c.list">{{li}}</li>
                     </ul>
-                    <div (load)="createSlider(class.id,c.title)" *ngIf="c.lizenzen.length > 1">
+                    <!--<div (load)="createSlider(class.id,c.title)" *ngIf="c.lizenzen.length > 1">
                         <input id="slider-{{class.id}}-{{c.title}}" type="text" data-slider-min="0" data-slider-max="25" data-slider-step="1" data-slider-value="0"/>
                         <button id="destroySlider-{{class.id}}-{{c.title}}" class='btn'>Other Value</button>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="btn-div"><a href="#Kontaktformular"><button [routerLink]="['/products']" (click)="goTo('Kontaktformular');" class="btn">{{p.button}}</button></a></div>
         </div>
     </div>
 </section>
-<section id="Kontaktformular" class="container">
-    <h1>Kontaktformular</h1>
+<section id="Preisanfrageformular" class="container">
+    <h1>Preisanfrageformular</h1>
     <hr />
     <form onchange="mail(this)" name="sendOrder" id="contactProdForm" novalidate>
         <div class="col-xs-12">

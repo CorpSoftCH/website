@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { SectionService } from '../services/section-service';
+import { SectionService, Section } from '../services/section-service.ts';
 
 /**
  * Diese Komponente ist eine Containerkomponente für die anderen Contentkomponenten.
