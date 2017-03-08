@@ -2,7 +2,7 @@
     <h1>{{class.title}}</h1>
     <hr />
     <div *ngFor="let p of class.products" class="col-md-4">
-        <div class="produkt">
+        <div class="landing-prod produkt">
             <div class="prodBorder"><h2>{{p.size}}</h2></div>
             <div class="col-xs-12" *ngFor="let c of p.content">
                 <img src="{{c.imgPath}}">
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class=""><a href="#Kontaktformular"><button [routerLink]="['/products']" (click)="goTo('Kontaktformular');" class="btn">{{p.button}}</button></a></div>
+            <div class="btn-div"><a href="#Kontaktformular"><button [routerLink]="['/products']" (click)="goTo('Kontaktformular');" class="btn">{{p.button}}</button></a></div>
         </div>
     </div>
 </section>

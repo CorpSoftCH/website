@@ -44,6 +44,7 @@ h3 {
 	text-transform: uppercase;
 	color: $cosoBlue01;
   	font-size: 1.8vw;
+	font-weight: bold;
 }
 @media all and (min-width: $MAX_WIDTH) {
 	h1 {
@@ -146,15 +147,9 @@ hr {
 }
 
 .btn {
-	background-color: $cosoBlue01;
-	border-color: $cosoBlue01;
-	color: white;
-}
-
-.btn:hover {
+	background-color: transparent;
+	border-color: transparent;
 	color: $cosoBlue01;
-	background-color: white;
-	border-color: $cosoBlue01;
 }
 
 .order {

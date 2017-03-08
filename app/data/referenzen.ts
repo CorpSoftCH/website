@@ -13,7 +13,8 @@ var referenzen = [
   },{
     "id": "ref_02",
     "zitat": [
-        "\"Das SQL-Consulting war ein voller Erfolg. Die vielen Inputs konnten erfolgreich umgesetzt werden.\""
+        "\"Das SQL-Consulting war ein voller Erfolg. Die vielen Inputs konnten erfolgreich umgesetzt werden.\"",
+        ""
     ],
     "lecturer": "Philipp Stampfli",
     "position": "Manager Data Center",

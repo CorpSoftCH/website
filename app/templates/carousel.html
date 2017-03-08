@@ -4,7 +4,9 @@
     </ol>
     <div class="carousel-inner">
         <div *ngFor="let r of items" class="item {{r.state}}">
-            <p class="zitat" *ngFor="let para of r.contentStrings">{{para}}</p>
+            <div class="zitat-container">
+                <p class="zitat" *ngFor="let para of r.contentStrings">{{para}}</p>
+            </div>
             <p class="highlighted">{{r.titles[0]}}</p>
             <p>{{r.titles[1]}}</p>
             <a href="{{r.specialStrings[0]}}">

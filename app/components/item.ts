@@ -82,7 +82,7 @@ export class ItemComponent {
 		$("#item-" + nextRightItem.id).after("<div class='col-xs-12' id='angebote-details'></div>");
 		$(".arrow").addClass("hide");
 		$("#arrow-" + i.id ).toggleClass("hide");
-		$("#title-" + i.id).addClass("hide");
+		//$("#title-" + i.id).addClass("hide");
 
 		if(i.isActive()) {
 			i.setActive(false);

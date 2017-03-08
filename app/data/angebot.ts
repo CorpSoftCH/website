@@ -29,9 +29,7 @@ var angebot = [
     "id": "angEP",
     "title": ["Enterprise Projektmanagement"],
     "description":  [
-      "Verwalten Sie Portfolios, Programme und Ressourcen, und erzielen Sie optimale Ergebnisse.",
-      "Mit Microsoft® Project werden alle Ihre Daten zu Ihrem Projektportfolio zur Verfügung gestellt.",
-      "Damit Sie jederzeit den Überblick über Ihre laufenden Projekte haben."
+      "Verwalten Sie Portfolios, Programme und Ressourcen, und erzielen Sie optimale Ergebnisse. Mit Microsoft® Project werden alle Ihre Daten zu Ihrem Projektportfolio zur Verfügung gestellt. Damit Sie jederzeit den Überblick über Ihre laufenden Projekte haben."
     ],
     "list1" : [
       "Auswahl und Aufbau des geeigneten Projektmanagement Tools",

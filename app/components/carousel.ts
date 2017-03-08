@@ -53,17 +53,22 @@ export class CarouselComponent {
     }
 
     ngAfterViewInit() {
-      var prd = $(".carousel");
-      prd = [...prd];
-      var height = 0;
-      for(let e of prd) {
-        if (e.offsetHeight > height) {
-          height = e.offsetHeight;
+      this.fixHoehe("zitat-container", 20);
+      this.fixHoehe("carousel", 70);
+    }
+
+    private fixHoehe(myclass: string, offset: number):void {
+        var prd = $("." + myclass);
+        prd = [...prd];
+        var height = 0;
+        for(let e of prd) {
+            if (e.offsetHeight > height) {
+            height = e.offsetHeight;
+            }
         }
-      }
-      for(let e of prd) {
-        e.style.height = height + 70 + "px";
-      }
+        for(let e of prd) {
+            e.style.height = height + offset + "px";
+        }
     }
 
 }

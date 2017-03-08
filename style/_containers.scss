@@ -129,11 +129,16 @@
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-
+/*
 .btn {
 	margin-top: 1em;
 	background-color: $cosoBlue01;
 	color: white;
+}*/
+#angebot {
+	h3 {
+		text-align: center;
+	}
 }
 //#produkte {
 	.produkt {
@@ -156,11 +161,16 @@
 			margin-top: 1em;
 			background-color: $cosoBlue01;
 			color: white;
+			:hover {
+				color: $cosoBlue01;
+				background-color: white;
+				border-color: $cosoBlue01;
+			}
+
 		}
 		.btn-div {
-			position: absolute;
+			//position: absolute;
 			bottom: 3em;
-			left: -0.5em; //Augenkorrektur
 			
 		}
 		h2 {
@@ -182,6 +192,16 @@
 		width: calc(70% - 2em);
 		li {
 			margin-left: 1em;
+		}
+	}
+
+	.landing-prod {
+		img {
+			width: calc(20% - 1em);
+		}
+
+		.prodText {
+			width: calc(80% - 2em);
 		}
 	}
 //}
@@ -248,6 +268,11 @@
 	p {
 		text-align: justify;
 	}
+	.btn:hover {
+		color: $cosoBlue01;
+		background-color: white;
+		border-color: $cosoBlue01;
+	}
 }
 	.contact-us {
 		padding: 1.5em 0;
@@ -289,6 +314,7 @@
 		letter-spacing: 3px;
 		text-transform: uppercase;
 	}
+	
 /*
 	.form-control {
 		//font-size: 1.2em;
