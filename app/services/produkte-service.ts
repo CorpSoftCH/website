@@ -1,4 +1,4 @@
-import allProducts from 'app/data/allProdukte';
+import {allProducts} from '../data/allProdukte';
 
 
 export class ProduktClass {

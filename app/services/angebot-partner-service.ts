@@ -1,5 +1,5 @@
-import angebot from 'app/data/angebot';
-import partner from 'app/data/partner';
+import angebot from '../data/angebot';
+import partner from '../data/partner';
 
 export class Item {
   constructor(

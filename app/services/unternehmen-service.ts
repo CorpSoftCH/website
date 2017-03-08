@@ -1,26 +1,26 @@
-import unternehmen from 'app/data/unternehmen';
+import {Http} from '@angular/http';
+
+//import unternehmen from '../data/unternehmen.json';
 
 export class Unternehmen {
-    constructor(
-        public description: string,
-        public property: Array<UnternehmenProperties>
-    ){}
-
-}
-
-export class UnternehmenProperties {
     constructor(
         public title: string,
         public paragraphs: Array<string>,
         public list: Array<string>,
         public imgPath: string
     ){}
+
 }
 
 export class UnternehmenService {
+    constructor(private http:Http) {}
     
     getUnternehmen(): Unternehmen {
-        return unternehmen.map(u => new Unternehmen(u.description, u.property.map(p => new UnternehmenProperties(p.title, p.paragraphs, p.list, p.imgPath))));
+        debugger;
+        let unternehmen:any = this.http.request('./data/unternehmen');
+        debugger;
+        return unternehmen.map(p => new Unternehmen(p.title, p.paragraphs, p.list, p.imgPath));
     }
 
 }
+

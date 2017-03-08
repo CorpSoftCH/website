@@ -1,4 +1,4 @@
-var unternehmen = [
+[
     {
         "id": "vision",
         "title": ["Unsere Vision"],
@@ -31,6 +31,7 @@ var unternehmen = [
         ],
         "imgPath" : "app/data/images/unternehmen/Kultur.png"
     }
-
 ]
+
+
 

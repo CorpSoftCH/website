@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {ItemService} from 'app/services/item-service';
+import {ItemService} from '../services/item-service';
 
 /**
  * Diese Komponente wird eingesetzt, wenn ein Carousel gebraucht wird.

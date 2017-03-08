@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RouterModule, Routes }   from '@angular/router';
 
-import { HeaderComponent }  from './components/header';
+import { HeaderComponent }  from 'app/components/header';
 import { SectionComponent }  from './components/section';
 import { ItemComponent }  from './components/item';
 import { CarouselComponent }  from './components/carousel';

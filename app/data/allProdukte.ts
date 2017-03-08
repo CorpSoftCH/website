@@ -1,4 +1,4 @@
-var allProducts = [
+export var allProducts = [
     {
         "id": "Office",
         "title":"Office 365",

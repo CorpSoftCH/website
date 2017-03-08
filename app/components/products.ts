@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ProduktService} from 'app/services/produkte-service'
+import {ProduktService} from '../services/produkte-service'
 /**
  * Diese Komponente wird für die Produkte-Page verwendet
  */
@@ -20,6 +20,7 @@ export class ProductsComponent {
 
     ngAfterViewInit() {
       this.fixHoehe();
+      this.setBtnBottom();
     }
 
     createSlider(content: string, title: string) {
@@ -32,6 +33,10 @@ export class ProductsComponent {
         $("#slider-" + content + "-" + title).slider('destroy');
 
       });
+    }
+
+    setBtnBottom() {
+      $(".btn-div").css({ position: "absolute", left: "1px", right: "1px"});
     }
 
 
