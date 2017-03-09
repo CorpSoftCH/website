@@ -37,11 +37,17 @@ h3 {
     font-size: 25px; }
 
   h3 {
-    font-size: 20px; } }
-@media all and (min-width: 992px) {
-  h3 {
     font-size: 18px; } }
+@media all and (min-width: 992px) {
+  h2 {
+    font-size: 22px; }
+
+  h3 {
+    font-size: 16px; } }
 @media all and (max-width: 576px) {
+  h2 {
+    font-size: 18px; }
+
   h3 {
     font-size: 12px; } }
 ul {
@@ -76,12 +82,13 @@ ul > li:before {
 .container h1 {
   text-transform: uppercase;
   padding: 0.5em;
+  padding-bottom: 0.3em;
   font-size: 1.9em;
   color: #2B425C; }
 
 hr {
-  margin-left: calc(100%/2 - 10em);
-  margin-bottom: 2em;
+  margin: auto;
+  margin-bottom: 1em;
   border: 0;
   height: 0.3em;
   background-color: #2B425C;
@@ -97,15 +104,15 @@ hr {
   font-size: 1.2em;
   font-style: italic; }
 
+.last,
+.ueberschrift2 {
+  font-size: 0.9em;
+  color: #2B425C; }
+
 .ueberschrift,
 .first {
   font-weight: 700;
   font-size: 1em;
-  color: #2B425C; }
-
-.last,
-.ueberschrift2 {
-  font-size: 0.8em;
   color: #2B425C; }
 
 .row {
@@ -527,7 +534,7 @@ header button {
     border-bottom: solid black 0.1em;
     padding: 1em; }
   .produkt .btn {
-    margin-top: 1em;
+    margin: 1em;
     background-color: #2B425C;
     color: white; }
     .produkt .btn :hover {
@@ -543,6 +550,10 @@ header button {
     padding: 1.5em 0.5em;
     float: left;
     width: calc(30% - 1em); }
+  .produkt .prodImg {
+    float: none;
+    margin: auto;
+    width: initial; }
 
 .prodText {
   padding-left: 2em;
@@ -577,9 +588,10 @@ header button {
   margin-top: 1px;
   margin-bottom: 1px; }
 
+#team .item {
+  margin-bottom: 2em; }
 #team .field {
-  position: relative;
-  padding-bottom: 1em; }
+  position: relative; }
 #team .field img {
   display: inline-block;
   width: 100%; }
@@ -589,6 +601,8 @@ header button {
   left: 0; }
 #team .text {
   padding: 1em; }
+#team h3 {
+  margin-top: 0.5em; }
 
 #kontakt p {
   text-align: justify; }

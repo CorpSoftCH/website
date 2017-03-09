@@ -18,8 +18,8 @@ import { ServicesComponent }  from './components/services.ts';
 
 import { Http, HttpModule } from '@angular/http';
 
-import 'zone.js';
-import 'reflect-metadata';
+//import 'zone.js';
+//import 'reflect-metadata';
 
 import ItemService from './services/item-service';
 //Diese Komponenten müssen deklariert und gebootstrapped werden.

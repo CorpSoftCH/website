@@ -158,7 +158,7 @@
 			padding: 1em;
 		}
 		.btn {
-			margin-top: 1em;
+			margin: 1em;
 			background-color: $cosoBlue01;
 			color: white;
 			:hover {
@@ -182,6 +182,11 @@
 			padding: 1.5em 0.5em;
 			float: left;
 			width: calc(30% - 1em);
+		}
+		.prodImg {
+			float: none;
+			margin: auto;
+			width: initial;
 		}
 	}
 
@@ -245,9 +250,11 @@
 
 //team
 #team {
+	.item {
+		margin-bottom: 2em;
+	}
 	.field {
 		position: relative;
-		padding-bottom: 1em;
 	}
 	.field img {
 		display: inline-block;
@@ -260,6 +267,9 @@
 	}
 	.text {
 		padding: 1em
+	}
+	h3 {
+		margin-top: 0.5em;
 	}
 }
 

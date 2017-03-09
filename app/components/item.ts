@@ -61,7 +61,8 @@ export class ItemComponent {
 			}
 		} catch (err) {console.log("catch more/less Buttons")} 
 
-		this.fixHoehe();
+		this.fixHoehe(".produkt .text",7);
+		this.fixHoehe(".divProdImg",20);
 
 	}
 	/**
@@ -150,10 +151,8 @@ export class ItemComponent {
 
 			if(index < this.showItems.length - 1) {
 				$("#text-" + i.id).append(`
-					<!--<ul id='ul-"` + i.id + `"'>-->
-						<a href="mailto:` + i.specialStrings[0] + `">Email an ` + i.titles[0] + `</a><br />
-						<a href="` + i.specialStrings[1] + `">vCard von  ` + i.titles[0] + `</a>
-					<!--</ul>-->`
+					<a href="mailto:` + i.specialStrings[0] + `">Email an ` + i.titles[0] + `</a><br />
+					<a href="` + i.specialStrings[1] + `">vCard von  ` + i.titles[0] + `</a>`
 				);
 			}
 		}
@@ -171,8 +170,8 @@ export class ItemComponent {
 		}
 	}
 
-	private fixHoehe() {
-	var prd:any = $(".produkt .text");
+	private fixHoehe(value: string, offset: number) {
+	var prd:any = $(value);
       prd = [...prd];
       var height = 0;
       for(let e of prd) {
@@ -181,7 +180,7 @@ export class ItemComponent {
         }
       }
       for(let e of prd) {
-        e.style.height = height + "px";
+        e.style.height = height + offset +  "px";
       }
 	}
 
@@ -189,19 +188,13 @@ export class ItemComponent {
 		$('html,body').scrollTop(0);
 	}
 
-	
-	
-	/**
-	 * Beim aktivieren eines Items werden zuerst alle anderen deaktiviert, damit der Fokus immer nur auf einem Item bleibt.
-	 */
-    /*private deactivateOthers(elements: Array<any> , ignoreElement: any) { //Das aktuelle Element darf noch nicht deaktiviert werden, damit der User es deaktivieren kann.
-		console.log(ignoreElement.isRightElement());
-		for(let value of elements) {
-			if(value.isActive() && value != ignoreElement) {
-				this.changeView(value, 0);
-			}
-		}
-	}*/
+	private goTo(ziel: string) {
+		setTimeout(function(){ //hack
+			$("html, body").animate({ scrollTop: $('#' + ziel).offset().top - 70 }, 1000);
+		}, 100);
+      	
+    }
+
 
 
 	/**

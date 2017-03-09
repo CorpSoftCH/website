@@ -55,7 +55,10 @@ export class HeaderComponent {
 	 * @eID die ID der Sektion, zu der gescrollt werden soll.
 	 */
     private smoothScroll(eID: any) {
-		var startY = this.currentYPosition();
+		setTimeout(function(){ //hack
+			$("html, body").animate({ scrollTop: $('#' + eID).offset().top - 70 }, 1000);
+		}, 100);
+		/*var startY = this.currentYPosition();
 		var stopY = this.elmYPosition(eID);
 		var distance = stopY > startY ? stopY - startY : startY - stopY;
 		if (distance < 100) {
@@ -75,7 +78,7 @@ export class HeaderComponent {
 		for (var i = startY; i > stopY; i -= step) {
 			this.scrollTo(leapY, timer * speed);
 			leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-		}
+		}*/
 	}
 
 	/**

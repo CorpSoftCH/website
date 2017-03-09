@@ -436,24 +436,28 @@ var produkte = [
         "id": "prod_01",
         "title": ["Collaboration"],
         "description": [
-            "Nutzen Sie die vertrauten Office-Anwendungen für bessere Zusammen-arbeit. Nutzen Sie SharePoint, die wichtigste Kollaboration Plattform.",
-            "So arbeiten Sie jederzeit und überall produktiver."
-        ]
+            "Nutzen Sie die vertrauten Office-Anwendungen für bessere Zusammen-arbeit. Nutzen Sie SharePoint, die wichtigste Kollaboration Plattform. So arbeiten Sie jederzeit und überall produktiver."
+        ],
+        "imgPath": "app/data/images/produkte/collaboration.png",
+        "target": ["Office"]
     },{
         "id": "prod_02",
         "title": ["Project Online"],
         "description": [
             "Organisieren Sie Ihre Arbeit mit Project Online und erhalten Sie Werkzeuge um Projekte problemlos zu starten, schnell zu planen und plangemäß durchzuführen.",
-        ]
+        ],
+        "imgPath": "app/data/images/produkte/project_online.png",
+        "target": ["Project"]
     },{
         "id": "prod_03",
         "title": ["Azure"],
         "description": [
-            "Entscheiden Sie sich für die Zukunft, entscheiden Sie sich für Microsoft Azure.",
-            "Es ist eine offene und flexible Cloudplattform, mit der Sie Anwendungen schnell aufbauen, bereitstellen und verwalten können."
-        ]
+            "Entscheiden Sie sich für die Zukunft, entscheiden Sie sich für Microsoft Azure. Es ist eine offene und flexible Cloudplattform, mit der Sie Anwendungen schnell aufbauen, bereitstellen und verwalten können."
+        ],
+        "imgPath": "app/data/images/produkte/azure_2.png",
+        "target": ["Azure"]
     }
-]
+];
 //import referenzen from 'app/data/referenzen';
 var referenzen = [
   {
@@ -624,7 +628,7 @@ export class ItemService {
     return unternehmen.map(u => new Item(u.id, u.title, u.imgPath, u.paragraphs, u.list,[],[], [false, true, false, false, false, false], ));
   }
   private getProdukte(): Array<Item> {
-    return produkte.map(pr => new Item(pr.id, pr.title, "" , pr.description, [],[],[], [false, true, false, true, false, false]));
+    return produkte.map(pr => new Item(pr.id, pr.title, pr.imgPath , pr.description, pr.target,[],[], [false, true, false, true, false, false]));
   }
   private getReferenzen(): Array<Item> {
     return referenzen.map(r => new Item(r.id, [r.lecturer, r.position], r.imgPath , r.zitat,[],[], [r.link], [r.state]));

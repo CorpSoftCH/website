@@ -46,6 +46,7 @@ h3 {
   	font-size: 1.8vw;
 	font-weight: bold;
 }
+
 @media all and (min-width: $MAX_WIDTH) {
 	h1 {
 		font-size: 60px;
@@ -54,15 +55,23 @@ h3 {
 		font-size: 25px;
 	}
 	h3 {
-		font-size: 20px;
-	}
-}
-@media all and (min-width: $LARGE_WIDTH) {
-	h3 {
 		font-size: 18px;
 	}
 }
+@media all and (min-width: $LARGE_WIDTH) {
+	h2 {
+		font-size: 22px;
+	}
+	
+	h3 {
+		font-size: 16px;
+	}
+}
 @media all and (max-width: $SMALL_WIDTH) {
+	h2 {
+		font-size: 18px;
+	}
+	
 	h3 {
 		font-size: 12px;
 	}
@@ -103,13 +112,14 @@ ul > li:before {
 .container h1 {
 	text-transform: uppercase;
 	padding: 0.5em;
+	padding-bottom: 0.3em;
 	font-size: 1.9em;
 	color: $cosoBlue01;
 }
 
 hr {
-	margin-left: calc(100%/2 - 10em);
-	margin-bottom: 2em;
+	margin: auto;
+	margin-bottom: 1em;
 	border: 0;
 	height: 0.3em;
 	background-color: $cosoBlue01;
@@ -129,18 +139,18 @@ hr {
 	font-size: 1.2em;
 	font-style: italic;
 }
+
+.last,
+.ueberschrift2 {
+	font-size: 0.9em;
+	color: $cosoBlue01;
+}
 .ueberschrift,
 .first {
 	font-weight: 700;
 	font-size: 1em;
 	color: $cosoBlue01;
 }
-.last,
-.ueberschrift2 {
-	font-size: 0.8em;
-	color: $cosoBlue01;
-}
-
 .row {
 	float: left;
 	width: 50%;
