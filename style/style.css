@@ -569,6 +569,8 @@ header button {
   width: calc(80% - 2em); }
 
 #unternehmen h2 {
+  font-size: 1.4em;
+  text-transform: uppercase;
   text-align: center; }
 #unternehmen img {
   width: 30%; }
