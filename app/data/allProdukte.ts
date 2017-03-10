@@ -11,7 +11,6 @@ export var allProducts = [
                         "title":"Lizenz",
                         "list": [
                             "Office 365 Business",
-                            "Office 365 Business Essentials",
                             "Office 365 Business Premium",
                             "Office 365 Business Enterprise E1",
                             "Office 365 Business Enterprise E2",

@@ -49,7 +49,7 @@ export class CarouselComponent {
      * Diese führt dann die carousel-Funktion von Bootstrap aus, welche die Bewegung des Carousels entspricht.
      */
     private move(id: string, value: string) {
-       //$('#' + id).carousel(value);
+       $('#' + id).carousel(value);
     }
 
     ngAfterViewInit() {

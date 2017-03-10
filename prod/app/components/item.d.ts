@@ -35,11 +35,9 @@ export declare class ItemComponent {
     private showDetailAngebote(i, index);
     private showDetailTeam(i, index);
     private nextRightElement(index);
-    private fixHoehe();
+    private fixHoehe(value, offset);
     private goToTop();
-    /**
-     * Beim aktivieren eines Items werden zuerst alle anderen deaktiviert, damit der Fokus immer nur auf einem Item bleibt.
-     */
+    private goTo(ziel);
     /**
      * Hier werden die Items per Reihe gesetzt.
      */

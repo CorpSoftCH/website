@@ -9,7 +9,7 @@ var section = [
         "title": "Angebot",
         "subtitles": [
             "Verbesserte Zusammenarbeit. Sichere Daten in der Cloud. Produktive Projekt Organisation. Beseitigung von Ineffizienzen.",
-            "Unser Diensleistungsangebot bietet Ihnen genau das an. Sei es als Cloud- oder OnPremis-Lösung, wir verfügen über das nötige Know How Als Microsoft- Partner und  -Trainer kenne wir uns mit den neusten Produkte und Trends aus."
+            "Unser Diensleistungsangebot bietet Ihnen genau das an. Sei es als Cloud- oder OnPremis-Lösung, wir verfügen über das nötige Know How Als Microsoft- Partner und -Trainer kenne wir uns mit den neusten Produkte und Trends aus."
         ],
         "itemFlag": true,
         "content": "angebote",

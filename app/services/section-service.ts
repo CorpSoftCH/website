@@ -13,10 +13,10 @@ var section = [
         "itemsPerRow": 4,        
     }, {
         "id": "produkte",
-        "title": "Unsere CorpSoft Produkte",
+        "title": "Produkte",
         "subtitles": [
             "Bringen Sie Ihre IT-Dienstleistungen in die Cloud",
-            "Mit unseren CorpSoftProdukten (CSP) gelingt Ihnen einen reibungslosen Einstieg in die Cloud. Bei unseren CorpSoftProdukten haben Sie die Wahl zwischen einem Basic, Standard oder Full Package. In jedem Package profitieren Sie neben der gewünschten Lizenz eine Einführung oder Erstkonfiguration in Form eines Coachings."
+            "Mit unseren CorpSoft Produkten gelingt Ihnen einen reibungslosen Einstieg in die Cloud. Wählen Sie zwischen einem Basic, Standard oder Full Package. In jedem Package profitieren Sie neben der gewünschten Lizenz eine Einführung oder Erstkonfiguration in Form eines Coachings. Fragen Sie für eine unverbindliche Preisanfrage an."
         ],
         "itemFlag": true,
         "showOnlyTopItems": false,

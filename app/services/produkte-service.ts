@@ -7,6 +7,7 @@ var allProducts = [
         "products": [
             {
                 "size":"Basic Package",
+                "mindLizenzen": 1,
                 "content": [
                     {
                         "title":"Lizenz",
@@ -30,8 +31,7 @@ var allProducts = [
                     },{
                         "title":"Office365 Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -40,12 +40,12 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Standard Package",
+                "mindLizenzen": 30,
                 "content": [
                     {
                         "title":"Lizenz",
                         "list": [
                             "Office 365 Business",
-                            "Office 365 Essentials",
                             "Office 365 Premium",
                             "Office 365 Enterprise E1",
                             "Office 365 Enterprise E2",
@@ -53,7 +53,7 @@ var allProducts = [
                         "lizenzen": [25,100],
                         "imgPath":"app/data/images/produkte/collaboration.png"
                     },{
-                        "title":"1/2 Tag Coaching*",
+                        "title":"1/2 Tag Coaching",
                         "list":[
                             "Einführung oder",
                             "Erstkonfiguration",
@@ -63,8 +63,7 @@ var allProducts = [
                     },{
                         "title":"Office365 Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -73,6 +72,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Full Package",
+                "mindLizenzen": 0,
                 "content": [
                     {
                         "title":"Office 365 Lizenzen",
@@ -80,34 +80,19 @@ var allProducts = [
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/collaboration.png",
                     },{
-                        "title":"Consulting",
+                        "title":"Consulting, Customizing & Coaching",
                         "list": [
                             "Analyse & Optimierung aktueller IT Landschaft",
-                            "Ausarbeitung & Beratung IT Konzepte",
+                            "Auf Sie zugeschnittene Lösung",
+                            "Einführung in die neue IT Landschaft",
                         ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/consulting.png",
                         
                     },{
-                        "title":"Customizing",
-                        "list":[
-                            "Analyse Ihrer Problemstellung",
-                            "Auf Sie zugeschnittene Lösung",
-                        ],
-                        "lizenzen": [],
-                        "imgPath":"app/data/images/produkte/customizing.png",
-                    },{
-                        "title":"Coaching",
-                        "list":[
-                            "Training der neuen IT-Landschaft",
-                            ],
-                        "lizenzen": [],
-                        "imgPath":"app/data/images/produkte/trainer.png",
-                    },{
                         "title":"Office365 Schulungen",
-                        "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                        "list":[
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -123,6 +108,7 @@ var allProducts = [
         "products": [
             {
                 "size":"Basic Package",
+                "mindLizenzen": 1,
                 "content": [
                     {
                         "title":"Lizenz",
@@ -131,7 +117,7 @@ var allProducts = [
                             "SharePoint Online (Plan 2)",
                             ],
                         "lizenzen": [1,25],
-                        "imgPath":"app/data/images/produkte/sharepoint.png"
+                        "imgPath":"app/data/images/produkte/SharePoint.png"
                     },{
                         "title":"2 Stunden Virtual Coaching",
                         "list": [
@@ -143,8 +129,7 @@ var allProducts = [
                     },{
                         "title":"SharePoint Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -153,6 +138,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Standard Package",
+                "mindLizenzen": 30,
                 "content": [
                     {
                         "title":"Lizenz",
@@ -160,7 +146,7 @@ var allProducts = [
                             "SharePoint Online (Plan 2)"
                             ],
                         "lizenzen": [30,100],
-                        "imgPath":"app/data/images/produkte/sharepoint.png"
+                        "imgPath":"app/data/images/produkte/SharePoint.png"
                     },{
                         "title":"1/2 Tag Virtual Coaching",
                         "list": [
@@ -172,8 +158,7 @@ var allProducts = [
                     },{
                         "title":"SharePoint Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -182,41 +167,27 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Full Package",
+                "mindLizenzen": 0,
                 "content": [
                     {
                         "title":"Office 365 Lizenzen",
                         "list": [],
                         "lizenzen": [],
-                        "imgPath":"app/data/images/produkte/sharepoint.png",
+                        "imgPath":"app/data/images/produkte/SharePoint.png",
                     },{
-                        "title":"Consulting",
+                        "title":"Consulting, Customizing & Coaching",
                         "list": [
                             "Analyse & Optimierung aktueller IT Landschaft",
-                            "Ausarbeitung & Beratung IT Konzepte",
+                            "Auf Sie zugeschnittene Lösung",
+                            "Einführung in die neue IT Landschaft",
                         ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/consulting.png",
                         
                     },{
-                        "title":"Customizing",
-                        "list":[
-                            "Analyse Ihrer Problemstellung",
-                            "Auf Sie zugeschnittene Lösung",
-                        ],
-                        "lizenzen": [],
-                        "imgPath":"app/data/images/produkte/customizing.png",
-                    },{
-                        "title":"Coaching",
-                        "list":[
-                            "Training der neuen IT-Landschaft",
-                            ],
-                        "lizenzen": [],
-                        "imgPath":"app/data/images/produkte/trainer.png",
-                    },{
                         "title":"SharePoint Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -232,6 +203,7 @@ var allProducts = [
         "products": [
             {
                 "size":"Basic Package",
+                "mindLizenzen": 1,
                 "content": [
                     {
                         "title":"Lizenz",
@@ -253,8 +225,7 @@ var allProducts = [
                     },{
                         "title":"Project Online Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -263,6 +234,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Standard Package",
+                "mindLizenzen": 30,
                 "content": [
                     {
                         "title":"Lizenz",
@@ -283,8 +255,7 @@ var allProducts = [
                     },{
                         "title":"Project Online Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -293,6 +264,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Full Package",
+                "mindLizenzen": 1,
                 "content": [
                     {
                         "title":"Office 365 Lizenzen",
@@ -300,34 +272,19 @@ var allProducts = [
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/project_online.png",
                     },{
-                        "title":"Consulting",
+                        "title":"Consulting, Customizing & Coaching",
                         "list": [
                             "Analyse & Optimierung aktueller IT Landschaft",
-                            "Ausarbeitung & Beratung IT Konzepte",
+                            "Auf Sie zugeschnittene Lösung",
+                            "Einführung in die neue IT Landschaft",
                         ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/consulting.png",
                         
                     },{
-                        "title":"Customizing",
-                        "list":[
-                            "Analyse Ihrer Problemstellung",
-                            "Auf Sie zugeschnittene Lösung",
-                        ],
-                        "lizenzen": [],
-                        "imgPath":"app/data/images/produkte/customizing.png",
-                    },{
-                        "title":"Coaching",
-                        "list":[
-                            "Training der neuen IT-Landschaft",
-                            ],
-                        "lizenzen": [],
-                        "imgPath":"app/data/images/produkte/trainer.png",
-                    },{
                         "title":"Project Online Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -343,6 +300,7 @@ var allProducts = [
         "products": [
             {
                 "size":"Basic Package",
+                "mindLizenzen": 0,
                 "content": [
                     {
                         "title":"Azure Virtual Machines",
@@ -360,8 +318,7 @@ var allProducts = [
                     },{
                         "title":"Azure Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -370,6 +327,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Standard Package",
+                "mindLizenzen": 0,
                 "content": [
                     {
                         "title":"Azure Virtual Machines",
@@ -387,8 +345,7 @@ var allProducts = [
                     },{
                         "title":"Azure Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -397,6 +354,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Full Package",
+                "mindLizenzen": 0,
                 "content": [
                     {
                         "title":"Azure Virtual Machines",
@@ -404,34 +362,19 @@ var allProducts = [
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/azure_2.png"
                     },{
-                        "title":"Consulting",
+                        "title":"Consulting, Customizing & Coaching",
                         "list": [
                             "Analyse & Optimierung aktueller IT Landschaft",
-                            "Ausarbeitung & Beratung IT Konzepte",
+                            "Auf Sie zugeschnittene Lösung",
+                            "Einführung in die neue IT Landschaft",
                         ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/consulting.png",
                         
                     },{
-                        "title":"Customizing",
-                        "list":[
-                            "Analyse Ihrer Problemstellung",
-                            "Auf Sie zugeschnittene Lösung",
-                        ],
-                        "lizenzen": [],
-                        "imgPath":"app/data/images/produkte/customizing.png",
-                    },{
-                        "title":"Coaching",
-                        "list":[
-                            "Training der neuen IT-Landschaft",
-                            ],
-                        "lizenzen":[],
-                        "imgPath":"app/data/images/produkte/trainer.png",
-                    },{
                         "title":"Azure Schulungen",
                         "list": [
-                            "Wir empfehlen unseren Schulungspartner",
-                            "www.digicomp.ch"
+                            "Wir empfehlen unseren Schulungspartner www.digicomp.ch"
                             ],
                         "lizenzen": [],
                         "imgPath":"app/data/images/produkte/digi.png"
@@ -455,6 +398,7 @@ export class ProduktClass {
 export class Produkt {
     constructor(
         public size: string,
+        public mindLizenzen: number,
         public content: Array<Content>,
         public button: string,
     ){}
@@ -475,7 +419,7 @@ export class Content {
 export class ProduktService {
   
   public getProdukte(): Array<ProduktClass> {
-    var all = allProducts.map(pc => new ProduktClass(pc.id, pc.title, pc.subtitles, pc.products.map(p => new Produkt(p.size, p.content.map(c => new Content(c.title, c.list, c.imgPath, c.lizenzen)) ,p.button))));
+    var all = allProducts.map(pc => new ProduktClass(pc.id, pc.title, pc.subtitles, pc.products.map(p => new Produkt(p.size, p.mindLizenzen, p.content.map(c => new Content(c.title, c.list, c.imgPath, c.lizenzen)) ,p.button))));
     return all;  
   }
 }
