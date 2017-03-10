@@ -156,10 +156,22 @@ hr {
 	width: 50%;
 }
 
-.btn {
+.transBtn {
 	background-color: transparent;
 	border-color: transparent;
 	color: $cosoBlue01;
+}
+
+.btn {
+	margin: 1em;
+	background-color: $cosoBlue01;
+	color: white;
+}
+
+.btn:hover {
+	color: $cosoBlue01;
+	background-color: white;
+	border-color: $cosoBlue01;
 }
 
 .order {
@@ -173,6 +185,7 @@ hr {
 .inactive {
 	opacity: 0.3;
 }
+
 @import 'carousel';
 @import 'header';
 @import 'containers';

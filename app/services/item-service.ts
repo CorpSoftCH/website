@@ -28,7 +28,7 @@ var angebot = [
   },
   {
     "id": "angEP",
-    "title": ["Enterprise Projektmanagement"],
+    "title": ["Projektmanagement"],
     "description":  [
       "Verwalten Sie Portfolios, Programme und Ressourcen, und erzielen Sie optimale Ergebnisse. Mit Microsoft® Project werden alle Ihre Daten zu Ihrem Projektportfolio zur Verfügung gestellt. Damit Sie jederzeit den Überblick über Ihre laufenden Projekte haben."
     ],
@@ -55,8 +55,7 @@ var angebot = [
     "id": "angSM",
     "title": ["Service Management - Itil"],
     "description":  [
-      "Als Teilbereich des Supply-Chains funktioniert Service Management als Schnittstelle zwischen dem Verkauf eines Produktes und dem Kunden.",
-      "Mit dem Fokus von ITIL® auf das IT Service Management verbessern Sie stetig die Produktivität und die Servicequalität."
+      "Als Teilbereich des Supply-Chains funktioniert Service Management als Schnittstelle zwischen dem Verkauf eines Produktes und dem Kunden. Mit dem Fokus von ITIL® auf das IT Service Management verbessern Sie stetig die Produktivität und die Servicequalität."
     ],
     "list1" : [
       "Aufzeigen der Best Practices",
@@ -382,7 +381,7 @@ var team = [
     "imgPath": "app/data/images/team/thomas vM_neu.png",
     "vCardPath": ""
 },{
-    "vorname": "You",
+    "vorname": "Offene Stellen",
     "nachname": "we want you",
     "kuerzel": "you",
     "description": [

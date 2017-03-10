@@ -1,6 +1,7 @@
 <section class="container" *ngFor="let class of sections" id="{{class.id}}">
     <h1>{{class.title}}</h1>
     <hr />
+    <p *ngFor="let text of class.subtitles;" class="prodSubtitle" >{{text}}</p>
     <div *ngFor="let p of class.products" class="col-md-4">
         <div class="landing-prod produkt">
             <div class="prodBorder"><h2>{{p.size}}</h2></div>
@@ -11,18 +12,14 @@
                     <ul>
                         <li *ngFor="let li of c.list">{{li}}</li>
                     </ul>
-                    <!--<div (load)="createSlider(class.id,c.title)" *ngIf="c.lizenzen.length > 1">
-                        <input id="slider-{{class.id}}-{{c.title}}" type="text" data-slider-min="0" data-slider-max="25" data-slider-step="1" data-slider-value="0"/>
-                        <button id="destroySlider-{{class.id}}-{{c.title}}" class='btn'>Other Value</button>
-                    </div>-->
                 </div>
             </div>
-            <div class="btn-div"><a href="#Kontaktformular"><button [routerLink]="['/products']" (click)="goTo('Kontaktformular');" class="btn">{{p.button}}</button></a></div>
+            <div class="btn-div"><button [routerLink]="['/products']" (click)="goTo('Anfrageformular');" class="btn">{{p.button}}</button></div>
         </div>
     </div>
 </section>
-<section id="Preisanfrageformular" class="container">
-    <h1>Preisanfrageformular</h1>
+<section id="Anfrageformular" class="container">
+    <h1>Anfrageformular</h1>
     <hr />
     <form onchange="mail(this)" name="sendOrder" id="contactProdForm" novalidate>
         <div class="col-xs-12">
@@ -48,7 +45,23 @@
         </div>
         <div class="col-xs-12">
             <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Produkt* z.B. SharePoint" id="produkt" required data-validation-required-message="Please enter your Product.">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Anz. Lizenzen*" id="lizenzen" required data-validation-required-message="Please enter a numbor of licences.">
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-sm-6">
                 <input type="email" class="form-control" placeholder="Email*" id="email" required data-validation-required-message="Please enter your email address.">
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Produkt* z.B. SharePoint" id="produkt" required data-validation-required-message="Please enter your Product.">
+            </div>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" placeholder="Anz. Lizenzen*" id="lizenzen" required data-validation-required-message="Please enter a numbor of licences.">
             </div>
         </div>
         <div class="col-xs-12">
@@ -57,6 +70,6 @@
             </div>
         </div>
         <p style="color:grey;text-align: left;margin-left:3.5em;">* Dies sind Pflichtfelder</p>
-        <button type="submit" id="order-form-senden" class="btn btn-success btn-lg">Offerte Anfordern</button>
+        <button type="submit" id="order-form-senden" class="btn">Unverbindliche Offerte Anfordern</button>
     </form>
 </section>

@@ -119,10 +119,20 @@ hr {
   float: left;
   width: 50%; }
 
-.btn {
+.transBtn {
   background-color: transparent;
   border-color: transparent;
   color: #2B425C; }
+
+.btn {
+  margin: 1em;
+  background-color: #2B425C;
+  color: white; }
+
+.btn:hover {
+  color: #2B425C;
+  background-color: white;
+  border-color: #2B425C; }
 
 .order {
   position: absolute;
@@ -511,12 +521,6 @@ header button {
   letter-spacing: 3px;
   text-transform: uppercase; }
 
-/*
-.btn {
-	margin-top: 1em;
-	background-color: $cosoBlue01;
-	color: white;
-}*/
 #angebot h3 {
   text-align: center; }
 
@@ -533,14 +537,6 @@ header button {
   .produkt .prodBorder {
     border-bottom: solid black 0.1em;
     padding: 1em; }
-  .produkt .btn {
-    margin: 1em;
-    background-color: #2B425C;
-    color: white; }
-    .produkt .btn :hover {
-      color: #2B425C;
-      background-color: white;
-      border-color: #2B425C; }
   .produkt .btn-div {
     bottom: 3em; }
   .produkt h2 {
@@ -553,7 +549,11 @@ header button {
   .produkt .prodImg {
     float: none;
     margin: auto;
-    width: initial; }
+    width: 60%; }
+
+.prodSubtitle {
+  padding: 1em 3em;
+  text-align: left; }
 
 .prodText {
   padding-left: 2em;
@@ -564,16 +564,20 @@ header button {
     margin-left: 1em; }
 
 .landing-prod img {
-  width: calc(20% - 1em); }
+  width: calc(20% + 2em); }
 .landing-prod .prodText {
   width: calc(80% - 2em); }
+.landing-prod li {
+  margin-left: 0.5em; }
+.landing-prod h3 {
+  font-size: 1em; }
 
 #unternehmen h2 {
   font-size: 1.4em;
   text-transform: uppercase;
   text-align: center; }
 #unternehmen img {
-  width: 30%; }
+  width: 50%; }
 #unternehmen ul {
   padding-left: 1em; }
 #unternehmen li p {
@@ -649,26 +653,6 @@ header button {
   letter-spacing: 3px;
   text-transform: uppercase; }
 
-/*
-	.form-control {
-		//font-size: 1.2em;
-		padding: 1.2em;
-		//width: calc(100% - 6em);
-		border: 0.2em solid #2B425C;
-		margin: 1em;
-		input {
-			width: calc(100% - 6em);
-		}
-	}
-	#contact-form-senden {
-		font-size: 1.2em;
-		padding: 1.5em;
-		border: none;
-		background-color: $cosoBlue01;
-		color: white;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-	}*/
 footer {
   float: left;
   width: 100%;

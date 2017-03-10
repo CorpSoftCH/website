@@ -62,8 +62,7 @@ export class ItemComponent {
 		} catch (err) {console.log("catch more/less Buttons")} 
 
 		this.fixHoehe(".produkt .text",7);
-		this.fixHoehe(".divProdImg",20);
-
+		//this.fixHoehe(".divProdImg",20);
 	}
 	/**
 	 * Nachdem der Kontent initialisiert wurde, werden dort, wo nur die TopItems dargestellt werden Buttens sichtbar gemacht,

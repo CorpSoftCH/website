@@ -129,17 +129,14 @@
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-/*
-.btn {
-	margin-top: 1em;
-	background-color: $cosoBlue01;
-	color: white;
-}*/
+
 #angebot {
 	h3 {
 		text-align: center;
 	}
 }
+
+
 //#produkte {
 	.produkt {
 		max-width: 30em;
@@ -157,17 +154,7 @@
 			border-bottom: solid black 0.1em;
 			padding: 1em;
 		}
-		.btn {
-			margin: 1em;
-			background-color: $cosoBlue01;
-			color: white;
-			:hover {
-				color: $cosoBlue01;
-				background-color: white;
-				border-color: $cosoBlue01;
-			}
-
-		}
+		
 		.btn-div {
 			//position: absolute;
 			bottom: 3em;
@@ -186,8 +173,13 @@
 		.prodImg {
 			float: none;
 			margin: auto;
-			width: initial;
+			width: 60%;
 		}
+	}
+
+	.prodSubtitle {
+		padding: 1em 3em;
+		text-align: left;
 	}
 
 	.prodText {
@@ -202,11 +194,17 @@
 
 	.landing-prod {
 		img {
-			width: calc(20% - 1em);
+			width: calc(20% + 2em);
 		}
 
 		.prodText {
 			width: calc(80% - 2em);
+		}
+		li {
+			margin-left: 0.5em;
+		}
+		h3 {
+			font-size: 1em;
 		}
 	}
 //}
@@ -219,7 +217,7 @@
 		text-align: center;
 	}
 	img {
-		width: 30%;
+		width: 50%;
 	}
 
 	ul {
@@ -327,24 +325,3 @@
 		text-transform: uppercase;
 	}
 	
-/*
-	.form-control {
-		//font-size: 1.2em;
-		padding: 1.2em;
-		//width: calc(100% - 6em);
-		border: 0.2em solid #2B425C;
-		margin: 1em;
-		input {
-			width: calc(100% - 6em);
-		}
-	}
-	#contact-form-senden {
-		font-size: 1.2em;
-		padding: 1.5em;
-		border: none;
-		background-color: $cosoBlue01;
-		color: white;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-	}*/
-

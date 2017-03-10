@@ -52,7 +52,7 @@ export class ProductsComponent {
         }
       }
       for(let e of prd) {
-        e.style.height = height + 30 + "px";
+        e.style.height = height + 100 + "px";
       }
     }
 
