@@ -4,8 +4,8 @@ var section = [
         "id": "angebot",
         "title": "Angebot",
         "subtitles": [
-            "Verbesserte Zusammenarbeit. Sichere Daten in der Cloud. Produktive Projekt Organisation. Beseitigung von Ineffizienzen.",
-            "Bei unseren Dienstleistungen finden Sie was Sie wünschen. Sei es als Cloud- oder OnPremis-Lösung, wir verfügen über das nötige Know How. Als Microsoft Partner und  Trainer kennen wir uns mit den neusten Produkte und Trends aus. "
+            "Verbesserte Zusammenarbeit. Effizientes Projekt- und ServiceMgmt. Einführung ins Cloud Computing.",
+            "Bei unseren Dienstleistungen finden Sie was Sie wünschen. Sei es als Cloud- oder Hybrid-Lösung, wir verfügen über das nötige Know How. Als Microsoft Partner und Trainer kennen wir uns mit den neusten Produkte und Trends aus."
         ],
         "itemFlag": true,
         "showOnlyTopItems": false,

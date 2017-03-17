@@ -23,22 +23,20 @@ export class ProductsComponent {
     ngAfterViewInit() {
       this.fixHoehe();
       this.setBtnBottom();
+      this.setLizTop();
     }
 
-    /*createSlider(content: string, title: string) {
-      console.log("created " + content + " " + title);
-      $("#slider-" + content + "-" + title).slider();
-
-
-      $("#destroySlider-" + content + "-" + title).click(function() {
-
-        $("#slider-" + content + "-" + title).slider('destroy');
-
-      });
-    }*/
 
     setBtnBottom() {
       $(".btn-div").css({ position: "absolute", left: "1px", right: "1px"});
+    }
+
+    addFullPackClass() {
+
+    }
+
+    setLizTop() {
+      //$(".prodLizenzen").css({ position: "absolute", top: "0", right: "0"});
     }
 
 
@@ -52,7 +50,7 @@ export class ProductsComponent {
         }
       }
       for(let e of prd) {
-        e.style.height = height + 100 + "px";
+        e.style.height = height + 0 + "px";
       }
     }
 

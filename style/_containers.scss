@@ -175,6 +175,7 @@
 			margin: auto;
 			width: 40%;
 		}
+		
 	}
 
 	.prodSubtitle {
@@ -194,17 +195,35 @@
 
 	.landing-prod {
 		img {
-			width: calc(20% + 2em);
+			width: calc(20% + 1em);
 		}
 
 		.prodText {
-			width: calc(80% - 2em);
+			width: calc(80% - 1em);
 		}
 		li {
 			margin-left: 0.5em;
 		}
 		h3 {
 			font-size: 1em;
+		}
+	}
+
+	.fullPkg {
+		img {
+			width: calc(15% + 1em);
+		}
+
+		.prodText {
+			width: calc(85% - 1em);
+			display: table-cell;
+			vertical-align: middle;
+		}
+		li {
+			margin-left: 0.5em;
+		}
+		h3 {
+			font-size: 0.9em;
 		}
 	}
 //}
@@ -324,4 +343,10 @@
 		letter-spacing: 3px;
 		text-transform: uppercase;
 	}
+
+.kompImg {
+	width: 80%;
+	max-width: 600px;
+	margin: auto;
+}
 	

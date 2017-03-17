@@ -401,13 +401,7 @@ var unternehmen = [
             "Wir begeistern Kunden mit nachhaltigen Lösungskonzepten an der Schnittstelle zwischen IT und Business. Mit der Verbindung der beiden Bereiche ermöglichen wir die Fokussierung auf die Kernkompetenzen. ",
             "Unsere Hauptkompetenzen umfassen die Bereiche:"
         ],
-        "list" : [
-            "Enterprise Project Management",
-            "Collaboration",
-            "Service Management",
-            "Cloud Computing",
-            "Training"
-        ],
+        "list" : [],
         "imgPath" : "app/data/images/unternehmen/Vision.png"
     },{
         "id": "philo",

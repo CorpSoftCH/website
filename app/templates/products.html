@@ -3,18 +3,25 @@
     <hr />
     <p *ngFor="let text of class.subtitles;" class="prodSubtitle" >{{text}}</p>
     <div *ngFor="let p of class.products" class="col-md-4">
-        <div class="landing-prod produkt">
+        <div class="landing-prod produkt {{p.setFPkgClass()}}">
             <div class="prodBorder"><h2>{{p.size}}</h2></div>
+            <!--<div class=""><img src="{{p.getLizImgPath()}}"></div>-->
             <div class="col-xs-12" *ngFor="let c of p.content">
                 <img src="{{c.imgPath}}">
                 <div class="prodText">
+                    <div *ngIf="c.list.length < 1" style="margin-top: 2.75em;"></div>
                     <h3>{{c.title}}</h3>
                     <ul>
                         <li *ngFor="let li of c.list">{{li}}</li>
                     </ul>
                 </div>
             </div>
-            <div class="btn-div"><button [routerLink]="['/products']" (click)="goTo('Anfrageformular');" class="btn">{{p.button}}</button></div>
+            <div class="btn-div">
+                <div *ngIf="p.mindLizenzen > 0" class="col-xs-12">
+                    <p style="padding: 0.6em; max-width: 30em; margin: auto;">*Ab {{p.mindLizenzen}} Lizenzen</p>
+                </div>
+                <button [routerLink]="['/products']" (click)="goTo('Anfrageformular');" class="btn">{{p.button}}</button>
+            </div>
         </div>
     </div>
 </section>

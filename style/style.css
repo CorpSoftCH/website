@@ -8,10 +8,13 @@ html {
   margin: auto; }
 
 body {
-  background-image: url("/app/data/images/cloud-02.jpg");
+  background-image: url("/app/data/images/iStock-great.jpg");
   background-size: cover;
   background-attachment: fixed; }
 
+@media all and (max-width: 992px) {
+  body {
+    background-image: url("/app/data/images/iStock-small.jpg"); } }
 h1,
 h2 {
   z-index: 2;
@@ -564,13 +567,24 @@ header button {
     margin-left: 1em; }
 
 .landing-prod img {
-  width: calc(20% + 2em); }
+  width: calc(20% + 1em); }
 .landing-prod .prodText {
-  width: calc(80% - 2em); }
+  width: calc(80% - 1em); }
 .landing-prod li {
   margin-left: 0.5em; }
 .landing-prod h3 {
   font-size: 1em; }
+
+.fullPkg img {
+  width: calc(15% + 1em); }
+.fullPkg .prodText {
+  width: calc(85% - 1em);
+  display: table-cell;
+  vertical-align: middle; }
+.fullPkg li {
+  margin-left: 0.5em; }
+.fullPkg h3 {
+  font-size: 0.9em; }
 
 #unternehmen h2 {
   font-size: 1.4em;
@@ -652,6 +666,11 @@ header button {
   color: white;
   letter-spacing: 3px;
   text-transform: uppercase; }
+
+.kompImg {
+  width: 80%;
+  max-width: 600px;
+  margin: auto; }
 
 footer {
   float: left;

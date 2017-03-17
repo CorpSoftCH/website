@@ -72,7 +72,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Full Package",
-                "mindLizenzen": 0,
+                "mindLizenzen": 10,
                 "content": [
                     {
                         "title":"Office 365 Lizenzen",
@@ -167,7 +167,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Full Package",
-                "mindLizenzen": 0,
+                "mindLizenzen": 10,
                 "content": [
                     {
                         "title":"Office 365 Lizenzen",
@@ -264,7 +264,7 @@ var allProducts = [
                 "button":"Unverbindliche Preisanfrage"
             },{
                 "size":"Full Package",
-                "mindLizenzen": 1,
+                "mindLizenzen": 10,
                 "content": [
                     {
                         "title":"Office 365 Lizenzen",
@@ -393,6 +393,7 @@ export class ProduktClass {
         public subtitles: Array<string>,
         public products: Array<Produkt>,
     ){}
+
 }
 
 export class Produkt {
@@ -402,6 +403,27 @@ export class Produkt {
         public content: Array<Content>,
         public button: string,
     ){}
+
+    public getLizImgPath():string {
+        return "app/data/images/produkte/lizenzen/stamp_" + this.mindLizenzen + ".png";
+    }
+
+    public isFullPackage():boolean {
+        if (this.size == "Full Package") {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
+
+    public setFPkgClass():string {
+        if( this.isFullPackage() ) {
+            return "fullPkg";
+        } else {
+            return "";
+        }
+    }
 }
 
 export class Content {

@@ -22,10 +22,15 @@ html {
 	margin: auto;
 }
 body {
-
-	background-image: url("/app/data/images/cloud-02.jpg");
+	background-image: url("/app/data/images/iStock-great.jpg");
 	background-size: cover;
 	background-attachment: fixed;
+}
+@media all and (max-width: $LARGE_WIDTH) {
+	body {
+		background-image: url("/app/data/images/iStock-small.jpg");
+	}
+	
 }
 
 h1,
